@@ -7,7 +7,8 @@
   <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
     <p class="hero-eyebrow" style="color: var(--color-orange);">About</p>
     <h1 class="hero-split-title">Hi! I'm Laurence Methot.</h1>
-    <p class="hero-split-desc">Leadership has evolved. Let's make sure you stay ahead.</p>
+    <p class="hero-split-desc">After 22 years coaching leaders across 70+ countries, I've learned one thing — the right
+      conversation changes everything.</p>
     <div class="hero-actions">
       <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank"
         rel="noopener noreferrer">
@@ -16,12 +17,43 @@
     </div>
   </div>
   <div class="hero-split-image">
+    {# Smaller brushstroke — slightly above, shifted left #}
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true"
+      style="position: absolute; bottom: 48%; left: 50%; transform: translateX(-65%) rotate(-38deg); width: 80%; height: auto; z-index: 0;">
+    {# Smaller brushstroke — slightly below, shifted right #}
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true"
+      style="position: absolute; bottom: 14%; left: 50%; transform: translateX(-35%) rotate(148deg); width: 75%; height: auto; z-index: 0;">
+    {# Main brushstroke — center, on top #}
+    <img src="/images/hero-brushstroke.svg" alt="" aria-hidden="true"
+      style="position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%) rotate(-35deg); width: 140%; height: auto; z-index: 0;">
     {% if section.extra.headshot is defined %}
     <img src="{{ section.extra.headshot }}" alt="Laurence Methot"
-      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top center;">
+      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top center; z-index: 1;">
     {% else %}
     <div class="hero-split-image-placeholder">Photo Placeholder</div>
     {% endif %}
+  </div>
+</section>
+
+{# ── STATS STRIP ─────────────────────────────────────────── #}
+<section class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="stats-strip-item">
+      <span class="stats-strip-number">22+</span>
+      <span class="stats-strip-label">Years Coaching</span>
+    </div>
+    <div class="stats-strip-item">
+      <span class="stats-strip-number">70+</span>
+      <span class="stats-strip-label">Countries</span>
+    </div>
+    <div class="stats-strip-item">
+      <span class="stats-strip-number">4</span>
+      <span class="stats-strip-label">Languages</span>
+    </div>
+    <div class="stats-strip-item">
+      <span class="stats-strip-number">Fortune 100</span>
+      <span class="stats-strip-label">Client Portfolio</span>
+    </div>
   </div>
 </section>
 
@@ -79,6 +111,14 @@
   </div>
 </section>
 
+{# ── PULL QUOTE 1 ────────────────────────────────────────── #}
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    <div class="pull-quote-line"></div>
+    <p class="pull-quote-text">"I don't give you answers. I help you find the ones you've been avoiding."</p>
+  </div>
+</section>
+
 {# ── MEET LAURENCE ───────────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
@@ -121,6 +161,28 @@
             style="font-size: var(--text-lg); font-weight: 500; color: var(--color-purple); font-family: var(--font-heading); font-style: italic;">
             Clients describe me as sharp, genuine, and compassionate.
           </p>
+        </div>
+
+        <div class="about-personal">
+          <p class="about-personal-title">What you might not know</p>
+          <div class="about-personal-list">
+            <div class="about-personal-item">
+              <span class="about-personal-bullet">&#9679;</span>
+              <span>Speaks four languages — French, English, Italian, and German</span>
+            </div>
+            <div class="about-personal-item">
+              <span class="about-personal-bullet">&#9679;</span>
+              <span>Based in Switzerland, coaching across time zones</span>
+            </div>
+            <div class="about-personal-item">
+              <span class="about-personal-bullet">&#9679;</span>
+              <span>Passionate about Italy, historical costumes, and her dog</span>
+            </div>
+            <div class="about-personal-item">
+              <span class="about-personal-bullet">&#9679;</span>
+              <span>Will ask the question you've been avoiding</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -181,13 +243,21 @@
   </div>
 </section>
 
+{# ── PULL QUOTE 2 ────────────────────────────────────────── #}
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    <div class="pull-quote-line"></div>
+    <p class="pull-quote-text">"Real change starts with one honest conversation."</p>
+  </div>
+</section>
+
 {# ── TESTIMONIAL ─────────────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
     <blockquote
       style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
       <img src="/images/big-quote.svg" alt="" aria-hidden="true"
-        style="width: 48px; height: auto; opacity: 0.3; margin: 0 auto var(--space-4); display: block;">
+        style="width: 48px; height: auto; opacity: 0.5; margin: 0 auto var(--space-4); display: block;">
       After leading in C-suite positions, I thought I knew it all. A very challenging work situation showed me otherwise
       and Laurence helped me. Consequently, my sleep, my performance, and happiness at work have improved tremendously.
     </blockquote>
