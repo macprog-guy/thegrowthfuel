@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Gradient ──────────────────────────────────────── #}
+<section class="hero-gradient grain-overlay">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Our Programs</p>
+    <h1 class="hero-title">Structured programmes for <em>transformation</em></h1>
+    <p class="hero-desc">{{ section.description }}</p>
+  </div>
+</section>
+
+{# ── PROGRAM SECTIONS ─────────────────────────────────────── #}
+{% set icon_colors = ["purple", "orange", "green"] %}
+{% for page in section.pages %}
+
+{% if loop.index is odd %}
+{# ── Left text, right accent ─────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);{% if not loop.first %} border-top: 1px solid var(--color-gray-200);{% endif %}">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
+    <div>
+      {% if loop.index0 % 3 == 0 %}
+        {% set_global prog_color = "orange" %}
+      {% elif loop.index0 % 3 == 1 %}
+        {% set_global prog_color = "purple" %}
+      {% else %}
+        {% set_global prog_color = "green" %}
+      {% endif %}
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Program {{ loop.index }} of {{ section.pages | length }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ page.title }}</h2>
+      {% if page.extra.subtitle is defined %}
+      <p style="font-size: var(--text-xl); font-weight: 500; color: var(--color-purple); margin-bottom: var(--space-6); font-family: var(--font-heading); font-style: italic;">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ page.description }}</p>
+      {% if page.extra.price_info is defined %}
+      <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-8); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
+      {% endif %}
+      <div class="hero-actions">
+        <a href="{{ page.permalink }}" class="btn btn-primary">
+          Learn More <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+    <div style="background: var(--color-{{ prog_color }}-lightest, var(--color-purple-lightest)); border-radius: var(--radius-2xl); padding: var(--space-16); display: flex; align-items: center; justify-content: center; min-height: 320px;">
+      <span style="font-family: var(--font-heading); font-size: var(--text-7xl); color: var(--color-{{ prog_color }}, var(--color-purple)); opacity: 0.2; font-weight: 400;">0{{ loop.index }}</span>
+    </div>
+  </div>
+</section>
+
+{% else %}
+{# ── Right text, left accent ─────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6); border-top: 1px solid var(--color-gray-200);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
+    {% if loop.index0 % 3 == 0 %}
+      {% set_global prog_color = "orange" %}
+    {% elif loop.index0 % 3 == 1 %}
+      {% set_global prog_color = "purple" %}
+    {% else %}
+      {% set_global prog_color = "green" %}
+    {% endif %}
+    <div style="background: var(--color-{{ prog_color }}-lightest, var(--color-orange-lightest)); border-radius: var(--radius-2xl); padding: var(--space-16); display: flex; align-items: center; justify-content: center; min-height: 320px;">
+      <span style="font-family: var(--font-heading); font-size: var(--text-7xl); color: var(--color-{{ prog_color }}, var(--color-orange)); opacity: 0.2; font-weight: 400;">0{{ loop.index }}</span>
+    </div>
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Program {{ loop.index }} of {{ section.pages | length }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ page.title }}</h2>
+      {% if page.extra.subtitle is defined %}
+      <p style="font-size: var(--text-xl); font-weight: 500; color: var(--color-purple); margin-bottom: var(--space-6); font-family: var(--font-heading); font-style: italic;">{{ page.extra.subtitle }}</p>
+      {% endif %}
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ page.description }}</p>
+      {% if page.extra.price_info is defined %}
+      <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-8); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
+      {% endif %}
+      <div class="hero-actions">
+        <a href="{{ page.permalink }}" class="btn btn-primary">
+          Learn More <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endfor %}
+
+{# ── CTA ────────────────────────────────────────────────────── #}
+<section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">Not sure which programme <em style="font-style: italic; color: var(--color-orange-light);">fits</em>?</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">Book a free consultation and we'll find the right path together.</p>
+    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+
+</section>
+{% endblock content %}

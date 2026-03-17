@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+{# Calendly widget CSS is already loaded in base.html #}
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+{% endblock head_extra %}
+
+{% block content %}
+{# ── HERO — Centered ────────────────────────────────────────── #}
+<section class="hero-centered">
+  <p class="hero-eyebrow" style="color: var(--color-orange);">Book Online</p>
+  <h1 class="hero-centered-title">{{ section.title }}</h1>
+  {% if section.extra.subtitle is defined %}
+  <p class="hero-centered-desc">{{ section.extra.subtitle }}</p>
+  {% elif section.description %}
+  <p class="hero-centered-desc">{{ section.description }}</p>
+  {% else %}
+  <p class="hero-centered-desc">Choose a session type below and pick a time that works for you. All sessions are conducted via video call.</p>
+  {% endif %}
+</section>
+
+{# ── CALENDLY INLINE EMBED ─────────────────────────────────── #}
+<section style="padding: var(--space-16) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    {% if section.extra.calendly_url is defined %}
+    <div class="calendly-inline-widget" data-url="{{ section.extra.calendly_url }}" style="min-width: 320px; height: 700px;"></div>
+    {% else %}
+    <div class="calendly-inline-widget" data-url="{{ config.extra.calendly_free_consultation }}" style="min-width: 320px; height: 700px;"></div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── BOOKING OPTIONS ────────────────────────────────────────── #}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">Other session <em>options</em></h2>
+    <p style="font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 50ch; margin-left: auto; margin-right: auto;">Already a client? Book your next session below.</p>
+
+    <div class="pricing-grid" style="text-align: left;">
+      <div class="pricing-card">
+        <div class="pricing-name">Free Consultation</div>
+        <div class="pricing-duration">30 minutes</div>
+        <div class="pricing-price" style="color: var(--color-green);">Free</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Introductory conversation</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Needs assessment</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Coaching fit evaluation</span></li>
+        </ul>
+        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_free_consultation }}'}); return false;" style="width: 100%;">Book Free Call</a>
+      </div>
+
+      <div class="pricing-card pricing-card-popular">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-name">1-Hour Coaching</div>
+        <div class="pricing-duration">60 minutes</div>
+        <div class="pricing-price">CHF 350 <span>/ session</span></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Deep-dive coaching session</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Personalized action plan</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Follow-up notes &amp; resources</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Email support between sessions</span></li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_1hr_coaching }}'}); return false;" style="width: 100%;">Book Session <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-name">2-Hour Intensive</div>
+        <div class="pricing-duration">120 minutes</div>
+        <div class="pricing-price">CHF 600 <span>/ session</span></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Extended coaching deep-dive</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Comprehensive assessment</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Strategic career planning</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Priority email support</span></li>
+        </ul>
+        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_2hr_coaching }}'}); return false;" style="width: 100%;">Book Intensive</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── PAGE BODY (optional extra content from markdown) ───────── #}
+{% if section.content %}
+<section style="padding: var(--space-16) var(--space-6);">
+  <div class="prose" style="max-width: var(--container-max); margin: 0 auto;">
+    {{ section.content | safe }}
+  </div>
+</section>
+{% endif %}
+{% endblock content %}

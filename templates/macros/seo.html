@@ -1,0 +1,66 @@
+{% macro head(title="", description="", image="", url="", type="website") %}
+{#- Resolve values: prefer explicit args, fall back to page/section, then config -#}
+{%- set page_title = title -%}
+{%- if not page_title and page is defined and page.title -%}
+  {%- set page_title = page.title -%}
+{%- endif -%}
+{%- if not page_title and section is defined and section.title -%}
+  {%- set page_title = section.title -%}
+{%- endif -%}
+{%- if page_title -%}
+  {%- set full_title = page_title ~ " | " ~ config.title -%}
+{%- else -%}
+  {%- set full_title = config.title -%}
+{%- endif -%}
+
+{%- set meta_desc = description -%}
+{%- if not meta_desc and page is defined and page.description -%}
+  {%- set meta_desc = page.description -%}
+{%- endif -%}
+{%- if not meta_desc -%}
+  {%- set meta_desc = config.description -%}
+{%- endif -%}
+
+{%- set og_image = image -%}
+{%- if not og_image and page is defined and page.extra.og_image is defined -%}
+  {%- set og_image = page.extra.og_image -%}
+{%- endif -%}
+{%- if og_image and not og_image is starting_with("http") -%}
+  {%- set og_image = config.base_url ~ og_image -%}
+{%- endif -%}
+
+{%- set canonical = url -%}
+{%- if not canonical and page is defined -%}
+  {%- set canonical = config.base_url ~ page.path -%}
+{%- elif not canonical and section is defined -%}
+  {%- set canonical = config.base_url ~ section.path -%}
+{%- elif not canonical -%}
+  {%- set canonical = config.base_url -%}
+{%- endif -%}
+
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ meta_desc }}">
+<link rel="canonical" href="{{ canonical }}">
+
+{#- Open Graph -#}
+<meta property="og:type" content="{{ type }}">
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ meta_desc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="{{ config.title }}">
+{%- if og_image %}
+<meta property="og:image" content="{{ og_image }}">
+{%- endif %}
+
+{#- Twitter Card -#}
+{%- if og_image -%}
+<meta name="twitter:card" content="summary_large_image">
+{%- else -%}
+<meta name="twitter:card" content="summary">
+{%- endif -%}
+<meta name="twitter:title" content="{{ full_title }}">
+<meta name="twitter:description" content="{{ meta_desc }}">
+{%- if og_image %}
+<meta name="twitter:image" content="{{ og_image }}">
+{%- endif %}
+{% endmacro head %}

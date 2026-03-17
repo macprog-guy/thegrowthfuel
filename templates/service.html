@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Split layout ──────────────────────────────────── #}
+<section class="hero-split">
+  <div class="hero-split-content" style="padding-left: max(var(--space-12), calc((100% - 540px) / 2));">
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ page.extra.eyebrow | default(value="Coaching Services") }}</p>
+    <h1 class="hero-split-title">{{ page.title }}</h1>
+    {% if page.extra.subtitle is defined %}
+    <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
+    {% endif %}
+    <div class="hero-actions">
+      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-split-image">
+    {% if page.extra.hero_image is defined %}
+    <img src="{{ page.extra.hero_image }}" alt="{{ page.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top center;">
+    {% else %}
+    <div class="hero-split-image-placeholder">{{ page.title }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── INTRO ────────────────────────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.intro_eyebrow | default(value="Overview") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ page.extra.intro_heading | default(value="Coaching tailored to your context") | safe }}</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start;" class="about-bio-grid">
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col1 | default(value="") }}</p>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col2 | default(value="") }}</p>
+    </div>
+  </div>
+</section>
+
+{# ── FEATURES — Cards ────────────────────────────────────── #}
+{% if page.extra.features is defined %}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.features_eyebrow | default(value="Focus Areas") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ page.extra.features_heading | default(value="What we work on together") | safe }}</h2>
+
+    <div class="card-grid">
+      {% for feature in page.extra.features %}
+      {% if loop.index0 % 3 == 0 %}
+        {% set_global icon_color = "purple" %}
+      {% elif loop.index0 % 3 == 1 %}
+        {% set_global icon_color = "orange" %}
+      {% else %}
+        {% set_global icon_color = "green" %}
+      {% endif %}
+      <div class="service-card">
+        {% if feature.icon is defined %}
+        <div class="service-card-icon service-card-icon-{{ icon_color }}">{{ feature.icon | safe }}</div>
+        <h3 class="service-card-title">{{ feature.title }}</h3>
+        {% if feature.description is defined %}
+        <p class="service-card-desc">{{ feature.description }}</p>
+        {% endif %}
+        {% else %}
+        <h3 class="service-card-title">{{ feature }}</h3>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── WHAT IT LOOKS LIKE ──────────────────────────────────── #}
+{% if page.extra.process_items is defined %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;" class="about-bio-grid">
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.process_eyebrow | default(value="The Engagement") }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ page.extra.process_heading | default(value="What coaching looks like") | safe }}</h2>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.process_description | default(value="") }}</p>
+    </div>
+    <div>
+      {% for item in page.extra.process_items %}
+      <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-6); align-items: flex-start;">
+        <span style="flex-shrink: 0; width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--color-purple-lightest); color: var(--color-purple); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: var(--text-sm);">{{ loop.index }}</span>
+        <p style="font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600); padding-top: var(--space-1);">{{ item }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── WHO THIS IS FOR ─────────────────────────────────────── #}
+{% if page.extra.audience is defined %}
+<section class="section-warm" style="padding: var(--space-16) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
+    <h3 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">Who this is for</h3>
+    <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); max-width: 700px; margin: 0 auto;">{{ page.extra.audience }}</p>
+  </div>
+</section>
+{% endif %}
+
+{# ── TESTIMONIAL (optional) ────────────────────────────────── #}
+{% if page.extra.testimonial_quote is defined %}
+<section class="section-alt" style="padding: var(--space-20) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-12); align-items: center;" class="about-bio-grid">
+    <div>
+      <p style="font-weight: 600; color: var(--color-gray-800); font-size: var(--text-lg);">{{ page.extra.testimonial_name }}</p>
+      {% if page.extra.testimonial_role is defined %}
+      <p style="color: var(--color-gray-500); font-size: var(--text-sm);">{{ page.extra.testimonial_role }}</p>
+      {% endif %}
+    </div>
+    <blockquote style="font-family: var(--font-heading); font-size: var(--text-2xl); font-style: italic; line-height: 1.5; color: var(--color-purple); padding-left: var(--space-8); border-left: 3px solid var(--color-orange);">
+      "{{ page.extra.testimonial_quote }}"
+    </blockquote>
+  </div>
+</section>
+{% endif %}
+
+{# ── CTA ────────────────────────────────────────────────── #}
+<section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">Ready to start the <em style="font-style: italic; color: var(--color-orange-light);">conversation</em>?</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">Book a free 30-minute consultation to explore how coaching can support your next chapter.</p>
+    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>
+{% endblock content %}

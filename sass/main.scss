@@ -1,0 +1,19 @@
+// ============================================================
+// THE GROWTH FUEL — Main Stylesheet
+// Imports all partials in the correct cascade order
+// ============================================================
+
+// 1. Design tokens (CSS custom properties)
+@import "variables";
+
+// 2. Reset / normalize
+@import "reset";
+
+// 3. Typography (headings, body, lead, blockquote, etc.)
+@import "typography";
+
+// 4. Layout (container, grids, sections, dividers, responsive)
+@import "layout";
+
+// 5. Components (buttons, nav, cards, form, footer, animations)
+@import "components";

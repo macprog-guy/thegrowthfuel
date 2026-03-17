@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Font Comparison — The Growth Fuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Vollkorn:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #41458E;
+    --purple-deeper: #252855;
+    --orange: #ED5E2D;
+    --orange-light: #FDEBE5;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+  body { font-family: 'Outfit', sans-serif; color: var(--gray-700); background: #F3F4F6; padding: 3rem 1.5rem; }
+
+  h1 { font-family: 'Outfit'; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
+  .page-title { font-family: 'Outfit'; font-size: 2rem; font-weight: 300; color: var(--gray-900); margin-bottom: 3rem; }
+
+  .font-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .font-card-header {
+    padding: 1.25rem 2rem;
+    background: #F9FAFB;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .font-card-name {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--gray-900);
+  }
+
+  .font-card-meta {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+  }
+
+  .font-card-body {
+    padding: 2.5rem;
+  }
+
+  .font-card-hero {
+    background: linear-gradient(135deg, var(--purple-deeper), var(--purple));
+    color: white;
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .font-card-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(237,94,45,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .font-hero-eyebrow {
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+
+  .font-hero-title {
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .font-hero-title em {
+    font-style: italic;
+    color: var(--orange-light);
+  }
+
+  .font-hero-sub {
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 45ch;
+    line-height: 1.6;
+  }
+
+  .font-samples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .font-sample-group h3 {
+    font-family: 'Outfit';
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 0.75rem;
+  }
+
+  .font-sample-heading {
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .font-sample-heading-italic {
+    font-size: 1.875rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--purple);
+    margin-bottom: 0.5rem;
+  }
+
+  .font-sample-subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--gray-900);
+  }
+
+  .font-blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--purple);
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--orange);
+    margin-top: 0.5rem;
+  }
+
+  .current-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--orange-light);
+    color: var(--orange);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    margin-left: 0.75rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Font Comparison</h1>
+<p class="page-title">Heading font alternatives for The Growth Fuel</p>
+
+<!-- Option A: Lora -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">A — Lora</span>
+    <span class="font-card-meta">Warm calligraphic serif · approachable + refined</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Lora', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Lora', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Lora', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Lora', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Lora', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option B: Vollkorn -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">B — Vollkorn</span>
+    <span class="font-card-meta">Warm bookish serif · distinctive character + personality</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Vollkorn', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Vollkorn', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Vollkorn', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Vollkorn', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Vollkorn', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option C: Crimson Pro -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">C — Crimson Pro</span>
+    <span class="font-card-meta">Book-quality old-style · refined + literary</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Crimson Pro', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Crimson Pro', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Crimson Pro', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Crimson Pro', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Crimson Pro', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option D: Source Serif 4 -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">D — Source Serif 4</span>
+    <span class="font-card-meta">Adobe's open-source transitional · scholarly + authoritative</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Source Serif 4', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Source Serif 4', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Source Serif 4', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Source Serif 4', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Source Serif 4', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option C: Libre Baskerville -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">E — Libre Baskerville</span>
+    <span class="font-card-meta">Classic transitional serif · timeless elegance</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Libre Baskerville', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Libre Baskerville', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Libre Baskerville', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Libre Baskerville', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Libre Baskerville', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option F: Literata -->
+<div class="font-card">
+  <div class="font-card-header">
+    <span class="font-card-name">F — Literata</span>
+    <span class="font-card-meta">Modern screen-optimized serif · polished + contemporary</span>
+  </div>
+  <div class="font-card-body">
+    <div class="font-card-hero">
+      <p class="font-hero-eyebrow">Executive Coaching</p>
+      <h2 class="font-hero-title" style="font-family: 'Literata', serif;">Bespoke coaching to unlock your <em>career</em></h2>
+      <p class="font-hero-sub">For established leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world.</p>
+    </div>
+    <div class="font-samples">
+      <div class="font-sample-group">
+        <h3>Headings</h3>
+        <p class="font-sample-heading" style="font-family: 'Literata', serif;">Navigate complexity with confidence</p>
+        <p class="font-sample-subheading" style="font-family: 'Literata', serif;">Leadership that holds under pressure</p>
+      </div>
+      <div class="font-sample-group">
+        <h3>Italic &amp; Blockquote</h3>
+        <p class="font-sample-heading-italic" style="font-family: 'Literata', serif;">Clarity, impact &amp; transformation</p>
+        <blockquote class="font-blockquote" style="font-family: 'Literata', serif;">"Her coaching is sharp and refreshingly honest."</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

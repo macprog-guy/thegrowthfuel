@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO ───────────────────────────────────────────────────── #}
+<section class="hero-split">
+  <div class="hero-split-content">
+    {% if section.extra.eyebrow is defined %}
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ section.extra.eyebrow }}</p>
+    {% endif %}
+    <h1 class="hero-split-title">{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="hero-split-desc">{{ section.description }}</p>
+    {% endif %}
+  </div>
+  <div class="hero-split-image">
+    {% if section.extra.hero_image is defined %}
+    <img src="{{ section.extra.hero_image }}" alt="{{ section.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+    {% else %}
+    <div class="hero-split-image-placeholder">{{ section.title }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── SECTION CONTENT (if any) ───────────────────────────────── #}
+{% if section.content %}
+<section style="padding: var(--space-16) var(--space-6);">
+  <div class="prose" style="max-width: var(--container-max); margin: 0 auto;">
+    {{ section.content | safe }}
+  </div>
+</section>
+{% endif %}
+
+{# ── CHILD PAGES ─────────────────────────────────────────────── #}
+{% if section.pages %}
+<section style="padding: var(--space-16) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <div class="card-grid">
+      {% for page in section.pages %}
+      <div class="service-card">
+        {% if page.extra.icon_color is defined %}
+        <div class="service-card-icon service-card-icon-{{ page.extra.icon_color }}">
+          {% if page.extra.icon is defined %}{{ page.extra.icon | safe }}{% else %}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          {% endif %}
+        </div>
+        {% endif %}
+        <h3 class="service-card-title">{{ page.title }}</h3>
+        {% if page.description %}
+        <p class="service-card-desc">{{ page.description }}</p>
+        {% endif %}
+        <a href="{{ page.permalink }}" class="service-card-link">Read more <span class="btn-arrow">&rarr;</span></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── SUBSECTIONS ─────────────────────────────────────────────── #}
+{% if section.subsections %}
+<section style="padding: 0 var(--space-6) var(--space-16);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <div class="card-grid">
+      {% for subsection_path in section.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        <div class="service-card">
+          <h3 class="service-card-title">{{ subsection.title }}</h3>
+          {% if subsection.description %}
+          <p class="service-card-desc">{{ subsection.description }}</p>
+          {% endif %}
+          <a href="{{ subsection.permalink }}" class="service-card-link">Explore <span class="btn-arrow">&rarr;</span></a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock content %}

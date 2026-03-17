@@ -1,0 +1,152 @@
+{%- import "macros/seo.html" as seo -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {#- SEO — pages can override by defining {% block seo %} -#}
+  {% block seo %}
+    {{ seo::head() }}
+  {% endblock seo %}
+
+  {#- Fonts -#}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  {#- Compiled stylesheet (Zola compiles sass/main.scss -> /main.css) -#}
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+
+  {#- Favicon -#}
+  <link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="any">
+  <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
+
+  {% block head_extra %}{% endblock head_extra %}
+</head>
+
+<body>
+  {#- Navigation -#}
+  {% include "macros/nav.html" %}
+
+  {#- Page content -#}
+  <main id="main-content">
+    {% block content %}{% endblock content %}
+  </main>
+
+  {#- Footer -#}
+  {% include "macros/footer.html" %}
+
+  {#- Calendly widget -#}
+  <script src="https://assets.calendly.com/assets/external/widget.js" defer></script>
+
+  {#- Site-wide inline JS: mobile nav, sticky header, smooth scroll, contact form -#}
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Mobile nav toggle ─────────────────────────────────── */
+    var toggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('nav-links--open');
+        document.body.classList.toggle('nav-open');
+      });
+    }
+
+    /* ── Sticky header (compact on scroll) ─────────────────── */
+    var header = document.getElementById('site-header');
+    if (header) {
+      var scrollThreshold = 40;
+      var ticking = false;
+
+      function onScroll() {
+        if (window.scrollY > scrollThreshold) {
+          header.classList.add('site-header--scrolled');
+        } else {
+          header.classList.remove('site-header--scrolled');
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+    }
+
+    /* ── Smooth scroll for anchor links ────────────────────── */
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      var id = link.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + id);
+      }
+    });
+
+    /* ── Contact form submission via Workers API ───────────── */
+    var form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var submitBtn = form.querySelector('[type="submit"]');
+        var feedback = document.getElementById('form-feedback');
+        var btnText = submitBtn ? submitBtn.textContent : '';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending\u2026';
+        }
+
+        var data = new FormData(form);
+        var payload = {};
+        data.forEach(function (value, key) { payload[key] = value; });
+
+        fetch('{{ config.extra.contact_api_url }}', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Server responded with ' + res.status);
+          return res.json();
+        })
+        .then(function () {
+          form.reset();
+          if (feedback) {
+            feedback.textContent = 'Thank you! Your message has been sent.';
+            feedback.className = 'form-feedback form-feedback--success';
+          }
+        })
+        .catch(function () {
+          if (feedback) {
+            feedback.textContent = 'Something went wrong. Please try again or email us directly.';
+            feedback.className = 'form-feedback form-feedback--error';
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = btnText;
+          }
+        });
+      });
+    }
+  })();
+  </script>
+
+  {% block scripts_extra %}{% endblock scripts_extra %}
+</body>
+</html>

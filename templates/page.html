@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Split layout ───────────────────────────────────── #}
+<section class="hero-split">
+  <div class="hero-split-content">
+    {% if page.extra.eyebrow is defined %}
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ page.extra.eyebrow }}</p>
+    {% endif %}
+    <h1 class="hero-split-title">{{ page.title }}</h1>
+    {% if page.extra.subtitle is defined %}
+    <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
+    {% endif %}
+    {% if page.extra.cta_text is defined and page.extra.cta_url is defined %}
+    <div class="hero-actions">
+      <a href="{{ page.extra.cta_url }}" class="btn btn-primary">
+        {{ page.extra.cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+  <div class="hero-split-image">
+    {% if page.extra.hero_image is defined %}
+    <img src="{{ page.extra.hero_image }}" alt="{{ page.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+    {% else %}
+    <div class="hero-split-image-placeholder">{{ page.title }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── PAGE BODY ──────────────────────────────────────────────── #}
+{% if page.content %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div class="prose" style="max-width: var(--container-max); margin: 0 auto;">
+    {{ page.content | safe }}
+  </div>
+</section>
+{% endif %}
+{% endblock content %}

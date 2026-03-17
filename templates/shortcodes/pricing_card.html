@@ -1,0 +1,30 @@
+{#-
+  Pricing Card Shortcode
+  Params:
+    name         — package name (required)
+    duration     — e.g. "6 months" (required)
+    price        — e.g. "CHF 4,500" (required)
+    price_suffix — e.g. "/program" (optional)
+    features     — comma-separated list (required)
+    cta_text     — button label (required)
+    cta_url      — button href (required)
+    popular      — true | false; highlight card (default: false)
+-#}
+{%- set is_popular = popular | default(value=false) -%}
+<div class="pricing-card{% if is_popular == "true" or is_popular == true %} pricing-card-popular{% endif %}">
+  {% if is_popular == "true" or is_popular == true %}
+  <div class="pricing-badge">Most Popular</div>
+  {% endif %}
+  <div class="pricing-name">{{ name }}</div>
+  <div class="pricing-duration">{{ duration }}</div>
+  <div class="pricing-price">{{ price }}{% if price_suffix is defined and price_suffix %} <span>{{ price_suffix }}</span>{% endif %}</div>
+  <ul class="pricing-features">
+    {% for feature in features | split(pat=",") %}
+    <li class="pricing-feature">
+      <span class="pricing-check">&check;</span>
+      <span>{{ feature | trim }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ cta_url }}" class="btn btn-{% if is_popular == 'true' or is_popular == true %}primary{% else %}secondary{% endif %} btn-lg">{{ cta_text }}</a>
+</div>

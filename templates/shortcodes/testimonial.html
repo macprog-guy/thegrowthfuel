@@ -1,0 +1,22 @@
+{#-
+  Testimonial Card Shortcode
+  Params:
+    quote    — the testimonial text (required)
+    name     — person's name (required)
+    role     — job title (required)
+    company  — company name (optional)
+    initials — avatar initials, e.g. "JS" (required)
+    featured — true | false; uses purple bg variant (default: false)
+-#}
+{%- set is_featured = featured | default(value=false) -%}
+<div class="testimonial-card{% if is_featured == "true" or is_featured == true %} testimonial-featured{% endif %}">
+  <div class="testimonial-quote-mark">&ldquo;</div>
+  <p class="testimonial-text">{{ quote }}</p>
+  <div class="testimonial-author">
+    <div class="testimonial-avatar">{{ initials }}</div>
+    <div>
+      <div class="testimonial-name">{{ name }}</div>
+      <div class="testimonial-role">{{ role }}{% if company is defined and company %} &middot; {{ company }}{% endif %}</div>
+    </div>
+  </div>
+</div>

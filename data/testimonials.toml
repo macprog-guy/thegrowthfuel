@@ -1,0 +1,39 @@
+[[testimonials]]
+quote = "Working with Laurence was a turning point in my career. I came in feeling stuck after a reorganisation left me in a role that didn't fit. Within three months, I had a clear strategy and the confidence to pursue a director-level position — which I landed six months later."
+name = "Catherine M."
+title = "Director of Strategy"
+company = "International Organisation, Geneva"
+initials = "CM"
+featured = true
+
+[[testimonials]]
+quote = "Laurence has a rare ability to cut through the noise and help you see what actually matters. Her coaching helped me navigate a complex board dynamic and emerge as a stronger, more authentic leader. I recommend her without reservation."
+name = "James R."
+title = "Chief Operating Officer"
+company = "Global Financial Services Firm"
+initials = "JR"
+featured = false
+
+[[testimonials]]
+quote = "I was sceptical about coaching — I thought it was for people who had problems. Laurence showed me it's for people who want to be intentional about their next chapter. The Reignite programme gave me clarity I hadn't felt in years."
+name = "Amara K."
+title = "Senior Vice President"
+company = "Fortune 100 Technology Company"
+initials = "AK"
+featured = false
+
+[[testimonials]]
+quote = "What sets Laurence apart is her global perspective and her rigour. She doesn't offer platitudes — she asks the questions that matter and holds you accountable to your own ambitions. My leadership has fundamentally shifted since working with her."
+name = "Thomas L."
+title = "Head of Division"
+company = "European Government Agency"
+initials = "TL"
+featured = false
+
+[[testimonials]]
+quote = "Laurence helped me transition from a technical expert role into general management. Her coaching was practical, challenging, and deeply supportive. I felt genuinely seen — not as a title, but as a whole person navigating a complex career."
+name = "Priya S."
+title = "Managing Director"
+company = "Management Consulting Firm"
+initials = "PS"
+featured = false

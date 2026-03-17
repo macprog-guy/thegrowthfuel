@@ -1,0 +1,12 @@
+{#-
+  Highlight Box Shortcode
+  Params:
+    title — box heading (optional)
+  Body:  markdown content rendered inside the box
+-#}
+<div class="highlight-box" style="border-left: 4px solid var(--color-orange); background: var(--color-orange-lightest); border-radius: var(--radius-lg); padding: var(--space-8) var(--space-10); margin: var(--space-8) 0;">
+  {% if title is defined and title %}
+  <h4 style="font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ title }}</h4>
+  {% endif %}
+  <div class="prose" style="color: var(--color-gray-700); line-height: 1.7;">{{ body | safe }}</div>
+</div>

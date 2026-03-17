@@ -1,0 +1,17 @@
+[[services]]
+name = "Individual Coaching"
+description = "One-on-one executive coaching tailored to your specific leadership challenges, career transitions, and growth ambitions. For senior leaders in both the public and private sectors."
+icon_color = "emerald"
+link_url = "/services/private-sector/"
+
+[[services]]
+name = "Leadership Networks"
+description = "Curated peer learning circles and leadership communities that bring together senior professionals for structured reflection, honest feedback, and mutual growth."
+icon_color = "blue"
+link_url = "/programs/membership/"
+
+[[services]]
+name = "Corporate Programs"
+description = "Bespoke coaching engagements for organisations investing in their leadership pipeline. Designed in partnership with HR and senior sponsors to align with business priorities."
+icon_color = "amber"
+link_url = "/services/public-sector/"

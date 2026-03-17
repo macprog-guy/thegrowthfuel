@@ -1,0 +1,14 @@
+{#-
+  Calendly Popup Button Shortcode
+  Params:
+    url   — full Calendly event URL (required)
+    text  — button label (required)
+    style — primary | secondary (default: primary)
+  Requires the Calendly widget JS loaded in base.html.
+-#}
+{%- set btn_style = style | default(value="primary") -%}
+<a href="#"
+   class="btn btn-{{ btn_style }}"
+   onclick="Calendly.initPopupWidget({url: '{{ url }}'}); return false;">
+  {{ text }} <span class="btn-arrow">&rarr;</span>
+</a>

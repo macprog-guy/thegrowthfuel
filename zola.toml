@@ -1,0 +1,34 @@
+# The Growth Fuel — Zola Configuration
+base_url = "https://thegrowthfuel.com"
+title = "The Growth Fuel"
+description = "Bespoke coaching to unlock your career"
+compile_sass = true
+build_search_index = false
+minify_html = true
+generate_feeds = false
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+# Brand
+brand_name = "The Growth Fuel"
+tagline = "Bespoke coaching to unlock your career"
+legal_entity = "Rethink Performance Sàrl"
+
+# Contact
+contact_api_url = "https://api.thegrowthfuel.com/contact"
+notification_email = "laurence@thegrowthfuel.com"
+
+# Calendly event URLs (update with real Calendly slugs)
+calendly_base = "https://calendly.com/thegrowthfuel"
+calendly_free_consultation = "https://calendly.com/thegrowthfuel/free-consultation"
+calendly_prep_call = "https://calendly.com/thegrowthfuel/prep-call"
+calendly_1hr_coaching = "https://calendly.com/thegrowthfuel/1-hour-coaching"
+calendly_2hr_coaching = "https://calendly.com/thegrowthfuel/2-hour-coaching"
+calendly_wrap_up = "https://calendly.com/thegrowthfuel/wrap-up"
+
+# Social links
+linkedin_url = "https://www.linkedin.com/in/laurencemethot/"

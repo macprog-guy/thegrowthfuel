@@ -1,0 +1,17 @@
+{#-
+  CTA Button Shortcode
+  Params:
+    text     — button label (required)
+    url      — link href (required)
+    style    — primary | secondary | ghost (default: primary)
+    size     — sm | lg | (default: omitted for standard size)
+    new_tab  — true | false (default: false)
+-#}
+{%- set btn_style = style | default(value="primary") -%}
+{%- set btn_size = size | default(value="") -%}
+{%- set open_new = new_tab | default(value=false) -%}
+<a href="{{ url }}"
+   class="btn btn-{{ btn_style }}{% if btn_size %} btn-{{ btn_size }}{% endif %}"
+   {% if open_new == "true" or open_new == true %}target="_blank" rel="noopener noreferrer"{% endif %}>
+  {{ text }}{% if btn_style == "primary" or btn_style == "ghost" %} <span class="btn-arrow">&rarr;</span>{% endif %}
+</a>

@@ -1,0 +1,12 @@
+{#-
+  Stats Row Shortcode
+  Body: HTML content containing individual stat items.
+  Usage example (in markdown):
+    {% stats_row() %}
+      <div><div class="stat-number">20+</div><div class="stat-label">Years Experience</div></div>
+      <div><div class="stat-number">70+</div><div class="stat-label">Countries</div></div>
+    {% end %}
+-#}
+<div class="stats-row">
+  {{ body | safe }}
+</div>

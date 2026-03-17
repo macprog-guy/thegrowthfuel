@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Split layout with headshot ──────────────────────── #}
+<section class="hero-split"
+  style="grid-template-columns: 1fr 1fr; max-width: var(--container-max); margin: 0 auto; background: var(--color-white);">
+  <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
+    <p class="hero-eyebrow" style="color: var(--color-orange);">About</p>
+    <h1 class="hero-split-title">Hi! I'm Laurence Methot.</h1>
+    <p class="hero-split-desc">Leadership has evolved. Let's make sure you stay ahead.</p>
+    <div class="hero-actions">
+      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank"
+        rel="noopener noreferrer">
+        Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-split-image">
+    {% if section.extra.headshot is defined %}
+    <img src="{{ section.extra.headshot }}" alt="Laurence Methot"
+      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top center;">
+    {% else %}
+    <div class="hero-split-image-placeholder">Photo Placeholder</div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── THE CHALLENGE ────────────────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div
+    style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
+    class="about-bio-grid">
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Create a Healthier
+        Career</p>
+      <h2
+        style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
+        As an established leader, you worked hard to <em>get here.</em></h2>
+      <p
+        style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+        But leadership today isn't what it was five years ago. The game has changed — faster decisions, relentless
+        pressure, and expectations from all sides.
+      </p>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
+        The most successful leaders never go it alone. I guide driven and passionate leaders like you to create a better
+        career and life.
+      </p>
+    </div>
+    <div>
+      <div class="card-grid" style="grid-template-columns: 1fr; gap: var(--space-8);">
+        <div class="service-card"
+          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
+          <img src="/images/check-1.webp" alt="" aria-hidden="true"
+            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
+          <p class="service-card-desc" style="margin: 0;">Create and lead teams that are excited about the work they do
+          </p>
+        </div>
+        <div class="service-card"
+          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
+          <img src="/images/check-1.webp" alt="" aria-hidden="true"
+            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
+          <p class="service-card-desc" style="margin: 0;">Establish healthy boundaries &amp; be respected as a leader
+          </p>
+        </div>
+        <div class="service-card"
+          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
+          <img src="/images/check-1.webp" alt="" aria-hidden="true"
+            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
+          <p class="service-card-desc" style="margin: 0;">Strategically navigate transitions</p>
+        </div>
+        <div class="service-card"
+          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
+          <img src="/images/check-1.webp" alt="" aria-hidden="true"
+            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
+          <p class="service-card-desc" style="margin: 0;">Make smart, high-pressure decisions when it matters most</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── MEET LAURENCE ───────────────────────────────────────── #}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Meet Laurence</p>
+    <h2
+      style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
+      Ph.D., Certified Professional <em>Coach</em></h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
+      class="about-bio-grid">
+      <div>
+        <p
+          style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+          For over 22 years, I've worked with leaders across Fortune 100 companies, SMEs, and the public sector,
+          navigating high-stakes environments in 70+ countries.
+        </p>
+        <p
+          style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+          I've guided leaders through mergers, acquisitions, and global transitions, maintaining momentum amid
+          uncertainty.
+        </p>
+        <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
+          Continuous improvement is key. So I work alongside top experts in psychology, NLP, strategy consulting, and
+          change management.
+        </p>
+      </div>
+      <div>
+        <div
+          style="background: var(--color-purple-lightest); border-radius: var(--radius-2xl); padding: var(--space-10);">
+          <h3
+            style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">
+            What does my PhD and PCC add to my work today?</h3>
+          <p
+            style="font-size: var(--text-base); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
+            The curiosity, openness, and ability to identify differences and similarities, challenge assumptions, and
+            connect ideas and people across fields and cultures enable me to support the leader's deep need to address
+            constant pressure and rising demands.
+          </p>
+          <p
+            style="font-size: var(--text-lg); font-weight: 500; color: var(--color-purple); font-family: var(--font-heading); font-style: italic;">
+            Clients describe me as sharp, genuine, and compassionate.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── FAQ ─────────────────────────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">FAQ</p>
+    <h2
+      style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
+      Common <em>questions</em></h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);" class="about-bio-grid">
+      <div class="service-card">
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">How does the
+          one-on-one work?</h3>
+        <p class="service-card-desc">We start with you — understanding your challenges, goals, and leadership style.
+          Together, we'll co-create a personalised plan that evolves as you do. Forget one-size-fits-all solutions. This
+          is a tailored approach designed to meet you where you are and take you where you want to go.</p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">How long do
+          clients typically sign up for?</h3>
+        <p class="service-card-desc">A focused 2.5-hour session helps identify a specific challenge you've overlooked,
+          enabling you to tackle it with immediate, actionable solutions. For long-term progress, a 3 to 6-month
+          framework addresses broader leadership milestones — with a key milestone at 4 weeks to decide next steps.</p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">What results
+          can I expect?</h3>
+        <p class="service-card-desc">Clients seamlessly transition into new leadership roles, lead through challenging
+          transitions or difficult conversations, and navigate major life changes — such as returning from parental
+          leave or recovering from burnout.</p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">I don't have
+          much time. Can it still work?</h3>
+        <p class="service-card-desc">Coaching integrates into your busy schedule. With one-hour sessions every second
+          week, you'll apply insights in real time. This keeps the process light on your calendar but powerful in
+          impact.</p>
+      </div>
+
+      <div class="service-card" style="grid-column: span 2;">
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">What type of
+          clients do you work with?</h3>
+        <p class="service-card-desc">Senior leaders across industries, including pharmaceuticals, finance, legal,
+          consultancy, start-ups, and Fortune 100 companies. If you're a driven leader ready to grow and thrive, we
+          could be a great match. I always set up a free discovery call first so we can see the fit and decide — plus
+          there are Go/No-Go milestones to give you flexibility and the guarantee that you can choose what comes next.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── TESTIMONIAL ─────────────────────────────────────────── #}
+<section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+    <blockquote
+      style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
+      <img src="/images/big-quote.svg" alt="" aria-hidden="true"
+        style="width: 48px; height: auto; opacity: 0.3; margin: 0 auto var(--space-4); display: block;">
+      After leading in C-suite positions, I thought I knew it all. A very challenging work situation showed me otherwise
+      and Laurence helped me. Consequently, my sleep, my performance, and happiness at work have improved tremendously.
+    </blockquote>
+    <p style="font-weight: 600; color: var(--color-white); font-size: var(--text-lg);">Christian Loyer</p>
+    <p style="color: var(--color-purple-light); font-size: var(--text-base);">VP, i-Nexus &middot; London</p>
+  </div>
+</section>
+
+{# ── THE LEADERSHIP COLLECTIVE ───────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div
+    style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-16); align-items: center;"
+    class="about-bio-grid">
+    <div style="border-radius: var(--radius-2xl); overflow: hidden;">
+      <img src="/images/networking-opportunities.avif" alt="The Leadership Collective"
+        style="width: 60%; height: auto; display: block; float: right;">
+    </div>
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Group Coaching</p>
+      <h2
+        style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
+        Curated and practical insights on leadership, <em>unpacked</em> for you</h2>
+      <p
+        style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
+        Join us for our monthly sessions with a meaningful multi-continental network to encourage groupthink, support,
+        and raise your accountability with your peers.
+      </p>
+      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank"
+        rel="noopener noreferrer">
+        Inquire to Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ── CTA ────────────────────────────────────────────────────── #}
+<section class="section-warm" style="padding: var(--space-20) var(--space-8); text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p
+      style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-4);">
+      The Most Successful Leaders Never Go It Alone</p>
+    <h2
+      style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">
+      Get the bespoke coaching to unlock your <em>career</em></h2>
+    <p
+      style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-10); line-height: 1.7;">
+      Curious to hear more and see if there's a fit?</p>
+    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank"
+      rel="noopener noreferrer">
+      Grab Some Time On My Calendar <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>
+{% endblock content %}
