@@ -3,17 +3,20 @@
 // Imports all partials in the correct cascade order
 // ============================================================
 
-// 1. Design tokens (CSS custom properties)
+// 1. Self-hosted font faces (must precede all usage)
+@import "fonts";
+
+// 2. Design tokens (CSS custom properties)
 @import "variables";
 
-// 2. Reset / normalize
+// 3. Reset / normalize
 @import "reset";
 
-// 3. Typography (headings, body, lead, blockquote, etc.)
+// 4. Typography (headings, body, lead, blockquote, etc.)
 @import "typography";
 
-// 4. Layout (container, grids, sections, dividers, responsive)
+// 5. Layout (container, grids, sections, dividers, responsive)
 @import "layout";
 
-// 5. Components (buttons, nav, cards, form, footer, animations)
+// 6. Components (buttons, nav, cards, form, footer, animations)
 @import "components";

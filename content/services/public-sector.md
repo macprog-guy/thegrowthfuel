@@ -2,12 +2,26 @@
 title = "Public Sector"
 description = "Coaching and team support for leaders in public service, international organisations, and government agencies."
 weight = 1
-template = "service.html"
+template = "service-showcase.html"
 
 [extra]
 eyebrow = "Public Sector"
 subtitle = "Addressing the team's journey is vital to having a thriving public service that serves the community at its best."
-hero_image = "/images/lauren-sit-blue-chair2.avif"
+hero_image = "/images/laurence-big-smile-black-suit.webp"
+pull_quote = "Nobody is at ease with disruption, but the only healthy way forward is to face it with the best tools available."
+
+[[extra.stats]]
+number = "Since 2006"
+label = "Researching & Coaching"
+[[extra.stats]]
+number = "70+"
+label = "Countries"
+[[extra.stats]]
+number = "4"
+label = "Languages"
+[[extra.stats]]
+number = "Fortune 100"
+label = "Client Portfolio"
 
 intro_eyebrow = "The Reality"
 intro_heading = "The public sector is not immune to <em>disruption</em>"
@@ -50,4 +64,5 @@ audience = "Leaders and teams in public service, international organisations, an
 
 testimonial_quote = "Laurence intervened fast… The results came out very quickly: combining individual coaching and collective work made a difference."
 testimonial_name = "Sandro Rosselet"
+testimonial_role = "Public Sector Leader"
 +++

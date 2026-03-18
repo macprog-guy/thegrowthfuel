@@ -39,7 +39,7 @@ make deploy-workers   # Build + deploy to Cloudflare Workers
 ## Design System
 
 - **Colors:** Purple primary (#41458E), Orange accent/CTA (#ED5E2D), Green secondary (#88C029), 9-step gray scale
-- **Fonts:** Lora (serif, headings), Outfit (sans-serif, body) via Google Fonts
+- **Fonts:** Lora (serif, headings), Outfit (sans-serif, body) — self-hosted WOFF2 variable fonts in `static/fonts/`
 - **Spacing:** 8px base unit scale
 - All tokens defined in `sass/_variables.scss`
 

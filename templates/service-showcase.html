@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Split layout ──────────────────────────────────── #}
+<section class="hero-split"
+  style="grid-template-columns: 1fr 1fr; max-width: var(--container-max); margin: 0 auto; background: var(--color-white);">
+  <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ page.extra.eyebrow | default(value="Coaching Services") }}</p>
+    <h1 class="hero-split-title">{{ page.title }}</h1>
+    {% if page.extra.subtitle is defined %}
+    <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
+    {% endif %}
+    <div class="hero-actions">
+      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-split-image">
+    {% if page.extra.hero_image is defined %}
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 48%; left: 50%; transform: translateX(-65%) rotate(-38deg); width: 80%; height: auto; z-index: 0;">
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 6%; left: 30%; transform: translateX(-35%) rotate(148deg); width: 94%; height: auto; z-index: 0;">
+    <img src="/images/hero-brushstroke.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%) rotate(-35deg); width: 140%; height: auto; z-index: 0;">
+    <img src="{{ page.extra.hero_image }}" alt="{{ page.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom center; z-index: 1;">
+    {% else %}
+    <div class="hero-split-image-placeholder">{{ page.title }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{# ── STATS STRIP ──────────────────────────────────────────── #}
+{% if page.extra.stats is defined %}
+<section class="stats-strip">
+  <div class="stats-strip-inner">
+    {% for stat in page.extra.stats %}
+    <div class="stats-strip-item">
+      <span class="stats-strip-number">{{ stat.number }}</span>
+      <span class="stats-strip-label">{{ stat.label }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ── THE REALITY (Intro) ─────────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.intro_eyebrow | default(value="Overview") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ page.extra.intro_heading | default(value="Coaching tailored to your context") | safe }}</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start;" class="about-bio-grid">
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col1 | default(value="") }}</p>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col2 | default(value="") }}</p>
+    </div>
+  </div>
+</section>
+
+{# ── PULL QUOTE ───────────────────────────────────────────── #}
+{% if page.extra.pull_quote is defined %}
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    <div class="pull-quote-line"></div>
+    <p class="pull-quote-text">"{{ page.extra.pull_quote }}"</p>
+  </div>
+</section>
+{% endif %}
+
+{# ── FEATURES — Cards ────────────────────────────────────── #}
+{% if page.extra.features is defined %}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.features_eyebrow | default(value="Focus Areas") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ page.extra.features_heading | default(value="What we work on together") | safe }}</h2>
+
+    <div class="card-grid card-grid-2">
+      {% for feature in page.extra.features %}
+      {% if loop.index0 % 3 == 0 %}
+        {% set_global icon_color = "purple" %}
+      {% elif loop.index0 % 3 == 1 %}
+        {% set_global icon_color = "orange" %}
+      {% else %}
+        {% set_global icon_color = "green" %}
+      {% endif %}
+      <div class="service-card">
+        {% if feature.icon is defined %}
+        <div class="service-card-icon service-card-icon-{{ icon_color }}">{{ feature.icon | safe }}</div>
+        <h3 class="service-card-title">{{ feature.title }}</h3>
+        {% if feature.description is defined %}
+        <p class="service-card-desc">{{ feature.description }}</p>
+        {% endif %}
+        {% else %}
+        <h3 class="service-card-title">{{ feature }}</h3>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── HOW IT WORKS ─────────────────────────────────────────── #}
+{% if page.extra.process_items is defined %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;" class="about-bio-grid">
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.process_eyebrow | default(value="The Engagement") }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ page.extra.process_heading | default(value="What coaching looks like") | safe }}</h2>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.process_description | default(value="") }}</p>
+    </div>
+    <div>
+      {% for item in page.extra.process_items %}
+      <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-6); align-items: flex-start;">
+        <span style="flex-shrink: 0; width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--color-purple-lightest); color: var(--color-purple); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: var(--text-sm);">{{ loop.index }}</span>
+        <p style="font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600); padding-top: var(--space-1);">{{ item }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── WHO THIS IS FOR ──────────────────────────────────────── #}
+{% if page.extra.audience is defined %}
+<section class="section-warm" style="padding: var(--space-16) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
+    <h3 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">Who this is for</h3>
+    <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); max-width: 700px; margin: 0 auto;">{{ page.extra.audience }}</p>
+  </div>
+</section>
+{% endif %}
+
+{# ── TESTIMONIAL ──────────────────────────────────────────── #}
+{% if page.extra.testimonial_quote is defined %}
+<section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+    <blockquote style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
+      <img src="/images/big-quote.svg" alt="" aria-hidden="true" width="120" height="120" loading="lazy"
+        style="width: 48px; height: auto; opacity: 0.5; margin: 0 auto var(--space-4); display: block;">
+      {{ page.extra.testimonial_quote }}
+    </blockquote>
+    <p style="font-weight: 600; color: var(--color-white); font-size: var(--text-lg);">{{ page.extra.testimonial_name }}</p>
+    {% if page.extra.testimonial_role is defined %}
+    <p style="color: var(--color-purple-light); font-size: var(--text-base);">{{ page.extra.testimonial_role }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{# ── CTA ──────────────────────────────────────────────────── #}
+<section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">Ready to start the <em style="font-style: italic; color: var(--color-orange-light);">conversation</em>?</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">Book a free 30-minute consultation to explore how coaching can support your next chapter.</p>
+    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>
+{% endblock content %}

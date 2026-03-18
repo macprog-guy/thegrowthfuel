@@ -2,12 +2,13 @@
 title = "Private Sector"
 description = "I support executives navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
 weight = 2
-template = "service.html"
+template = "service-showcase.html"
 
 [extra]
 eyebrow = "Private Sector"
 subtitle = "I support executives navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
-hero_image = "/images/laurence-sit-blue-chair.avif"
+hero_image = "/images/laurence-front-facing-black.avif"
+pull_quote = "Growth used to feel important but not urgent. Now, disruption forces every leader to rethink their approach."
 
 intro_eyebrow = "The Reality"
 intro_heading = "Growth used to feel important but not <em>urgent.</em>"
