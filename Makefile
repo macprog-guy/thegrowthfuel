@@ -20,10 +20,10 @@ clean:
 design-system:
 	open design-system/index.html
 
-# Run Workers backend locally (use in a separate terminal)
+# Run Workers locally (serves static site)
 dev-workers:
-	cd workers && wrangler dev
+	zola build && wrangler dev
 
-# Deploy Workers to Cloudflare
+# Deploy to Cloudflare Workers
 deploy-workers:
-	cd workers && wrangler deploy
+	zola build && wrangler deploy

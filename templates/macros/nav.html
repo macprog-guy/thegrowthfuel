@@ -3,28 +3,28 @@
 
 <header class="site-header" id="site-header">
   <nav class="nav" aria-label="Main navigation">
-    <a class="nav-logo" href="{{ config.base_url }}" aria-label="{{ config.extra.brand_name }} — Home">
+    <a class="nav-logo" href="/" aria-label="{{ config.extra.brand_name }} — Home">
       <img src="/images/logo.avif" alt="{{ config.extra.brand_name }}" class="nav-logo-img">
     </a>
 
     {#- Desktop links -#}
     <div class="nav-links" id="nav-links">
-      <a href="{{ config.base_url | safe }}"
+      <a href="/"
          class="nav-link{% if cp == '/' %} nav-link-active{% endif %}">Home</a>
 
-      <a href="{{ config.base_url ~ '/about/' | safe }}"
+      <a href="/about"
          class="nav-link{% if cp is starting_with('/about') %} nav-link-active{% endif %}">About</a>
 
-      <a href="{{ config.base_url ~ '/services/public-sector/' | safe }}"
+      <a href="/services/public-sector"
          class="nav-link{% if cp is starting_with('/services/public-sector') %} nav-link-active{% endif %}">Public Sector</a>
 
-      <a href="{{ config.base_url ~ '/services/private-sector/' | safe }}"
+      <a href="/services/private-sector"
          class="nav-link{% if cp is starting_with('/services/private-sector') %} nav-link-active{% endif %}">Private Sector</a>
 
-      <a href="{{ config.base_url ~ '/programs/' | safe }}"
+      <a href="/programs"
          class="nav-link{% if cp is starting_with('/programs') %} nav-link-active{% endif %}">Programs</a>
 
-      <a href="{{ config.base_url ~ '/contact/' | safe }}"
+      <a href="/contact"
          class="nav-link{% if cp is starting_with('/contact') %} nav-link-active{% endif %}">Contact</a>
 
       <span class="nav-cta">

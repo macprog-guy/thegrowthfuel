@@ -36,7 +36,7 @@
       <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-8); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
       {% endif %}
       <div class="hero-actions">
-        <a href="{{ page.permalink }}" class="btn btn-primary">
+        <a href="{{ page.path | trim_end_matches(pat="/") }}" class="btn btn-primary">
           Learn More <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
         <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
@@ -75,7 +75,7 @@
       <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-8); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
       {% endif %}
       <div class="hero-actions">
-        <a href="{{ page.permalink }}" class="btn btn-primary">
+        <a href="{{ page.path | trim_end_matches(pat="/") }}" class="btn btn-primary">
           Learn More <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
         <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">

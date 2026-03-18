@@ -4,10 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-The Growth Fuel — executive coaching website for Rethink Performance Sàrl, built with Zola (Rust-based static site generator) and Cloudflare Workers for the contact form API. Replaces a previous Wix site.
+The Growth Fuel — executive coaching website for Rethink Performance Sàrl, built with Zola (Rust-based static site generator) and deployed via Cloudflare Workers. Replaces a previous Wix site.
 
 **Live site:** thegrowthfuel.com
-**API endpoint:** api.thegrowthfuel.com/contact
 
 ## Build Commands
 
@@ -17,8 +16,8 @@ make build            # Production build to public/
 make preview          # Build + serve locally on port 8000
 make clean            # Remove public/
 make design-system    # Open design system reference in browser
-make dev-workers      # Run Cloudflare Workers locally (wrangler dev)
-make deploy-workers   # Deploy Workers to Cloudflare
+make dev-workers      # Build + serve via wrangler locally
+make deploy-workers   # Build + deploy to Cloudflare Workers
 ```
 
 ## Architecture
@@ -30,11 +29,12 @@ make deploy-workers   # Deploy Workers to Cloudflare
 - `sass/` — SCSS with design token system in `_variables.scss`. Main entry: `main.scss` imports partials in cascade order
 - `data/` — TOML data: `testimonials.toml` (client quotes), `services.toml` (service definitions)
 - `static/` — Images (AVIF/WebP/SVG), fonts
-- `workers/` — Cloudflare Workers backend for contact form email handling
+- `workers/` — Cloudflare Workers source (contact form backend — pending)
+- `wrangler.toml` — Cloudflare Workers deployment config (project root)
 - `design-system/` — Visual component reference and font comparison tool
 - `current-site/` — Reference text content from the old Wix site
 
-**Key config:** `zola.toml` holds site-wide settings including Calendly URLs, LinkedIn link, contact API endpoint, and brand entity name.
+**Key config:** `zola.toml` holds site-wide settings including Calendly URLs, LinkedIn link, contact API endpoint, and brand entity name. `wrangler.toml` configures Cloudflare Workers deployment with static asset serving.
 
 ## Design System
 

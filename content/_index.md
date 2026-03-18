@@ -12,5 +12,5 @@ hero_description = "How you lead today in high-stakes environments defines your 
 cta_primary_text = "Book a Free Consultation"
 cta_primary_url = "https://calendly.com/thegrowthfuel/free-consultation"
 cta_secondary_text = "Browse Services"
-cta_secondary_url = "/services/private-sector/"
+cta_secondary_url = "/services/private-sector"
 +++

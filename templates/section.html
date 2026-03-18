@@ -48,7 +48,7 @@
         {% if page.description %}
         <p class="service-card-desc">{{ page.description }}</p>
         {% endif %}
-        <a href="{{ page.permalink }}" class="service-card-link">Read more <span class="btn-arrow">&rarr;</span></a>
+        <a href="{{ page.path | trim_end_matches(pat="/") }}" class="service-card-link">Read more <span class="btn-arrow">&rarr;</span></a>
       </div>
       {% endfor %}
     </div>
@@ -68,7 +68,7 @@
           {% if subsection.description %}
           <p class="service-card-desc">{{ subsection.description }}</p>
           {% endif %}
-          <a href="{{ subsection.permalink }}" class="service-card-link">Explore <span class="btn-arrow">&rarr;</span></a>
+          <a href="{{ subsection.path | trim_end_matches(pat="/") }}" class="service-card-link">Explore <span class="btn-arrow">&rarr;</span></a>
         </div>
       {% endfor %}
     </div>

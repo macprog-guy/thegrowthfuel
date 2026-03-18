@@ -31,9 +31,9 @@
 
 {%- set canonical = url -%}
 {%- if not canonical and page is defined -%}
-  {%- set canonical = config.base_url ~ page.path -%}
+  {%- set canonical = config.base_url ~ page.path | trim_end_matches(pat="/") -%}
 {%- elif not canonical and section is defined -%}
-  {%- set canonical = config.base_url ~ section.path -%}
+  {%- set canonical = config.base_url ~ section.path | trim_end_matches(pat="/") -%}
 {%- elif not canonical -%}
   {%- set canonical = config.base_url -%}
 {%- endif -%}
