@@ -3,46 +3,46 @@
 {% block content %}
 {# ── HERO — Centered ────────────────────────────────────────── #}
 <section class="hero-centered">
-  <p class="hero-eyebrow" style="color: var(--color-orange);">Get in Touch</p>
+  <p class="hero-eyebrow" style="color: var(--color-orange);">{{ trans(key="form-get-in-touch", lang=lang) }}</p>
   <h1 class="hero-centered-title">{{ section.title }}</h1>
   {% if section.extra.subtitle is defined %}
   <p class="hero-centered-desc">{{ section.extra.subtitle }}</p>
   {% elif section.description %}
   <p class="hero-centered-desc">{{ section.description }}</p>
   {% else %}
-  <p class="hero-centered-desc">Have a question about coaching? Looking to explore your options? Drop us a message and we'll get back to you within 24 hours.</p>
+  <p class="hero-centered-desc">{{ trans(key="form-fallback-desc", lang=lang) }}</p>
   {% endif %}
 </section>
 
 {# ── CONTACT FORM ───────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: 560px; margin: 0 auto;">
-    <form id="contact-form" novalidate>
+    <form id="contact-form" novalidate data-sending="{{ trans(key="form-sending", lang=lang) }}" data-success="{{ trans(key="form-success", lang=lang) }}" data-error="{{ trans(key="form-error", lang=lang) }}">
       <div class="form-group">
-        <label class="form-label" for="contact-name">Full Name</label>
-        <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required>
+        <label class="form-label" for="contact-name">{{ trans(key="form-full-name", lang=lang) }}</label>
+        <input type="text" id="contact-name" name="name" class="form-input" placeholder="{{ trans(key="form-name-placeholder", lang=lang) }}" required>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="contact-email">Email Address</label>
-        <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required>
+        <label class="form-label" for="contact-email">{{ trans(key="form-email", lang=lang) }}</label>
+        <input type="email" id="contact-email" name="email" class="form-input" placeholder="{{ trans(key="form-email-placeholder", lang=lang) }}" required>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="contact-subject">Subject</label>
+        <label class="form-label" for="contact-subject">{{ trans(key="form-subject", lang=lang) }}</label>
         <select id="contact-subject" name="subject" class="form-input form-select" required>
-          <option value="">Select a topic&hellip;</option>
-          <option value="general">General Inquiry</option>
-          <option value="coaching">Coaching Services</option>
-          <option value="reignite">Reignite Program</option>
-          <option value="corporate">Corporate Partnership</option>
-          <option value="other">Other</option>
+          <option value="">{{ trans(key="form-select-topic", lang=lang) }}</option>
+          <option value="general">{{ trans(key="form-general", lang=lang) }}</option>
+          <option value="coaching">{{ trans(key="form-coaching", lang=lang) }}</option>
+          <option value="reignite">{{ trans(key="form-reignite", lang=lang) }}</option>
+          <option value="corporate">{{ trans(key="form-corporate", lang=lang) }}</option>
+          <option value="other">{{ trans(key="form-other", lang=lang) }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" class="form-input" placeholder="Tell us about your leadership goals..." rows="5" required></textarea>
+        <label class="form-label" for="contact-message">{{ trans(key="form-message", lang=lang) }}</label>
+        <textarea id="contact-message" name="message" class="form-input" placeholder="{{ trans(key="form-placeholder", lang=lang) }}" rows="5" required></textarea>
       </div>
 
       {# Honeypot — hidden from real users, catches bots #}
@@ -54,7 +54,7 @@
       <div id="form-feedback" class="form-feedback" role="alert"></div>
 
       <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: var(--space-4);">
-        Send Message <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        {{ trans(key="form-send", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </button>
     </form>
   </div>
@@ -63,9 +63,9 @@
 {# ── ALTERNATIVE CONTACT ───────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-16) var(--space-8); text-align: center;">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-6);">Prefer to schedule directly?</p>
+    <p style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ trans(key="form-prefer-direct", lang=lang) }}</p>
     <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
-      Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>
 </section>

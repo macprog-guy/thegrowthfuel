@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block content %}
+{# ── HERO — Split layout with brushstrokes ──────────────────── #}
+<section class="hero-split"
+  style="grid-template-columns: 1fr 1fr; max-width: var(--container-max); margin: 0 auto; background: var(--color-white);">
+  <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ page.extra.eyebrow | default(value="Programme") }}</p>
+    <h1 class="hero-split-title">{{ page.title }}</h1>
+    {% if page.extra.subtitle is defined %}
+    <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
+    {% endif %}
+    {% if page.extra.price_info is defined %}
+    <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-6); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
+    {% endif %}
+    <div class="hero-actions">
+      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-split-image">
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 48%; left: 50%; transform: translateX(-65%) rotate(-38deg); width: 80%; height: auto; z-index: 0;">
+    <img src="/images/hero-brushstroke-light.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 6%; left: 30%; transform: translateX(-35%) rotate(148deg); width: 94%; height: auto; z-index: 0;">
+    <img src="/images/hero-brushstroke.svg" alt="" aria-hidden="true" width="500" height="180"
+      style="position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%) rotate(-35deg); width: 140%; height: auto; z-index: 0;">
+    {% if page.extra.hero_image is defined %}
+    <img src="{{ page.extra.hero_image }}" alt="{{ page.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom center; z-index: 1;">
+    {% endif %}
+  </div>
+</section>
+
+{# ── INTRO ──────────────────────────────────────────────────── #}
+{% if page.extra.intro is defined %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.intro_eyebrow | default(value="Overview") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ page.extra.intro_heading | default(value=page.title) | safe }}</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start;" class="about-bio-grid">
+      {% for paragraph in page.extra.intro %}
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── PULL QUOTE ─────────────────────────────────────────────── #}
+{% if page.extra.pull_quote is defined %}
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    <div class="pull-quote-line"></div>
+    <p class="pull-quote-text">"{{ page.extra.pull_quote }}"</p>
+  </div>
+</section>
+{% endif %}
+
+{# ── WHAT'S INCLUDED — Cards ───────────────────────────────── #}
+{% if page.extra.includes is defined %}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.includes_eyebrow | default(value="What's Included") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ page.extra.includes_heading | default(value="Everything you need") | safe }}</h2>
+    {% if page.extra.includes_description is defined %}
+    <p style="font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 55ch;">{{ page.extra.includes_description }}</p>
+    {% else %}
+    <div style="margin-bottom: var(--space-12);"></div>
+    {% endif %}
+
+    <div class="card-grid card-grid-2">
+      {% for item in page.extra.includes %}
+      {% if loop.index0 % 3 == 0 %}
+        {% set_global icon_color = "purple" %}
+      {% elif loop.index0 % 3 == 1 %}
+        {% set_global icon_color = "orange" %}
+      {% else %}
+        {% set_global icon_color = "green" %}
+      {% endif %}
+      <div class="service-card" style="cursor: default;">
+        <div class="service-card-icon service-card-icon-{{ icon_color }}">
+          {% if item.icon is defined %}
+          {{ item.icon | safe }}
+          {% else %}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="service-card-title" style="font-size: var(--text-xl);">{{ item.title }}</h3>
+        {% if item.description is defined %}
+        <p class="service-card-desc">{{ item.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── HOW IT WORKS — Phases ─────────────────────────────────── #}
+{% if page.extra.phases is defined %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.phases_eyebrow | default(value="How It Works") }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ page.extra.phases_heading | default(value="Your journey") | safe }}</h2>
+
+    <div style="display: grid; grid-template-columns: repeat({{ page.extra.phases | length }}, 1fr); gap: var(--space-8);" class="about-bio-grid">
+      {% for phase in page.extra.phases %}
+      {% if loop.index0 % 3 == 0 %}
+        {% set_global phase_color = "purple" %}
+      {% elif loop.index0 % 3 == 1 %}
+        {% set_global phase_color = "orange" %}
+      {% else %}
+        {% set_global phase_color = "green" %}
+      {% endif %}
+      <div>
+        <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
+          <span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: var(--radius-full); background: var(--color-{{ phase_color }}-lightest); color: var(--color-{{ phase_color }}); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: var(--text-base); font-family: var(--font-heading);">{{ loop.index }}</span>
+          <div style="flex: 1; height: 2px; background: var(--color-gray-200);"></div>
+        </div>
+        <h3 style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-2);">{{ phase.title }}</h3>
+        {% if phase.weeks is defined %}
+        <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-{{ phase_color }}); margin-bottom: var(--space-4);">{{ phase.weeks }}</p>
+        {% endif %}
+        <p style="font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600);">{{ phase.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── WHO IT'S FOR ──────────────────────────────────────────── #}
+{% if page.extra.audience is defined %}
+<section class="section-warm" style="padding: var(--space-20) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-16); align-items: start;" class="about-bio-grid">
+      <div>
+        <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.audience_eyebrow | default(value="Who It's For") }}</p>
+        <h2 style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900);">{{ page.extra.audience_heading | default(value="Is this right for you?") | safe }}</h2>
+      </div>
+      <div>
+        {% for item in page.extra.audience %}
+        <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-5); align-items: flex-start;">
+          <span style="flex-shrink: 0; margin-top: 6px; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--color-orange);"></span>
+          <p style="font-size: var(--text-lg); line-height: 1.7; color: var(--color-gray-600);">{{ item }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── INVESTMENT ────────────────────────────────────────────── #}
+{% if page.extra.investment_text is defined %}
+<section style="padding: var(--space-20) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.investment_eyebrow | default(value="Investment") }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ page.extra.investment_heading | default(value="Your investment") | safe }}</h2>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">{{ page.extra.investment_text }}</p>
+      <div class="hero-actions">
+        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+    <div style="background: var(--color-purple-lightest); border-radius: var(--radius-2xl); padding: var(--space-12);">
+      {% if page.extra.price_highlight is defined %}
+      <p style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-purple); margin-bottom: var(--space-4);">{{ page.extra.price_highlight }}</p>
+      {% endif %}
+      {% if page.extra.price_info is defined %}
+      <p style="font-size: var(--text-base); color: var(--color-gray-600); line-height: 1.7;">{{ page.extra.price_info }}</p>
+      {% endif %}
+      {% if page.extra.price_note is defined %}
+      <p style="font-size: var(--text-sm); color: var(--color-gray-500); margin-top: var(--space-4); font-style: italic;">{{ page.extra.price_note }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── CTA ────────────────────────────────────────────────────── #}
+<section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ trans(key="service-ready", lang=lang) | safe }}</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ trans(key="service-ready-desc", lang=lang) }}</p>
+    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>
+{% endblock content %}

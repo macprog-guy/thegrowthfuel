@@ -1,6 +1,6 @@
 {%- import "macros/seo.html" as seo -%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,19 @@
   {% block seo %}
     {{ seo::head() }}
   {% endblock seo %}
+
+  {#- Hreflang alternate links for multilingual SEO -#}
+  {%- set cp = current_path | default(value="/") -%}
+  {%- if lang == "fr" -%}
+    {%- set en_path = cp | replace(from="/fr", to="") -%}
+    {%- if en_path == "" %}{%- set en_path = "/" -%}{%- endif -%}
+  {%- else -%}
+    {%- set en_path = cp -%}
+  {%- endif -%}
+  {%- set fr_path = "/fr" ~ en_path -%}
+  <link rel="alternate" hreflang="en" href="{{ config.base_url ~ en_path | trim_end_matches(pat="/") }}">
+  <link rel="alternate" hreflang="fr" href="{{ config.base_url ~ fr_path | trim_end_matches(pat="/") }}">
+  <link rel="alternate" hreflang="x-default" href="{{ config.base_url ~ en_path | trim_end_matches(pat="/") }}">
 
   {#- Font preloads (self-hosted, critical weights only) -#}
   <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -80,10 +93,13 @@
         var submitBtn = form.querySelector('[type="submit"]');
         var feedback = document.getElementById('form-feedback');
         var btnText = submitBtn ? submitBtn.textContent : '';
+        var sendingText = form.dataset.sending || 'Sending\u2026';
+        var successText = form.dataset.success || 'Thank you! Your message has been sent.';
+        var errorText = form.dataset.error || 'Something went wrong. Please try again or email us directly.';
 
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending\u2026';
+          submitBtn.textContent = sendingText;
         }
 
         var data = new FormData(form);
@@ -102,13 +118,13 @@
         .then(function () {
           form.reset();
           if (feedback) {
-            feedback.textContent = 'Thank you! Your message has been sent.';
+            feedback.textContent = successText;
             feedback.className = 'form-feedback form-feedback--success';
           }
         })
         .catch(function () {
           if (feedback) {
-            feedback.textContent = 'Something went wrong. Please try again or email us directly.';
+            feedback.textContent = errorText;
             feedback.className = 'form-feedback form-feedback--error';
           }
         })

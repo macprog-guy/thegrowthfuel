@@ -289,6 +289,34 @@
   margin-left: var(--space-4);
 }
 
+// Language switcher
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.nav-lang-active {
+  color: var(--color-purple);
+}
+
+.nav-lang-link {
+  color: var(--color-gray-400);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-orange);
+  }
+}
+
+.nav-lang-sep {
+  color: var(--color-gray-300);
+}
+
 // Mobile hamburger menu
 .nav-hamburger {
   width: 24px;
@@ -322,7 +350,7 @@
   padding-left: max(var(--space-8), calc((100vw - var(--container-max)) / 2 + var(--space-8)));
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
 
@@ -466,7 +494,7 @@
 
   em {
     font-style: italic;
-    color: var(--color-orange-light);
+    color: var(--color-orange);
   }
 }
 
@@ -593,7 +621,8 @@ section.hero-split {
 // ─── SERVICE CARDS ──────────────────────────────────────────
 
 .service-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--color-white);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-xl);
@@ -606,28 +635,13 @@ section.hero-split {
   cursor: pointer;
   box-shadow: var(--shadow-md);
 
-  // Top-border reveal animation
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color-purple);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition-slow);
-  }
+  border-bottom: 4px solid transparent;
+  transition: all var(--transition-base), border-color var(--transition-slow);
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-purple-lightest);
-
-    &::before {
-      transform: scaleX(1);
-    }
+    border-color: var(--color-purple-light);
   }
 }
 
@@ -687,6 +701,7 @@ section.hero-split {
   align-items: center;
   gap: var(--space-2);
   transition: gap var(--transition-base);
+  margin-top: auto;
 }
 
 .service-card:hover .service-card-link {
@@ -1197,6 +1212,7 @@ textarea.form-input {
 
   .hero-gradient {
     padding: var(--space-20) var(--space-6);
+    height: auto;
     min-height: 400px;
   }
 

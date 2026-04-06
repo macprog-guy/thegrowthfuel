@@ -5,14 +5,14 @@
 <section class="hero-split"
   style="grid-template-columns: 1fr 1fr; max-width: var(--container-max); margin: 0 auto; background: var(--color-white);">
   <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
-    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ page.extra.eyebrow | default(value="Coaching Services") }}</p>
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{% if page.extra.eyebrow is defined %}{{ page.extra.eyebrow }}{% else %}{{ trans(key="service-eyebrow-default", lang=lang) }}{% endif %}</p>
     <h1 class="hero-split-title">{{ page.title }}</h1>
     {% if page.extra.subtitle is defined %}
     <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
     {% endif %}
     <div class="hero-actions">
       <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-        Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -125,7 +125,7 @@
 {% if page.extra.audience is defined %}
 <section class="section-warm" style="padding: var(--space-16) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
-    <h3 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">Who this is for</h3>
+    <h3 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ trans(key="service-who-for", lang=lang) }}</h3>
     <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); max-width: 700px; margin: 0 auto;">{{ page.extra.audience }}</p>
   </div>
 </section>
@@ -151,10 +151,10 @@
 {# ── CTA ──────────────────────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
   <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
-    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">Ready to start the <em style="font-style: italic; color: var(--color-orange-light);">conversation</em>?</h2>
-    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">Book a free 30-minute consultation to explore how coaching can support your next chapter.</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ trans(key="service-ready", lang=lang) | safe }}</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ trans(key="service-ready-desc", lang=lang) }}</p>
     <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
-      Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>
 </section>

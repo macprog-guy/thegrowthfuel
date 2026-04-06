@@ -1,17 +1,23 @@
 [[services]]
 name = "Individual Coaching"
+name_fr = "Coaching Individuel"
 description = "One-on-one executive coaching tailored to your specific leadership challenges, career transitions, and growth ambitions. For senior leaders in both the public and private sectors."
+description_fr = "Coaching exécutif individuel adapté à vos défis de leadership, transitions de carrière et ambitions de croissance. Pour les cadres dirigeants des secteurs public et privé."
 icon_color = "emerald"
 link_url = "/services/private-sector/"
 
 [[services]]
 name = "Leadership Networks"
+name_fr = "Réseaux de Leadership"
 description = "Curated peer learning circles and leadership communities that bring together senior professionals for structured reflection, honest feedback, and mutual growth."
+description_fr = "Cercles d'apprentissage entre pairs et communautés de leadership réunissant des cadres supérieurs pour une réflexion structurée, un feedback honnête et une croissance mutuelle."
 icon_color = "blue"
 link_url = "/programs/membership/"
 
 [[services]]
 name = "Corporate Programs"
+name_fr = "Programmes Entreprise"
 description = "Bespoke coaching engagements for organisations investing in their leadership pipeline. Designed in partnership with HR and senior sponsors to align with business priorities."
+description_fr = "Engagements de coaching sur mesure pour les organisations qui investissent dans leur vivier de leaders. Conçus en partenariat avec les RH et les sponsors dirigeants pour s'aligner sur les priorités de l'entreprise."
 icon_color = "amber"
 link_url = "/services/public-sector/"

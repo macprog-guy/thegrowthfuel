@@ -7,7 +7,7 @@ template = "service-showcase.html"
 [extra]
 eyebrow = "Private Sector"
 subtitle = "I support executives navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
-hero_image = "/images/laurence-front-facing-black.avif"
+hero_image = "/images/laurence-dog.webp"
 pull_quote = "Growth used to feel important but not urgent. Now, disruption forces every leader to rethink their approach."
 
 intro_eyebrow = "The Reality"

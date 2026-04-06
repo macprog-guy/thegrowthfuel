@@ -1,39 +1,49 @@
 [[testimonials]]
 quote = "Working with Laurence was a turning point in my career. I came in feeling stuck after a reorganisation left me in a role that didn't fit. Within three months, I had a clear strategy and the confidence to pursue a director-level position — which I landed six months later."
+quote_fr = "Travailler avec Laurence a été un tournant dans ma carrière. Je me sentais bloquée après une réorganisation qui m'avait placée dans un rôle inadapté. En trois mois, j'avais une stratégie claire et la confiance nécessaire pour viser un poste de directrice — que j'ai décroché six mois plus tard."
 name = "Catherine M."
 title = "Director of Strategy"
+title_fr = "Directrice de la Stratégie"
 company = "International Organisation, Geneva"
 initials = "CM"
 featured = true
 
 [[testimonials]]
 quote = "Laurence has a rare ability to cut through the noise and help you see what actually matters. Her coaching helped me navigate a complex board dynamic and emerge as a stronger, more authentic leader. I recommend her without reservation."
+quote_fr = "Laurence a cette capacité rare de couper à travers le bruit et de vous aider à voir ce qui compte vraiment. Son coaching m'a aidé à naviguer une dynamique de conseil d'administration complexe et à en sortir comme un leader plus fort et plus authentique. Je la recommande sans réserve."
 name = "James R."
 title = "Chief Operating Officer"
+title_fr = "Directeur des Opérations"
 company = "Global Financial Services Firm"
 initials = "JR"
 featured = false
 
 [[testimonials]]
 quote = "I was sceptical about coaching — I thought it was for people who had problems. Laurence showed me it's for people who want to be intentional about their next chapter. The Reignite programme gave me clarity I hadn't felt in years."
+quote_fr = "J'étais sceptique vis-à-vis du coaching — je pensais que c'était pour les gens qui avaient des problèmes. Laurence m'a montré que c'est pour ceux qui veulent être intentionnels dans leur prochain chapitre. Le programme Reignite m'a apporté une clarté que je n'avais pas ressentie depuis des années."
 name = "Amara K."
 title = "Senior Vice President"
+title_fr = "Vice-Présidente Senior"
 company = "Fortune 100 Technology Company"
 initials = "AK"
 featured = false
 
 [[testimonials]]
 quote = "What sets Laurence apart is her global perspective and her rigour. She doesn't offer platitudes — she asks the questions that matter and holds you accountable to your own ambitions. My leadership has fundamentally shifted since working with her."
+quote_fr = "Ce qui distingue Laurence, c'est sa perspective internationale et sa rigueur. Elle ne propose pas de platitudes — elle pose les questions qui comptent et vous tient responsable de vos propres ambitions. Mon leadership a fondamentalement évolué depuis que je travaille avec elle."
 name = "Thomas L."
 title = "Head of Division"
+title_fr = "Chef de Division"
 company = "European Government Agency"
 initials = "TL"
 featured = false
 
 [[testimonials]]
 quote = "Laurence helped me transition from a technical expert role into general management. Her coaching was practical, challenging, and deeply supportive. I felt genuinely seen — not as a title, but as a whole person navigating a complex career."
+quote_fr = "Laurence m'a aidée à passer d'un rôle d'experte technique à la direction générale. Son coaching était pratique, stimulant et profondément bienveillant. Je me suis sentie véritablement vue — non pas comme un titre, mais comme une personne à part entière naviguant une carrière complexe."
 name = "Priya S."
 title = "Managing Director"
+title_fr = "Directrice Générale"
 company = "Management Consulting Firm"
 initials = "PS"
 featured = false

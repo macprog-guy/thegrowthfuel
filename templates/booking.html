@@ -8,14 +8,14 @@
 {% block content %}
 {# ── HERO — Centered ────────────────────────────────────────── #}
 <section class="hero-centered">
-  <p class="hero-eyebrow" style="color: var(--color-orange);">Book Online</p>
+  <p class="hero-eyebrow" style="color: var(--color-orange);">{{ trans(key="booking-eyebrow", lang=lang) }}</p>
   <h1 class="hero-centered-title">{{ section.title }}</h1>
   {% if section.extra.subtitle is defined %}
   <p class="hero-centered-desc">{{ section.extra.subtitle }}</p>
   {% elif section.description %}
   <p class="hero-centered-desc">{{ section.description }}</p>
   {% else %}
-  <p class="hero-centered-desc">Choose a session type below and pick a time that works for you. All sessions are conducted via video call.</p>
+  <p class="hero-centered-desc">{{ trans(key="booking-fallback-desc", lang=lang) }}</p>
   {% endif %}
 </section>
 
@@ -33,47 +33,47 @@
 {# ── BOOKING OPTIONS ────────────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
-    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">Other session <em>options</em></h2>
-    <p style="font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 50ch; margin-left: auto; margin-right: auto;">Already a client? Book your next session below.</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ trans(key="booking-other-options", lang=lang) }}</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 50ch; margin-left: auto; margin-right: auto;">{{ trans(key="booking-other-desc", lang=lang) }}</p>
 
     <div class="pricing-grid" style="text-align: left;">
       <div class="pricing-card">
-        <div class="pricing-name">Free Consultation</div>
-        <div class="pricing-duration">30 minutes</div>
-        <div class="pricing-price" style="color: var(--color-green);">Free</div>
+        <div class="pricing-name">{{ trans(key="booking-free-consultation", lang=lang) }}</div>
+        <div class="pricing-duration">{{ trans(key="booking-30-min", lang=lang) }}</div>
+        <div class="pricing-price" style="color: var(--color-green);">{{ trans(key="booking-free", lang=lang) }}</div>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Introductory conversation</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Needs assessment</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Coaching fit evaluation</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-intro", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-needs", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-fit", lang=lang) }}</span></li>
         </ul>
-        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_free_consultation }}'}); return false;" style="width: 100%;">Book Free Call</a>
+        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_free_consultation }}'}); return false;" style="width: 100%;">{{ trans(key="cta-book-free-call", lang=lang) }}</a>
       </div>
 
       <div class="pricing-card pricing-card-popular">
-        <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-name">1-Hour Coaching</div>
-        <div class="pricing-duration">60 minutes</div>
+        <div class="pricing-badge">{{ trans(key="booking-most-popular", lang=lang) }}</div>
+        <div class="pricing-name">{{ trans(key="booking-1hr", lang=lang) }}</div>
+        <div class="pricing-duration">{{ trans(key="booking-60-min", lang=lang) }}</div>
         <div class="pricing-price">CHF 350 <span>/ session</span></div>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Deep-dive coaching session</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Personalized action plan</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Follow-up notes &amp; resources</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Email support between sessions</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-deep-dive", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-action-plan", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-followup", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-email-support", lang=lang) }}</span></li>
         </ul>
-        <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_1hr_coaching }}'}); return false;" style="width: 100%;">Book Session <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_1hr_coaching }}'}); return false;" style="width: 100%;">{{ trans(key="cta-book-session", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
       </div>
 
       <div class="pricing-card">
-        <div class="pricing-name">2-Hour Intensive</div>
-        <div class="pricing-duration">120 minutes</div>
+        <div class="pricing-name">{{ trans(key="booking-2hr", lang=lang) }}</div>
+        <div class="pricing-duration">{{ trans(key="booking-120-min", lang=lang) }}</div>
         <div class="pricing-price">CHF 600 <span>/ session</span></div>
         <ul class="pricing-features">
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Extended coaching deep-dive</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Comprehensive assessment</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Strategic career planning</span></li>
-          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>Priority email support</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-extended", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-assessment", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-strategic", lang=lang) }}</span></li>
+          <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-priority", lang=lang) }}</span></li>
         </ul>
-        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_2hr_coaching }}'}); return false;" style="width: 100%;">Book Intensive</a>
+        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_2hr_coaching }}'}); return false;" style="width: 100%;">{{ trans(key="cta-book-intensive", lang=lang) }}</a>
       </div>
     </div>
   </div>

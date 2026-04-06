@@ -1,38 +1,62 @@
 {# Site Navigation — sticky header, responsive with mobile hamburger #}
 {%- set cp = current_path | default(value="/") -%}
+{%- if lang != "en" -%}
+  {%- set cp_clean = cp | replace(from="/" ~ lang, to="") -%}
+  {%- if cp_clean == "" %}{%- set cp_clean = "/" -%}{%- endif -%}
+{%- else -%}
+  {%- set cp_clean = cp -%}
+{%- endif -%}
+{%- set lang_prefix = "" -%}
+{%- if lang != "en" -%}
+  {%- set lang_prefix = "/" ~ lang -%}
+{%- endif -%}
 
 <header class="site-header" id="site-header">
   <nav class="nav" aria-label="Main navigation">
-    <a class="nav-logo" href="/" aria-label="{{ config.extra.brand_name }} — Home">
+    <a class="nav-logo" href="{{ lang_prefix }}/" aria-label="{{ config.extra.brand_name }} — {{ trans(key="nav-home", lang=lang) }}">
       <img src="/images/logo.avif" alt="{{ config.extra.brand_name }}" class="nav-logo-img" width="206" height="156" fetchpriority="high">
     </a>
 
     {#- Desktop links -#}
     <div class="nav-links" id="nav-links">
-      <a href="/"
-         class="nav-link{% if cp == '/' %} nav-link-active{% endif %}">Home</a>
+      <a href="{{ lang_prefix }}/"
+         class="nav-link{% if cp_clean == '/' %} nav-link-active{% endif %}">{{ trans(key="nav-home", lang=lang) }}</a>
 
-      <a href="/about"
-         class="nav-link{% if cp is starting_with('/about') %} nav-link-active{% endif %}">About</a>
+      <a href="{{ lang_prefix }}/about"
+         class="nav-link{% if cp_clean is starting_with('/about') %} nav-link-active{% endif %}">{{ trans(key="nav-about", lang=lang) }}</a>
 
-      <a href="/services/public-sector"
-         class="nav-link{% if cp is starting_with('/services/public-sector') %} nav-link-active{% endif %}">Public Sector</a>
+      <a href="{{ lang_prefix }}/services/public-sector"
+         class="nav-link{% if cp_clean is starting_with('/services/public-sector') %} nav-link-active{% endif %}">{{ trans(key="nav-public-sector", lang=lang) }}</a>
 
-      <a href="/services/private-sector"
-         class="nav-link{% if cp is starting_with('/services/private-sector') %} nav-link-active{% endif %}">Private Sector</a>
+      <a href="{{ lang_prefix }}/services/private-sector"
+         class="nav-link{% if cp_clean is starting_with('/services/private-sector') %} nav-link-active{% endif %}">{{ trans(key="nav-private-sector", lang=lang) }}</a>
 
-      <a href="/programs"
-         class="nav-link{% if cp is starting_with('/programs') %} nav-link-active{% endif %}">Programs</a>
+      <a href="{{ lang_prefix }}/programs"
+         class="nav-link{% if cp_clean is starting_with('/programs') %} nav-link-active{% endif %}">{{ trans(key="nav-programs", lang=lang) }}</a>
 
-      <a href="/contact"
-         class="nav-link{% if cp is starting_with('/contact') %} nav-link-active{% endif %}">Contact</a>
+      <a href="{{ lang_prefix }}/contact"
+         class="nav-link{% if cp_clean is starting_with('/contact') %} nav-link-active{% endif %}">{{ trans(key="nav-contact", lang=lang) }}</a>
+
+      {#- Language switcher -#}
+      <span class="nav-lang">
+        {% if lang == "en" %}
+          <span class="nav-lang-active">EN</span>
+          <span class="nav-lang-sep">|</span>
+          <a href="/fr{{ cp_clean }}" class="nav-lang-link">FR</a>
+        {% else %}
+          <a href="{{ cp_clean }}" class="nav-lang-link">EN</a>
+          <span class="nav-lang-sep">|</span>
+          <span class="nav-lang-active">FR</span>
+        {% endif %}
+      </span>
 
       <span class="nav-cta">
         <a href="{{ config.extra.calendly_free_consultation }}"
            class="btn btn-primary btn-sm"
            target="_blank"
-           rel="noopener noreferrer">Book Now <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+           rel="noopener noreferrer">{{ trans(key="nav-book-now", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
       </span>
+
     </div>
 
     {#- Mobile hamburger -#}

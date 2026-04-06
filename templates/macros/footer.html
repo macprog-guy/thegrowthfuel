@@ -1,4 +1,9 @@
 {# Site Footer — multi-column with brand, nav, social, and legal #}
+{%- set lang_prefix = "" -%}
+{%- if lang != "en" -%}
+  {%- set lang_prefix = "/" ~ lang -%}
+{%- endif -%}
+
 <footer class="footer grain-overlay">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -7,40 +12,37 @@
         <div class="footer-brand-name">
           <img src="/images/logo-light.avif" alt="{{ config.extra.brand_name }}" width="198" height="152" loading="lazy" style="height: 40px; width: auto;">
         </div>
-        <p class="footer-brand-desc">{{ config.extra.tagline }}. For established leaders looking to adapt, thrive, and lead with confidence.</p>
+        <p class="footer-brand-desc">{{ trans(key="footer-brand-desc", lang=lang) }}</p>
       </div>
 
       {#- Services column -#}
       <div>
-        <h4 class="footer-col-title">Services</h4>
-        <a href="/services/#individual-coaching" class="footer-link">Individual Coaching</a>
-        <a href="/services/#leadership-networks" class="footer-link">Leadership Networks</a>
-        <a href="/services/#corporate-programs" class="footer-link">Corporate Programs</a>
-        <a href="/services/#public-sector" class="footer-link">Public Sector</a>
-        <a href="/services/#private-sector" class="footer-link">Private Sector</a>
+        <h4 class="footer-col-title">{{ trans(key="footer-services", lang=lang) }}</h4>
+        <a href="{{ lang_prefix }}/services/private-sector" class="footer-link">{{ trans(key="footer-individual-coaching", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/services/public-sector" class="footer-link">{{ trans(key="footer-public-sector", lang=lang) }}</a>
       </div>
 
       {#- Programs column -#}
       <div>
-        <h4 class="footer-col-title">Programs</h4>
-        <a href="/programs/#reignite" class="footer-link">Reignite</a>
-        <a href="/programs/#unlock-your-career" class="footer-link">Unlock Your Career</a>
-        <a href="/programs/#membership" class="footer-link">Membership</a>
-        <a href="{{ config.extra.calendly_free_consultation }}" class="footer-link" target="_blank" rel="noopener noreferrer">Book Online</a>
+        <h4 class="footer-col-title">{{ trans(key="footer-programs", lang=lang) }}</h4>
+        <a href="{{ lang_prefix }}/programs/reignite" class="footer-link">{{ trans(key="footer-reignite", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/programs/unlock-your-career" class="footer-link">{{ trans(key="footer-unlock-your-career", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/programs/membership" class="footer-link">{{ trans(key="footer-membership", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/book-online" class="footer-link">{{ trans(key="footer-book-online", lang=lang) }}</a>
       </div>
 
       {#- Company column -#}
       <div>
-        <h4 class="footer-col-title">Company</h4>
-        <a href="/about" class="footer-link">About Laurence</a>
-        <a href="/contact" class="footer-link">Contact</a>
-        <a href="/privacy" class="footer-link">Privacy Policy</a>
-        <a href="/cookies" class="footer-link">Cookie Policy</a>
+        <h4 class="footer-col-title">{{ trans(key="footer-company", lang=lang) }}</h4>
+        <a href="{{ lang_prefix }}/about" class="footer-link">{{ trans(key="footer-about-laurence", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/contact" class="footer-link">{{ trans(key="footer-contact", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/legal/privacy-policy" class="footer-link">{{ trans(key="footer-privacy", lang=lang) }}</a>
+        <a href="{{ lang_prefix }}/legal/cookie-policy" class="footer-link">{{ trans(key="footer-cookies", lang=lang) }}</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-legal">&copy; {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}, a trademark of {{ config.extra.legal_entity }}. All rights reserved.</p>
+      <p class="footer-legal">&copy; {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}, a trademark of {{ config.extra.legal_entity }}. {{ trans(key="footer-rights", lang=lang) }}</p>
       <div class="footer-socials">
         <a href="{{ config.extra.linkedin_url }}" class="footer-social" title="LinkedIn"
            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

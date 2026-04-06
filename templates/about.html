@@ -5,14 +5,13 @@
 <section class="hero-split"
   style="grid-template-columns: 1fr 1fr; max-width: var(--container-max); margin: 0 auto; background: var(--color-white);">
   <div class="hero-split-content" style="padding: var(--space-20) var(--space-8);">
-    <p class="hero-eyebrow" style="color: var(--color-orange);">About</p>
-    <h1 class="hero-split-title">Hi! I'm Laurence Methot.</h1>
-    <p class="hero-split-desc">After 22 years coaching leaders across 70+ countries, I've learned one thing — the right
-      conversation changes everything.</p>
+    <p class="hero-eyebrow" style="color: var(--color-orange);">{{ section.extra.hero_eyebrow }}</p>
+    <h1 class="hero-split-title">{{ section.extra.hero_title }}</h1>
+    <p class="hero-split-desc">{{ section.extra.hero_desc }}</p>
     <div class="hero-actions">
       <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank"
         rel="noopener noreferrer">
-        Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        {{ section.extra.hero_cta }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -27,10 +26,10 @@
     <img src="/images/hero-brushstroke.svg" alt="" aria-hidden="true" width="500" height="180"
       style="position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%) rotate(-35deg); width: 140%; height: auto; z-index: 0;">
     {% if section.extra.headshot is defined %}
-    <img src="{{ section.extra.headshot }}" alt="Laurence Methot" width="738" height="1086"
+    <img src="{{ section.extra.headshot }}" alt="{{ section.extra.hero_headshot_alt }}" width="738" height="1086"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top center; z-index: 1;">
     {% else %}
-    <div class="hero-split-image-placeholder">Photo Placeholder</div>
+    <div class="hero-split-image-placeholder">{{ section.extra.hero_placeholder }}</div>
     {% endif %}
   </div>
 </section>
@@ -38,22 +37,12 @@
 {# ── STATS STRIP ─────────────────────────────────────────── #}
 <section class="stats-strip">
   <div class="stats-strip-inner">
+    {% for stat in section.extra.stats %}
     <div class="stats-strip-item">
-      <span class="stats-strip-number">22+</span>
-      <span class="stats-strip-label">Years Coaching</span>
+      <span class="stats-strip-number">{{ stat.number }}</span>
+      <span class="stats-strip-label">{{ stat.label }}</span>
     </div>
-    <div class="stats-strip-item">
-      <span class="stats-strip-number">70+</span>
-      <span class="stats-strip-label">Countries</span>
-    </div>
-    <div class="stats-strip-item">
-      <span class="stats-strip-number">4</span>
-      <span class="stats-strip-label">Languages</span>
-    </div>
-    <div class="stats-strip-item">
-      <span class="stats-strip-number">Fortune 100</span>
-      <span class="stats-strip-label">Client Portfolio</span>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -63,49 +52,28 @@
     style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
     class="about-bio-grid">
     <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Create a Healthier
-        Career</p>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.challenge_eyebrow }}</p>
       <h2
         style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
-        As an established leader, you worked hard to <em>get here.</em></h2>
+        {{ section.extra.challenge_heading | safe }}</h2>
       <p
         style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
-        But leadership today isn't what it was five years ago. The game has changed — faster decisions, relentless
-        pressure, and expectations from all sides.
+        {{ section.extra.challenge_paragraph_1 }}
       </p>
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
-        The most successful leaders never go it alone. I guide driven and passionate leaders like you to create a better
-        career and life.
+        {{ section.extra.challenge_paragraph_2 }}
       </p>
     </div>
     <div>
       <div class="card-grid" style="grid-template-columns: 1fr; gap: var(--space-8);">
+        {% for item in section.extra.checklist %}
         <div class="service-card"
           style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
           <img src="/images/check-1.webp" alt="" aria-hidden="true" width="300" height="281" loading="lazy"
             style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
-          <p class="service-card-desc" style="margin: 0;">Create and lead teams that are excited about the work they do
-          </p>
+          <p class="service-card-desc" style="margin: 0;">{{ item.text | safe }}</p>
         </div>
-        <div class="service-card"
-          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
-          <img src="/images/check-1.webp" alt="" aria-hidden="true" width="300" height="281" loading="lazy"
-            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
-          <p class="service-card-desc" style="margin: 0;">Establish healthy boundaries &amp; be respected as a leader
-          </p>
-        </div>
-        <div class="service-card"
-          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
-          <img src="/images/check-1.webp" alt="" aria-hidden="true" width="300" height="281" loading="lazy"
-            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
-          <p class="service-card-desc" style="margin: 0;">Strategically navigate transitions</p>
-        </div>
-        <div class="service-card"
-          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
-          <img src="/images/check-1.webp" alt="" aria-hidden="true" width="300" height="281" loading="lazy"
-            style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
-          <p class="service-card-desc" style="margin: 0;">Make smart, high-pressure decisions when it matters most</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -115,34 +83,31 @@
 <section class="pull-quote">
   <div class="pull-quote-inner">
     <div class="pull-quote-line"></div>
-    <p class="pull-quote-text">"I don't give you answers. I help you find the ones you've been avoiding."</p>
+    <p class="pull-quote-text">{{ section.extra.pull_quote_1 }}</p>
   </div>
 </section>
 
 {# ── MEET LAURENCE ───────────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Meet Laurence</p>
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.meet_eyebrow }}</p>
     <h2
       style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
-      Ph.D., Certified Professional <em>Coach</em></h2>
+      {{ section.extra.meet_heading | safe }}</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
       class="about-bio-grid">
       <div>
         <p
           style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
-          For over 22 years, I've worked with leaders across Fortune 100 companies, SMEs, and the public sector,
-          navigating high-stakes environments in 70+ countries.
+          {{ section.extra.meet_bio_1 }}
         </p>
         <p
           style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
-          I've guided leaders through mergers, acquisitions, and global transitions, maintaining momentum amid
-          uncertainty.
+          {{ section.extra.meet_bio_2 }}
         </p>
         <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
-          Continuous improvement is key. So I work alongside top experts in psychology, NLP, strategy consulting, and
-          change management.
+          {{ section.extra.meet_bio_3 }}
         </p>
       </div>
       <div>
@@ -150,38 +115,26 @@
           style="background: var(--color-purple-lightest); border-radius: var(--radius-2xl); padding: var(--space-10);">
           <h3
             style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">
-            What does my PhD and PCC add to my work today?</h3>
+            {{ section.extra.phd_heading }}</h3>
           <p
             style="font-size: var(--text-base); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
-            The curiosity, openness, and ability to identify differences and similarities, challenge assumptions, and
-            connect ideas and people across fields and cultures enable me to support the leader's deep need to address
-            constant pressure and rising demands.
+            {{ section.extra.phd_text }}
           </p>
           <p
             style="font-size: var(--text-lg); font-weight: 500; color: var(--color-purple); font-family: var(--font-heading); font-style: italic;">
-            Clients describe me as sharp, genuine, and compassionate.
+            {{ section.extra.phd_tagline }}
           </p>
         </div>
 
         <div class="about-personal">
-          <p class="about-personal-title">What you might not know</p>
+          <p class="about-personal-title">{{ section.extra.personal_facts_title }}</p>
           <div class="about-personal-list">
+            {% for fact in section.extra.personal_facts %}
             <div class="about-personal-item">
               <span class="about-personal-bullet">&#9679;</span>
-              <span>Speaks four languages — French, English, Italian, and German</span>
+              <span>{{ fact.text }}</span>
             </div>
-            <div class="about-personal-item">
-              <span class="about-personal-bullet">&#9679;</span>
-              <span>Based in Switzerland, coaching across time zones</span>
-            </div>
-            <div class="about-personal-item">
-              <span class="about-personal-bullet">&#9679;</span>
-              <span>Passionate about Italy, historical costumes, and her dog</span>
-            </div>
-            <div class="about-personal-item">
-              <span class="about-personal-bullet">&#9679;</span>
-              <span>Will ask the question you've been avoiding</span>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -192,53 +145,18 @@
 {# ── FAQ ─────────────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">FAQ</p>
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.faq_eyebrow }}</p>
     <h2
       style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
-      Common <em>questions</em></h2>
+      {{ section.extra.faq_heading | safe }}</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);" class="about-bio-grid">
-      <div class="service-card">
-        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">How does the
-          one-on-one work?</h3>
-        <p class="service-card-desc">We start with you — understanding your challenges, goals, and leadership style.
-          Together, we'll co-create a personalised plan that evolves as you do. Forget one-size-fits-all solutions. This
-          is a tailored approach designed to meet you where you are and take you where you want to go.</p>
+      {% for faq in section.extra.faqs %}
+      <div class="service-card"{% if faq.full_width is defined and faq.full_width %} style="grid-column: span 2;"{% endif %}>
+        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">{{ faq.question }}</h3>
+        <p class="service-card-desc">{{ faq.answer }}</p>
       </div>
-
-      <div class="service-card">
-        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">How long do
-          clients typically sign up for?</h3>
-        <p class="service-card-desc">A focused 2.5-hour session helps identify a specific challenge you've overlooked,
-          enabling you to tackle it with immediate, actionable solutions. For long-term progress, a 3 to 6-month
-          framework addresses broader leadership milestones — with a key milestone at 4 weeks to decide next steps.</p>
-      </div>
-
-      <div class="service-card">
-        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">What results
-          can I expect?</h3>
-        <p class="service-card-desc">Clients seamlessly transition into new leadership roles, lead through challenging
-          transitions or difficult conversations, and navigate major life changes — such as returning from parental
-          leave or recovering from burnout.</p>
-      </div>
-
-      <div class="service-card">
-        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">I don't have
-          much time. Can it still work?</h3>
-        <p class="service-card-desc">Coaching integrates into your busy schedule. With one-hour sessions every second
-          week, you'll apply insights in real time. This keeps the process light on your calendar but powerful in
-          impact.</p>
-      </div>
-
-      <div class="service-card" style="grid-column: span 2;">
-        <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">What type of
-          clients do you work with?</h3>
-        <p class="service-card-desc">Senior leaders across industries, including pharmaceuticals, finance, legal,
-          consultancy, start-ups, and Fortune 100 companies. If you're a driven leader ready to grow and thrive, we
-          could be a great match. I always set up a free discovery call first so we can see the fit and decide — plus
-          there are Go/No-Go milestones to give you flexibility and the guarantee that you can choose what comes next.
-        </p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -247,7 +165,7 @@
 <section class="pull-quote">
   <div class="pull-quote-inner">
     <div class="pull-quote-line"></div>
-    <p class="pull-quote-text">"Real change starts with one honest conversation."</p>
+    <p class="pull-quote-text">{{ section.extra.pull_quote_2 }}</p>
   </div>
 </section>
 
@@ -258,11 +176,10 @@
       style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
       <img src="/images/big-quote.svg" alt="" aria-hidden="true" width="120" height="120" loading="lazy"
         style="width: 48px; height: auto; opacity: 0.5; margin: 0 auto var(--space-4); display: block;">
-      After leading in C-suite positions, I thought I knew it all. A very challenging work situation showed me otherwise
-      and Laurence helped me. Consequently, my sleep, my performance, and happiness at work have improved tremendously.
+      {{ section.extra.testimonial_quote }}
     </blockquote>
-    <p style="font-weight: 600; color: var(--color-white); font-size: var(--text-lg);">Christian Loyer</p>
-    <p style="color: var(--color-purple-light); font-size: var(--text-base);">VP, i-Nexus &middot; London</p>
+    <p style="font-weight: 600; color: var(--color-white); font-size: var(--text-lg);">{{ section.extra.testimonial_name }}</p>
+    <p style="color: var(--color-purple-light); font-size: var(--text-base);">{{ section.extra.testimonial_role | safe }}</p>
   </div>
 </section>
 
@@ -272,22 +189,21 @@
     style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-16); align-items: center;"
     class="about-bio-grid">
     <div style="border-radius: var(--radius-2xl); overflow: hidden;">
-      <img src="/images/networking-opportunities.avif" alt="The Leadership Collective" width="140" height="140" loading="lazy"
+      <img src="/images/networking-opportunities.avif" alt="{{ section.extra.collective_image_alt }}" width="140" height="140" loading="lazy"
         style="width: 60%; height: auto; display: block; float: right;">
     </div>
     <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">Group Coaching</p>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.collective_eyebrow }}</p>
       <h2
         style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
-        Curated and practical insights on leadership, <em>unpacked</em> for you</h2>
+        {{ section.extra.collective_heading | safe }}</h2>
       <p
         style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
-        Join us for our monthly sessions with a meaningful multi-continental network to encourage groupthink, support,
-        and raise your accountability with your peers.
+        {{ section.extra.collective_desc }}
       </p>
       <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank"
         rel="noopener noreferrer">
-        Inquire to Join <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        {{ section.extra.collective_cta }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -298,16 +214,16 @@
   <div style="max-width: var(--container-max); margin: 0 auto;">
     <p
       style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-4);">
-      The Most Successful Leaders Never Go It Alone</p>
+      {{ section.extra.cta_eyebrow }}</p>
     <h2
       style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">
-      Get the bespoke coaching to unlock your <em>career</em></h2>
+      {{ section.extra.cta_heading | safe }}</h2>
     <p
       style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-10); line-height: 1.7;">
-      Curious to hear more and see if there's a fit?</p>
+      {{ section.extra.cta_desc }}</p>
     <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank"
       rel="noopener noreferrer">
-      Grab Some Time On My Calendar <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      {{ section.extra.cta_button }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>
 </section>

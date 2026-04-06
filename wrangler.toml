@@ -1,4 +1,5 @@
 name = "thegrowthfuel"
+main = "workers/src/index.js"
 compatibility_date = "2025-03-17"
 
 [assets]
