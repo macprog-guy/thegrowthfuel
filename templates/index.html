@@ -124,15 +124,17 @@
 
 {# ── NEWSLETTER ─────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
-  <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
     <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.newsletter_eyebrow }}</p>
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ section.extra.newsletter_heading | safe }}</h2>
-    <script async data-uid="a42fcbff0c" src="https://thegrowthfuel.kit.com/a42fcbff0c/index.js"></script>
+    <div style="text-align: center;">
+      <script async data-uid="a42fcbff0c" src="https://thegrowthfuel.kit.com/a42fcbff0c/index.js"></script>
+    </div>
   </div>
 </section>
 
 {# ── FREE RESOURCES ───────────────────────────────────────── #}
-<section style="padding: var(--space-24) var(--space-6);">
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
     <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.resources_eyebrow }}</p>
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ section.extra.resources_heading | safe }}</h2>
@@ -191,7 +193,7 @@
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
         {{ section.extra.impact_paragraph_2 }}
       </p>
-      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
         {{ section.extra.impact_cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -231,7 +233,7 @@
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ section.extra.cta_bottom_heading | safe }}</h2>
     <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ section.extra.cta_bottom_description }}</p>
     <div class="hero-actions" style="justify-content: center;">
-      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
         {{ section.extra.cta_bottom_button_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>

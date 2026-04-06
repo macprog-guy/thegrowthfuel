@@ -25,7 +25,7 @@
     {% if section.extra.calendly_url is defined %}
     <div class="calendly-inline-widget" data-url="{{ section.extra.calendly_url }}" style="min-width: 320px; height: 700px;"></div>
     {% else %}
-    <div class="calendly-inline-widget" data-url="{{ config.extra.calendly_free_consultation }}" style="min-width: 320px; height: 700px;"></div>
+    <div class="calendly-inline-widget" data-url="{{ trans(key="calendly-free-url", lang=lang) }}" style="min-width: 320px; height: 700px;"></div>
     {% endif %}
   </div>
 </section>
@@ -46,7 +46,7 @@
           <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-needs", lang=lang) }}</span></li>
           <li class="pricing-feature"><span class="pricing-check">&check;</span><span>{{ trans(key="booking-fit", lang=lang) }}</span></li>
         </ul>
-        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ config.extra.calendly_free_consultation }}'}); return false;" style="width: 100%;">{{ trans(key="cta-book-free-call", lang=lang) }}</a>
+        <a href="#" class="btn btn-secondary btn-lg" onclick="Calendly.initPopupWidget({url: '{{ trans(key="calendly-free-url", lang=lang) }}'}); return false;" style="width: 100%;">{{ trans(key="cta-book-free-call", lang=lang) }}</a>
       </div>
 
       <div class="pricing-card pricing-card-popular">

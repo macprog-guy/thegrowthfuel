@@ -11,7 +11,7 @@ hero_title = "Quand la pression ne s'arrête jamais."
 hero_title_emphasis = "jamais."
 hero_description = "Votre manière de diriger aujourd'hui dans des environnements sous haute pression définit votre avenir. Affinons ensemble votre posture de leader pour que vous puissiez diriger avec clarté, confiance et maîtrise — tout en profitant de la vie."
 cta_primary_text = "Réserver une consultation gratuite"
-cta_primary_url = "https://calendly.com/thegrowthfuel/free-consultation"
+cta_primary_url = "https://calendly.com/the-growth-fuel/30min-clarity-call"
 cta_secondary_text = "Découvrir les services"
 cta_secondary_url = "/fr/services/private-sector"
 
@@ -30,6 +30,10 @@ services_description = "Chaque leader fait face à des pressions uniques. Choisi
 # ── What To Expect Section ────────────────────────────────────
 expect_eyebrow = "À quoi s'attendre"
 expect_heading = "Des changements concrets, pas de vagues <em>promesses</em>"
+
+# ── Newsletter Section ────────────────────────────────────────
+newsletter_eyebrow = "Restez informé(e)"
+newsletter_heading = "Recevez des conseils de leadership dans votre <em>boîte mail</em>"
 
 # ── Free Resources Section ────────────────────────────────────
 resources_eyebrow = "Ressources gratuites"

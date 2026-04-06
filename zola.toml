@@ -28,12 +28,11 @@ contact_api_url = "https://api.thegrowthfuel.com/contact"
 notification_email = "laurence@thegrowthfuel.com"
 
 # Calendly event URLs (update with real Calendly slugs)
-calendly_base = "https://calendly.com/thegrowthfuel"
-calendly_free_consultation = "https://calendly.com/thegrowthfuel/free-consultation"
-calendly_prep_call = "https://calendly.com/thegrowthfuel/prep-call"
-calendly_1hr_coaching = "https://calendly.com/thegrowthfuel/1-hour-coaching"
-calendly_2hr_coaching = "https://calendly.com/thegrowthfuel/2-hour-coaching"
-calendly_wrap_up = "https://calendly.com/thegrowthfuel/wrap-up"
+calendly_base = "https://calendly.com/the-growth-fuel"
+calendly_prep_call = "https://calendly.com/the-growth-fuel/prep-call"
+calendly_1hr_coaching = "https://calendly.com/the-growth-fuel/1-hour-coaching"
+calendly_2hr_coaching = "https://calendly.com/the-growth-fuel/2-hour-coaching"
+calendly_wrap_up = "https://calendly.com/the-growth-fuel/wrap-up"
 
 # Social links
 linkedin_url = "https://www.linkedin.com/in/laurencemethot/"
@@ -89,6 +88,7 @@ form-get-in-touch = "Get in Touch"
 form-fallback-desc = "Have a question about coaching? Looking to explore your options? Drop us a message and we'll get back to you within 24 hours."
 form-prefer-direct = "Prefer to schedule directly?"
 # CTAs
+calendly-free-url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 cta-book-free = "Book a Free Consultation"
 cta-learn-more = "Learn More"
 cta-book-consultation = "Book a Consultation"
@@ -185,6 +185,7 @@ form-get-in-touch = "Nous contacter"
 form-fallback-desc = "Vous avez une question sur le coaching ? Vous souhaitez explorer vos options ? Envoyez-nous un message et nous vous répondrons dans les 24 heures."
 form-prefer-direct = "Vous préférez planifier directement ?"
 # CTAs
+calendly-free-url = "https://calendly.com/the-growth-fuel/30min-clarity-call"
 cta-book-free = "Réserver une consultation gratuite"
 cta-learn-more = "En savoir plus"
 cta-book-consultation = "Réserver une consultation"

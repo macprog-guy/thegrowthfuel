@@ -14,7 +14,7 @@
     <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-6); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
     {% endif %}
     <div class="hero-actions">
-      <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
         {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -161,7 +161,7 @@
       <h2 style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ page.extra.investment_heading | default(value="Your investment") | safe }}</h2>
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">{{ page.extra.investment_text }}</p>
       <div class="hero-actions">
-        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
           {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </div>
@@ -186,7 +186,7 @@
   <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ trans(key="service-ready", lang=lang) | safe }}</h2>
     <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ trans(key="service-ready-desc", lang=lang) }}</p>
-    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+    <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
       {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>

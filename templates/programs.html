@@ -57,7 +57,7 @@
         <a href="{{ page.path | trim_end_matches(pat=" /") }}" class="btn btn-primary">
           {{ trans(key="cta-learn-more", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank"
+        <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-secondary" target="_blank"
           rel="noopener noreferrer">
           {{ trans(key="cta-book-consultation", lang=lang) }}
         </a>
@@ -114,7 +114,7 @@
         <a href="{{ page.path | trim_end_matches(pat=" /") }}" class="btn btn-primary">
           {{ trans(key="cta-learn-more", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-secondary" target="_blank"
+        <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-secondary" target="_blank"
           rel="noopener noreferrer">
           {{ trans(key="cta-book-consultation", lang=lang) }}
         </a>
@@ -135,7 +135,7 @@
     <p
       style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">
       {{ trans(key="programs-not-sure-desc", lang=lang) }}</p>
-    <a href="{{ config.extra.calendly_free_consultation }}" class="btn btn-primary btn-lg" target="_blank"
+    <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank"
       rel="noopener noreferrer">
       {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
