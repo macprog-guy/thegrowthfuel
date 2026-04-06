@@ -31,6 +31,10 @@ services_description = "Every leader faces unique pressures. Choose the path tha
 expect_eyebrow = "What You Can Expect"
 expect_heading = "Concrete shifts, not vague <em>promises</em>"
 
+# ── Newsletter Section ────────────────────────────────────────
+newsletter_eyebrow = "Stay In The Loop"
+newsletter_heading = "Get leadership insights delivered to your <em>inbox</em>"
+
 # ── Free Resources Section ────────────────────────────────────
 resources_eyebrow = "Free Resources"
 resources_heading = "Want to know <em>more</em>?"

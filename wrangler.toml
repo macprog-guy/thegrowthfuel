@@ -1,13 +1,14 @@
 name = "thegrowthfuel"
 main = "workers/src/index.js"
 compatibility_date = "2025-03-17"
+preview_urls = true
 
 [[routes]]
-pattern = "rethinkperformance.ch/*"
+pattern = "rethinkperformance.ch"
 custom_domain = true
 
 [[routes]]
-pattern = "www.rethinkperformance.ch/*"
+pattern = "www.rethinkperformance.ch"
 custom_domain = true
 
 [assets]
