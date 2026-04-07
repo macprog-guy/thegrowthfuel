@@ -12,6 +12,6 @@
 {%- set open_new = new_tab | default(value=false) -%}
 <a href="{{ url }}"
    class="btn btn-{{ btn_style }}{% if btn_size %} btn-{{ btn_size }}{% endif %}"
-   {% if open_new == "true" or open_new == true %}target="_blank" rel="noopener noreferrer"{% endif %}>
-  {{ text }}{% if btn_style == "primary" or btn_style == "ghost" %} <span class="btn-arrow">&rarr;</span>{% endif %}
+   {% if open_new == "true" or open_new == true %}target="_blank" rel="noopener noreferrer" aria-label="{{ text }} (opens in new tab)"{% endif %}>
+  {{ text }}{% if btn_style == "primary" or btn_style == "ghost" %} <span class="btn-arrow" aria-hidden="true">&rarr;</span>{% endif %}
 </a>

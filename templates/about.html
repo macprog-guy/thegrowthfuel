@@ -10,7 +10,8 @@
     <p class="hero-split-desc">{{ section.extra.hero_desc }}</p>
     <div class="hero-actions">
       <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        aria-label="{{ section.extra.hero_cta }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.hero_cta }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -202,7 +203,8 @@
         {{ section.extra.collective_desc }}
       </p>
       <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        aria-label="{{ section.extra.collective_cta }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.collective_cta }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -222,7 +224,8 @@
       style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-10); line-height: 1.7;">
       {{ section.extra.cta_desc }}</p>
     <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+      aria-label="{{ section.extra.cta_button }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
       {{ section.extra.cta_button }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>

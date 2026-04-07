@@ -131,6 +131,10 @@ service-ready = 'Ready to start the <em style="font-style: italic; color: var(--
 service-ready-desc = "Book a free 30-minute consultation to explore how coaching can support your next chapter."
 cta-read-more = "Read more"
 cta-explore = "Explore"
+# Accessibility
+aria-opens-new-tab = "(opens in new tab)"
+nav-switch-to-fr = "Switch to French"
+nav-switch-to-en = "Switch to English"
 # Legal
 legal-last-updated = "Last updated:"
 
@@ -228,5 +232,9 @@ service-ready = 'Prêt(e) à entamer la <em style="font-style: italic; color: va
 service-ready-desc = "Réservez une consultation gratuite de 30 minutes pour découvrir comment le coaching peut accompagner votre prochain chapitre."
 cta-read-more = "Lire la suite"
 cta-explore = "Explorer"
+# Accessibility
+aria-opens-new-tab = "(ouvre dans un nouvel onglet)"
+nav-switch-to-fr = "Passer en français"
+nav-switch-to-en = "Passer en anglais"
 # Legal
 legal-last-updated = "Dernière mise à jour :"

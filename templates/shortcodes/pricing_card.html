@@ -26,5 +26,5 @@
     </li>
     {% endfor %}
   </ul>
-  <a href="{{ cta_url }}" class="btn btn-{% if is_popular == 'true' or is_popular == true %}primary{% else %}secondary{% endif %} btn-lg">{{ cta_text }}</a>
+  <a href="{{ cta_url }}" class="btn btn-{% if is_popular == 'true' or is_popular == true %}primary{% else %}secondary{% endif %} btn-lg" aria-label="{{ cta_text }}: {{ name }}">{{ cta_text }}</a>
 </div>

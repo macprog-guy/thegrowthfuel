@@ -17,5 +17,5 @@
   </div>
   <h3 class="service-card-title">{{ title }}</h3>
   <p class="service-card-desc">{{ description }}</p>
-  <a href="{{ link_url }}" class="service-card-link">{{ link_text }} <span class="btn-arrow">&rarr;</span></a>
+  <a href="{{ link_url }}" class="service-card-link" aria-label="{{ link_text }}: {{ title }}">{{ link_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
 </div>

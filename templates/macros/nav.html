@@ -20,31 +20,31 @@
     {#- Desktop links -#}
     <div class="nav-links" id="nav-links">
       <a href="{{ lang_prefix }}/"
-         class="nav-link{% if cp_clean == '/' %} nav-link-active{% endif %}">{{ trans(key="nav-home", lang=lang) }}</a>
+         class="nav-link{% if cp_clean == '/' %} nav-link-active{% endif %}"{% if cp_clean == '/' %} aria-current="page"{% endif %}>{{ trans(key="nav-home", lang=lang) }}</a>
 
       <a href="{{ lang_prefix }}/about"
-         class="nav-link{% if cp_clean is starting_with('/about') %} nav-link-active{% endif %}">{{ trans(key="nav-about", lang=lang) }}</a>
+         class="nav-link{% if cp_clean is starting_with('/about') %} nav-link-active{% endif %}"{% if cp_clean is starting_with('/about') %} aria-current="page"{% endif %}>{{ trans(key="nav-about", lang=lang) }}</a>
 
       <a href="{{ lang_prefix }}/services/public-sector"
-         class="nav-link{% if cp_clean is starting_with('/services/public-sector') %} nav-link-active{% endif %}">{{ trans(key="nav-public-sector", lang=lang) }}</a>
+         class="nav-link{% if cp_clean is starting_with('/services/public-sector') %} nav-link-active{% endif %}"{% if cp_clean is starting_with('/services/public-sector') %} aria-current="page"{% endif %}>{{ trans(key="nav-public-sector", lang=lang) }}</a>
 
       <a href="{{ lang_prefix }}/services/private-sector"
-         class="nav-link{% if cp_clean is starting_with('/services/private-sector') %} nav-link-active{% endif %}">{{ trans(key="nav-private-sector", lang=lang) }}</a>
+         class="nav-link{% if cp_clean is starting_with('/services/private-sector') %} nav-link-active{% endif %}"{% if cp_clean is starting_with('/services/private-sector') %} aria-current="page"{% endif %}>{{ trans(key="nav-private-sector", lang=lang) }}</a>
 
       <a href="{{ lang_prefix }}/programs"
-         class="nav-link{% if cp_clean is starting_with('/programs') %} nav-link-active{% endif %}">{{ trans(key="nav-programs", lang=lang) }}</a>
+         class="nav-link{% if cp_clean is starting_with('/programs') %} nav-link-active{% endif %}"{% if cp_clean is starting_with('/programs') %} aria-current="page"{% endif %}>{{ trans(key="nav-programs", lang=lang) }}</a>
 
       <a href="{{ lang_prefix }}/contact"
-         class="nav-link{% if cp_clean is starting_with('/contact') %} nav-link-active{% endif %}">{{ trans(key="nav-contact", lang=lang) }}</a>
+         class="nav-link{% if cp_clean is starting_with('/contact') %} nav-link-active{% endif %}"{% if cp_clean is starting_with('/contact') %} aria-current="page"{% endif %}>{{ trans(key="nav-contact", lang=lang) }}</a>
 
       {#- Language switcher -#}
       <span class="nav-lang">
         {% if lang == "en" %}
           <span class="nav-lang-active">EN</span>
           <span class="nav-lang-sep">|</span>
-          <a href="/fr{{ cp_clean }}" class="nav-lang-link">FR</a>
+          <a href="/fr{{ cp_clean }}" class="nav-lang-link" aria-label="{{ trans(key="nav-switch-to-fr", lang=lang) }}">FR</a>
         {% else %}
-          <a href="{{ cp_clean }}" class="nav-lang-link">EN</a>
+          <a href="{{ cp_clean }}" class="nav-lang-link" aria-label="{{ trans(key="nav-switch-to-en", lang=lang) }}">EN</a>
           <span class="nav-lang-sep">|</span>
           <span class="nav-lang-active">FR</span>
         {% endif %}
@@ -54,7 +54,8 @@
         <a href="{{ trans(key="calendly-free-url", lang=lang) }}"
            class="btn btn-primary btn-sm"
            target="_blank"
-           rel="noopener noreferrer">{{ trans(key="nav-book-now", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+           rel="noopener noreferrer"
+           aria-label="{{ trans(key="nav-book-now", lang=lang) }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">{{ trans(key="nav-book-now", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
       </span>
 
     </div>

@@ -48,7 +48,7 @@
         {% if page.description %}
         <p class="service-card-desc">{{ page.description }}</p>
         {% endif %}
-        <a href="{{ page.path | trim_end_matches(pat="/") }}" class="service-card-link">{{ trans(key="cta-read-more", lang=lang) }} <span class="btn-arrow">&rarr;</span></a>
+        <a href="{{ page.path | trim_end_matches(pat="/") }}" class="service-card-link" aria-label="{{ trans(key="cta-read-more", lang=lang) }}: {{ page.title }}">{{ trans(key="cta-read-more", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
       </div>
       {% endfor %}
     </div>
@@ -68,7 +68,7 @@
           {% if subsection.description %}
           <p class="service-card-desc">{{ subsection.description }}</p>
           {% endif %}
-          <a href="{{ subsection.path | trim_end_matches(pat="/") }}" class="service-card-link">{{ trans(key="cta-explore", lang=lang) }} <span class="btn-arrow">&rarr;</span></a>
+          <a href="{{ subsection.path | trim_end_matches(pat="/") }}" class="service-card-link" aria-label="{{ trans(key="cta-explore", lang=lang) }}: {{ subsection.title }}">{{ trans(key="cta-explore", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
       {% endfor %}
     </div>

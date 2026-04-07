@@ -9,6 +9,7 @@
 {%- set btn_style = style | default(value="primary") -%}
 <a href="#"
    class="btn btn-{{ btn_style }}"
+   role="button"
    onclick="Calendly.initPopupWidget({url: '{{ url }}'}); return false;">
-  {{ text }} <span class="btn-arrow">&rarr;</span>
+  {{ text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
 </a>

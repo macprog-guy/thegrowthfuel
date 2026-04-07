@@ -12,7 +12,8 @@
     </h1>
     <p class="hero-desc">{{ section.extra.hero_description }}</p>
     <div class="hero-actions">
-      <a href="{{ section.extra.cta_primary_url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      <a href="{{ section.extra.cta_primary_url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ section.extra.cta_primary_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.cta_primary_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
       <a href="{{ section.extra.cta_secondary_url }}" class="btn btn-white">
@@ -193,7 +194,8 @@
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
         {{ section.extra.impact_paragraph_2 }}
       </p>
-      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ section.extra.impact_cta_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.impact_cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -233,7 +235,8 @@
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ section.extra.cta_bottom_heading | safe }}</h2>
     <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ section.extra.cta_bottom_description }}</p>
     <div class="hero-actions" style="justify-content: center;">
-      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ section.extra.cta_bottom_button_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.cta_bottom_button_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>

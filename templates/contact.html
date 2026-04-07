@@ -64,7 +64,8 @@
 <section class="section-alt" style="padding: var(--space-16) var(--space-8); text-align: center;">
   <div style="max-width: var(--container-max); margin: 0 auto;">
     <p style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ trans(key="form-prefer-direct", lang=lang) }}</p>
-    <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+    <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer"
+       aria-label="{{ trans(key="cta-book-free", lang=lang) }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
       {{ trans(key="cta-book-free", lang=lang) }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </div>

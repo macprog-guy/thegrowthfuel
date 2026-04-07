@@ -98,5 +98,10 @@ service-who-for = À qui s'adresse ce service
 service-ready = Prêt(e) à entamer la <em style="font-style: italic; color: var(--color-orange-light);">conversation</em> ?
 service-ready-desc = Réservez une consultation gratuite de 30 minutes pour découvrir comment le coaching peut accompagner votre prochain chapitre.
 
+# Accessibility
+aria-opens-new-tab = (ouvre dans un nouvel onglet)
+nav-switch-to-fr = Passer en français
+nav-switch-to-en = Passer en anglais
+
 # Legal
 legal-last-updated = Dernière mise à jour :
