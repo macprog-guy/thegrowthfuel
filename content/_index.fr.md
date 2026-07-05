@@ -1,26 +1,65 @@
 +++
 title = "The Growth Fuel"
-description = "Gardez une longueur d'avance quand la pression ne s'arrête jamais. Coaching sur mesure pour leaders confirmés — Laurence Methot, PhD, PCC."
+description = "Mettez fin au mode pompier. Coaching exécutif pour leaders confirmés — menez votre équipe au bout de l'année et retrouvez le travail à haute valeur que vous seul pouvez faire. Laurence Methot, PhD, PCC."
 template = "index.html"
 sort_by = "weight"
 
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
 hero_eyebrow = "Coaching Exécutif pour Leaders Confirmés"
-hero_title = "Quand la pression ne s'arrête jamais."
-hero_title_emphasis = "jamais."
-hero_description = "Votre manière de diriger aujourd'hui dans des environnements sous haute pression définit votre avenir. Affinons ensemble votre posture de leader pour que vous puissiez diriger avec clarté, confiance et maîtrise — tout en profitant de la vie."
+hero_title = "Mener votre équipe au bout de l'année."
+hero_title_emphasis = "au bout de l'année."
+hero_description = "Toutes ces urgences et interruptions vous empêchent de jouer à votre plein potentiel. Vous êtes tenu à l'écart de votre travail à haute valeur."
 cta_primary_text = "Réserver une consultation gratuite"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-clarity-call"
 cta_secondary_text = "Découvrir les services"
 cta_secondary_url = "/fr/services/private-sector"
 
-# ── The Challenge Section ─────────────────────────────────────
+# ── The Problem Section ───────────────────────────────────────
 challenge_eyebrow = "La réalité"
-challenge_heading = "Comment garder une longueur d'avance quand la pression <em>ne s'arrête jamais</em> ?"
-challenge_paragraph_1 = "Le leadership a davantage évolué ces cinq dernières années qu'au cours des deux décennies précédentes. L'environnement actuel, à forts enjeux, exige une réflexion stratégique plus profonde, une intuition plus aiguisée et des décisions plus rapides."
-challenge_paragraph_2 = "Les attentes sont plus élevées. Les défis sont plus complexes. Ce qui fonctionnait hier doit être recalibré."
+challenge_heading = "La journée disparaît dans <em>les urgences des autres</em> — votre travail attend la nuit."
+challenge_paragraph_1 = "Vous voyez le mode pompier, et vous voulez que ça cesse. Pas votre équipe — pour elle, c'est se sentir utile, forte, engagée."
+challenge_lead_in = "Tout se résume à trois choses :"
+challenge_bullets = [
+    "Mener votre équipe au bout de l'année.",
+    "Partir à 19 h, pas à 22 h.",
+    "Construire un plan qui survit à la semaine.",
+]
+challenge_paragraph_2 = "Vous n'avez pas oublié la stratégie ni les résultats. Les interruptions quotidiennes vous éloignent sans cesse des objectifs qui comptent le plus."
 challenge_image_alt = "Laurence en coaching à son bureau"
+
+# ── The Trap Section ──────────────────────────────────────────
+realtalk_eyebrow = "Le piège"
+realtalk_heading = "Être occupé ne veut pas dire que le travail avance."
+realtalk_paragraph_1 = "Votre équipe glorifie le mode pompier : jouer les héros, sauver une chose, en laisser tomber cinq — et combattre le même feu demain."
+realtalk_paragraph_2 = "Au fond, tout le monde sait que ce n'est pas ça, le travail. Vous le voyez. Eux pas encore — et c'est exactement là que j'interviens : avec vous et avec votre équipe."
+realtalk_image_alt = "Laurence en session de coaching"
+
+# ── Imagine Section ───────────────────────────────────────────
+imagine_eyebrow = "Fermez les yeux"
+imagine_heading = "Imaginez cette année <em>autrement</em>"
+imagine_items = [
+    "Votre équipe est en mouvement : elle avance, elle livre, elle tient l'année.",
+    "Vous pouvez décrocher à une heure raisonnable. À 19 h au lieu de 22 h.",
+    "Votre plan tient la plupart du temps. Quand une urgence surgit, vous avez l'espace pour vous adapter et la traiter.",
+    "Vos journées vont au travail à haute valeur : parties prenantes, stratégie, talents.",
+]
+imagine_closing = "C'est vous, à votre plein potentiel."
+
+# ── The Promise Section ───────────────────────────────────────
+impact_eyebrow = "La promesse"
+impact_heading = "Menez votre équipe au bout de l'année — et retrouvez le travail que <em>vous seul pouvez faire</em>."
+impact_paragraph_1 = "Responsabilité, limites, engagement — tout cela, vous le connaissez déjà. Le problème, ce sont les urgences qui vous empêchent de diriger."
+impact_paragraph_2 = "Je travaille avec vous et votre équipe pour que le mode pompier cesse. Votre plan tient l'essentiel du temps — et quand une urgence surgit, vous avez l'espace pour vous adapter."
+impact_cta_text = "Je peux vous aider"
+impact_image_alt = "Laurence travaillant avec un client"
+
+# ── Case Example Section ──────────────────────────────────────
+case_eyebrow = "Un exemple concret"
+case_heading = "Une leader, un atelier — avant et <em>après</em>"
+case_description = "Ce qui a changé pour une leader, après un seul atelier :"
+case_before_label = "Avant"
+case_after_label = "Après l'atelier"
 
 # ── Services Section ──────────────────────────────────────────
 services_eyebrow = "Trois façons de travailler ensemble"
@@ -40,28 +79,13 @@ resources_eyebrow = "Ressources gratuites"
 resources_heading = "Envie d'en savoir <em>plus</em> ?"
 resources_description = "Voici quelques pistes pour découvrir des perspectives de leadership non conventionnelles..."
 
-# ── No Magic Pill Section ─────────────────────────────────────
-realtalk_eyebrow = "Parlons vrai"
-realtalk_heading = "Il n'existe pas de solution miracle pour résoudre des problèmes accumulés au fil du temps."
-realtalk_paragraph_1 = "Sous une pression croissante, notre cerveau est programmé pour sauter vers des solutions faciles et rapides. La plupart des gens sont attirés par une proposition simple, même s'ils savent, au fond, qu'elle ne fonctionnera pas."
-realtalk_paragraph_2 = "Mais une fois que nous identifions et ciblons des objectifs précis, vous pouvez mettre en place de nouvelles stratégies. C'est là que vous pouvez saisir de nouvelles opportunités de carrière, passer au niveau supérieur et vous épanouir."
-realtalk_image_alt = "Laurence en session de coaching"
-
-# ── Your Work Impacts Many Section ────────────────────────────
-impact_eyebrow = "Travaillons ensemble"
-impact_heading = "Votre travail et votre posture ont un <em>impact sur beaucoup de monde.</em>"
-impact_paragraph_1 = "Vous vous dites que le mois prochain ira mieux ? ...et vous vous le répétez mois après mois ? Vous êtes motivé, ambitieux et courageux, sans plus aucun temps pour vous."
-impact_paragraph_2 = "Si vous êtes curieux et prêt à affronter vos défis pour les surmonter véritablement, j'ai créé un cadre flexible qui se concentre sur votre expertise, vos défis actuels et votre style de leadership."
-impact_cta_text = "Je peux vous aider"
-impact_image_alt = "Laurence travaillant avec un client"
-
 # ── Client Testimonials Section ───────────────────────────────
 testimonials_eyebrow = "Découvrez ce que c'est de travailler ensemble"
 testimonials_heading = "En leurs <em>mots</em>"
 
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "Les leaders les plus accomplis ne font jamais cavalier seul"
-cta_bottom_heading = "Bénéficiez d'un coaching sur mesure pour débloquer votre <em style=\"font-style: italic; color: var(--color-orange-light)\">carrière</em>"
+cta_bottom_heading = "Prêt à en finir avec le mode <em style=\"font-style: italic; color: var(--color-orange-light)\">pompier</em> ?"
 cta_bottom_description = "Curieux d'en savoir plus et de voir si nous sommes faits pour travailler ensemble ? Prenez un moment dans mon agenda."
 cta_bottom_button_text = "Prenez un moment dans mon agenda"
 
@@ -81,6 +105,27 @@ label = "Leaders coachés"
 [[extra.stats]]
 number = "Fortune 100"
 label = "Organisations clientes"
+
+# ── Case Example Rows (array of tables) ──────────────────────
+[[extra.case_rows]]
+before = "Opère au niveau de l'équipe — absorbée par le quotidien"
+after = "Fixe le cap et le fait tenir, au lieu de gérer les tâches une à une"
+
+[[extra.case_rows]]
+before = "Hésite à affirmer son autorité ; perçue comme trop conciliante"
+after = "Pose des limites claires et responsabilise ses équipes — même face à la résistance"
+
+[[extra.case_rows]]
+before = "Communication réactive et sporadique avec les parties prenantes"
+after = "Points structurés : signale les risques et propose des solutions avant qu'on les lui demande"
+
+[[extra.case_rows]]
+before = "Visibilité limitée sur les lacunes de compétences de l'équipe"
+after = "Nomme précisément les manques et les traite avec les RH et la direction"
+
+[[extra.case_rows]]
+before = "Atelier prévu au départ pour les seuls cadres seniors"
+after = "Choisit d'inclure toute l'équipe — confiance dans son propre agenda de leadership"
 
 # ── Featured Testimonial (table) ─────────────────────────────
 [extra.featured_testimonial]
