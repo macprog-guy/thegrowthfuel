@@ -39,12 +39,12 @@ realtalk_image_alt = "Laurence in a coaching session"
 imagine_eyebrow = "Close Your Eyes"
 imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
-    "Your team is out of freeze — moving, delivering, getting through the year.",
-    "You leave at a reasonable hour. No 10pm. No daily fires.",
-    "Your plan holds — nothing urgent cancels it.",
+    "Your team is out of freeze: moving, delivering, getting through the year.",
+    "You can switch off at a reasonable hour. At 7 instead of 10pm.",
+    "Your plan holds. Nothing urgent cancels it.",
     "Your days go to the high-value work: stakeholders, strategy, talent.",
 ]
-imagine_closing = "That's a leader playing to their potential."
+imagine_closing = "That's you, playing to your full potential."
 
 # ── The Promise Section ───────────────────────────────────────
 impact_eyebrow = "The Promise"
