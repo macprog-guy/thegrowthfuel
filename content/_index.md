@@ -21,8 +21,8 @@ challenge_heading = "The day disappears into <em>other people's fires</em> — y
 challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
 challenge_lead_in = "Deep down, you want three things:"
 challenge_bullets = [
-    "Getting your team through the year, when part of the team is in freeze.",
-    "Not needing to stay until 10pm and firefight every day.",
+    "Getting your team through the year.",
+    "Not needing to stay until 10pm, because you can address the important work during the day.",
     "Not needing to build a plan you'll then cancel, because something urgent keeps you from it.",
 ]
 challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Daily interruptions keep pulling you away from the targets that matter most."
@@ -39,9 +39,9 @@ realtalk_image_alt = "Laurence in a coaching session"
 imagine_eyebrow = "Close Your Eyes"
 imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
-    "Your team is out of freeze: moving, delivering, getting through the year.",
+    "Your team is moving, delivering, getting through the year.",
     "You can switch off at a reasonable hour. At 7 instead of 10pm.",
-    "Your plan holds most of the time now. There's more structure.",
+    "Your plan mostly holds. When something urgent hits, you have the space to adapt and address it.",
     "Your days go to the high-value work: stakeholders, strategy, talent.",
 ]
 imagine_closing = "That's you, playing to your full potential."
@@ -50,7 +50,7 @@ imagine_closing = "That's you, playing to your full potential."
 impact_eyebrow = "The Promise"
 impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
 impact_paragraph_1 = "Ownership, boundaries, responsibility — you know all that. The issue is the emergencies keeping you from leading."
-impact_paragraph_2 = "I work with you and your team — so the freeze breaks, the firefighting stops, and your plan holds."
+impact_paragraph_2 = "I work with you and your team, so the firefighting stops. Your plan mostly holds — and when something urgent hits, you have the space to adapt."
 impact_cta_text = "I can help with that"
 impact_image_alt = "Laurence working with a client"
 
