@@ -19,11 +19,11 @@ cta_secondary_url = "/services/private-sector"
 challenge_eyebrow = "The Reality"
 challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
 challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
-challenge_lead_in = "Deep down, you want three things:"
+challenge_lead_in = "It comes down to three things:"
 challenge_bullets = [
-    "Getting your team through the year.",
-    "Not needing to stay until 10pm, because you can address the important work during the day.",
-    "Not needing to build a plan you'll then cancel, because something urgent keeps you from it.",
+    "Get your team through the year.",
+    "Leave by 7, not 10.",
+    "Make a plan that survives the week.",
 ]
 challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Daily interruptions keep pulling you away from the targets that matter most."
 challenge_image_alt = "Laurence coaching at her desk"
