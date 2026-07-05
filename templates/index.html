@@ -47,6 +47,17 @@
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.challenge_paragraph_1 }}
       </p>
+      {% if section.extra.challenge_bullets %}
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-700); font-weight: 600; margin-bottom: var(--space-3);">{{ section.extra.challenge_lead_in }}</p>
+      <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: grid; gap: var(--space-3);">
+        {% for bullet in section.extra.challenge_bullets %}
+        <li style="display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600);">
+          <span style="flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--color-orange); margin-top: 0.6em;" aria-hidden="true"></span>
+          <span>{{ bullet }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
         {{ section.extra.challenge_paragraph_2 }}
       </p>
@@ -56,6 +67,92 @@
     </div>
   </div>
 </section>
+
+{# ── THE TRAP ───────────────────────────────────────────── #}
+<section class="section-alt" style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
+    <div style="border-radius: var(--radius-2xl); overflow: hidden; min-height: 320px;">
+      <img src="/images/laurence-sit-living-room.avif" alt="{{ section.extra.realtalk_image_alt }}" width="802" height="1000" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.realtalk_eyebrow }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.realtalk_heading }}</h2>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+        {{ section.extra.realtalk_paragraph_1 }}
+      </p>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
+        {{ section.extra.realtalk_paragraph_2 }}
+      </p>
+    </div>
+  </div>
+</section>
+
+{# ── IMAGINE ────────────────────────────────────────────── #}
+{% if section.extra.imagine_items %}
+<section class="section-warm" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.imagine_eyebrow }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ section.extra.imagine_heading | safe }}</h2>
+    <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-8) 0; display: grid; gap: var(--space-4); max-width: 60ch;">
+      {% for item in section.extra.imagine_items %}
+      <li style="display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-xl); line-height: 1.5; color: var(--color-gray-700);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 4px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>{{ item }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="font-size: var(--text-lg); color: var(--color-gray-600); font-style: italic;">{{ section.extra.imagine_closing }}</p>
+  </div>
+</section>
+{% endif %}
+
+{# ── THE PROMISE ────────────────────────────────────────── #}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
+    <div>
+      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.impact_eyebrow }}</p>
+      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.impact_heading | safe }}</h2>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+        {{ section.extra.impact_paragraph_1 }}
+      </p>
+      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
+        {{ section.extra.impact_paragraph_2 }}
+      </p>
+      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ section.extra.impact_cta_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
+        {{ section.extra.impact_cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <div style="border-radius: var(--radius-2xl); overflow: hidden;">
+      <img src="/images/laurence-sit-outside-laptop.avif" alt="{{ section.extra.impact_image_alt }}" width="626" height="960" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+</section>
+
+{# ── CASE EXAMPLE (BEFORE / AFTER) ──────────────────────── #}
+{% if section.extra.case_rows %}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.case_eyebrow }}</p>
+    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ section.extra.case_heading | safe }}</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 55ch;">{{ section.extra.case_description }}</p>
+    <div style="display: grid; gap: var(--space-4);">
+      {% for row in section.extra.case_rows %}
+      <div class="about-bio-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); background: var(--color-white); border-radius: var(--radius-xl); padding: var(--space-6) var(--space-8); box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+        <div>
+          <p style="font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gray-400); margin-bottom: var(--space-2);">{{ section.extra.case_before_label }}</p>
+          <p style="font-size: var(--text-base); line-height: 1.6; color: var(--color-gray-500);">{{ row.before }}</p>
+        </div>
+        <div>
+          <p style="font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-2);">{{ section.extra.case_after_label }}</p>
+          <p style="font-size: var(--text-base); line-height: 1.6; color: var(--color-gray-800);">{{ row.after }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {# ── FEATURED TESTIMONIAL ────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
@@ -159,48 +256,6 @@
         {% endif %}
       </div>
       {% endfor %}
-    </div>
-  </div>
-</section>
-
-{# ── NO MAGIC PILL ───────────────────────────────────────── #}
-<section style="padding: var(--space-24) var(--space-6);">
-  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
-    <div style="border-radius: var(--radius-2xl); overflow: hidden; min-height: 320px;">
-      <img src="/images/laurence-sit-living-room.avif" alt="{{ section.extra.realtalk_image_alt }}" width="802" height="1000" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-    </div>
-    <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.realtalk_eyebrow }}</p>
-      <h2 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.realtalk_heading }}</h2>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
-        {{ section.extra.realtalk_paragraph_1 }}
-      </p>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
-        {{ section.extra.realtalk_paragraph_2 }}
-      </p>
-    </div>
-  </div>
-</section>
-
-{# ── YOUR WORK IMPACTS MANY ───────────────────────────────── #}
-<section style="padding: var(--space-24) var(--space-6);">
-  <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
-    <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.impact_eyebrow }}</p>
-      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.impact_heading | safe }}</h2>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
-        {{ section.extra.impact_paragraph_1 }}
-      </p>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
-        {{ section.extra.impact_paragraph_2 }}
-      </p>
-      <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
-         aria-label="{{ section.extra.impact_cta_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
-        {{ section.extra.impact_cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
-    <div style="border-radius: var(--radius-2xl); overflow: hidden;">
-      <img src="/images/laurence-sit-outside-laptop.avif" alt="{{ section.extra.impact_image_alt }}" width="626" height="960" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
   </div>
 </section>

@@ -1,26 +1,67 @@
 +++
 title = "The Growth Fuel"
-description = "Stay ahead when the pressure never stops. Bespoke coaching for established leaders — Laurence Methot, PhD, PCC."
+description = "End the daily firefighting. Executive coaching for senior leaders — get your team through this year and get back to the high-value work only you can do. Laurence Methot, PhD, PCC."
 template = "index.html"
 sort_by = "weight"
 
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
 hero_eyebrow = "Executive Coaching for Established Leaders"
-hero_title = "Stay ahead when the pressure never stops."
-hero_title_emphasis = "never stops."
-hero_description = "How you lead today in high-stakes environments defines your future. Let's refine your leadership edge so you can lead with clarity, confidence & control — and have a life, too."
+hero_title = "Getting your team through this year."
+hero_title_emphasis = "through this year."
+hero_description = "Some are procrastinating; some are working too hard, caught in the urgency. I work with you and your team to end the daily firefighting — so you get back to the work only you can do."
 cta_primary_text = "Book a Free Consultation"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 cta_secondary_text = "Browse Services"
 cta_secondary_url = "/services/private-sector"
 
-# ── The Challenge Section ─────────────────────────────────────
+# ── The Problem Section ───────────────────────────────────────
 challenge_eyebrow = "The Reality"
-challenge_heading = "How do you stay ahead when the pressure <em>never stops</em>?"
-challenge_paragraph_1 = "Leadership has changed more in the last five years than in the last two decades. Today's high-stakes environment demands deeper strategic thinking, sharper intuition, and faster decisions."
-challenge_paragraph_2 = "Expectations are higher. Challenges are more complex. What worked before must be recalibrated."
+challenge_heading = "Your team's daily emergencies are stopping you from playing to your <em>full potential</em>."
+challenge_paragraph_1 = "You're an experienced leader. You see the gap, you see the firefighting — and you want it to stop. But your team doesn't see it the way you do. For them, firefighting feels good: it's how they feel useful, strong, and committed. So they keep doing it — and justify it."
+challenge_lead_in = "Maybe this sounds familiar:"
+challenge_bullets = [
+    "Your day gets swallowed by your team leads' emergencies.",
+    "Your own work — the real work — gets pushed to the night. Administration at 10pm, because there was no time during the day.",
+    "You justify it: \"I'm on it. My boss, my company can trust me.\"",
+    "You tell yourself you're not really firefighting — you're showing up when there are issues.",
+]
+challenge_paragraph_2 = "But then it's never about the big picture, the strategy, or the results. That's not you. That's not the leader you are."
 challenge_image_alt = "Laurence coaching at her desk"
+
+# ── The Trap Section ──────────────────────────────────────────
+realtalk_eyebrow = "The Trap"
+realtalk_heading = "Your team glorifies firefighting. But being busy doesn't mean the work is moving forward."
+realtalk_paragraph_1 = "For your team, it's easy to play the hero — look at the hours, look how I saved this situation. But they might have saved one thing while dropping five others to do it. And tomorrow they'll fight the same fire again. Eventually, it drains them."
+realtalk_paragraph_2 = "They justify it: \"I stayed late, I sorted it, I showed up.\" It makes them feel useful, strong, committed. Deep down, everybody knows firefighting isn't the job. You see that. They don't yet — and that gap is exactly where I work: with you and with your team."
+realtalk_image_alt = "Laurence in a coaching session"
+
+# ── Imagine Section ───────────────────────────────────────────
+imagine_eyebrow = "Imagine"
+imagine_heading = "Imagine your days went to the <em>high-value work</em>"
+imagine_items = [
+    "Build strong relationships with your stakeholders.",
+    "Set the new strategy — and map the team to this year's constraints.",
+    "Delegate effectively to your team.",
+    "Identify talent and support their growth.",
+    "Ensure your team leads do the same.",
+]
+imagine_closing = "That's what it looks like when a leader is playing to their potential — instead of being thwarted by the day-to-day."
+
+# ── The Promise Section ───────────────────────────────────────
+impact_eyebrow = "The Promise"
+impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
+impact_paragraph_1 = "You already know about ownership, boundaries, and taking responsibility. That was never the issue. The issue is the emergencies keeping you from leading."
+impact_paragraph_2 = "I work with you and your team to make the firefighting stop — with a flexible framework built on your expertise, your current challenges, and your leadership style."
+impact_cta_text = "I can help with that"
+impact_image_alt = "Laurence working with a client"
+
+# ── Case Example Section ──────────────────────────────────────
+case_eyebrow = "A Real Example"
+case_heading = "One leader, one workshop — before and <em>after</em>"
+case_description = "What actually changed for one leader after a single workshop engagement:"
+case_before_label = "Before"
+case_after_label = "After the workshop"
 
 # ── Services Section ──────────────────────────────────────────
 services_eyebrow = "Three Ways We Can Work Together"
@@ -40,28 +81,13 @@ resources_eyebrow = "Free Resources"
 resources_heading = "Want to know <em>more</em>?"
 resources_description = "Here are some ways to get unconventional leadership insights..."
 
-# ── No Magic Pill Section ─────────────────────────────────────
-realtalk_eyebrow = "Real Talk"
-realtalk_heading = "There is no super-fast solution to resolve issues that have built up over time."
-realtalk_paragraph_1 = "Under rising pressure, our brains are wired to jump to easy, fast solutions. Most people are attracted to an easy proposal, even though they know, deep down, that it won't work."
-realtalk_paragraph_2 = "But once we identify and focus on specific targets, you can implement new strategies. That's when you can face new career opportunities, level up, and thrive."
-realtalk_image_alt = "Laurence in a coaching session"
-
-# ── Your Work Impacts Many Section ────────────────────────────
-impact_eyebrow = "Let's Work Together"
-impact_heading = "Your work and how you show up <em>impact many.</em>"
-impact_paragraph_1 = "Are you telling yourself next month will be better? ...and then saying that month after month? You're driven, ambitious and courageous, with no time left for you."
-impact_paragraph_2 = "If you're curious and ready to address your challenges and truly overcome them, I created a flexible framework that focuses on your expertise, your current challenges, and your leadership style."
-impact_cta_text = "I can help with that"
-impact_image_alt = "Laurence working with a client"
-
 # ── Client Testimonials Section ───────────────────────────────
 testimonials_eyebrow = "See What It's Like to Work Together"
 testimonials_heading = "In their <em>words</em>"
 
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "The Most Successful Leaders Never Go It Alone"
-cta_bottom_heading = "Get the bespoke coaching to unlock your <em style=\"font-style: italic; color: var(--color-orange-light)\">career</em>"
+cta_bottom_heading = "Ready for the firefighting to <em style=\"font-style: italic; color: var(--color-orange-light)\">stop</em>?"
 cta_bottom_description = "Curious to hear more and see if there's a fit? Grab some time on my calendar."
 cta_bottom_button_text = "Grab Some Time On My Calendar"
 
@@ -81,6 +107,27 @@ label = "Leaders Coached"
 [[extra.stats]]
 number = "Fortune 100"
 label = "Client Organizations"
+
+# ── Case Example Rows (array of tables) ──────────────────────
+[[extra.case_rows]]
+before = "Operating at team level — absorbed in day-to-day delivery"
+after = "Setting direction and holding the team to it, rather than managing individual tasks"
+
+[[extra.case_rows]]
+before = "Reluctant to assert authority; perceived as too accommodating"
+after = "Setting clear boundaries and holding direct reports accountable — even under pushback"
+
+[[extra.case_rows]]
+before = "Reactive, infrequent communication with senior stakeholders"
+after = "Structured stakeholder updates — flagging risks and proposing solutions before being asked"
+
+[[extra.case_rows]]
+before = "Limited visibility into team capability gaps"
+after = "Articulating gaps precisely and working with HR and senior leadership to address them"
+
+[[extra.case_rows]]
+before = "Workshop originally scoped for senior managers only"
+after = "Chose to include the full team — confidence in her own leadership agenda"
 
 # ── Featured Testimonial (table) ─────────────────────────────
 [extra.featured_testimonial]

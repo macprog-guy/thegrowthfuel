@@ -1,4 +1,4 @@
-.PHONY: dev build preview clean dev-workers deploy-workers design-system
+.PHONY: dev build preview publish clean dev-workers deploy-workers design-system
 
 # -----------------------------------------------------------------------------
 # Zola 
@@ -15,6 +15,26 @@ build:
 # Preview production build locally (no live reload)
 preview:
 	zola build && cd public && python3 -m http.server 8000
+
+# Publish: save all changes and push to GitHub (Cloudflare then rebuilds the live site)
+# Usage:  make publish                       -> commits with a default message
+#         make publish m="new homepage text" -> commits with your own message
+publish:
+	@bash -c '\
+	  git add -A; \
+	  if git diff --cached --quiet; then \
+	    echo "Nothing new to publish — you have no unsaved changes."; \
+	    exit 0; \
+	  fi; \
+	  echo "About to publish these changes:"; \
+	  git -c color.status=always status --short; \
+	  echo ""; \
+	  msg="$(m)"; \
+	  if [ -z "$$msg" ]; then msg="Update site content"; fi; \
+	  git commit -q -m "$$msg" && git push -q && \
+	  echo "" && \
+	  echo "✅ Published! Your changes are on their way to the live site." && \
+	  echo "   They usually appear at thegrowthfuel.com within 1–2 minutes."'
 
 # Clean build output
 clean:
