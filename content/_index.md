@@ -25,7 +25,7 @@ challenge_bullets = [
     "You stay until 10pm, firefighting every day.",
     "Every plan you make gets cancelled — something urgent always comes first.",
 ]
-challenge_paragraph_2 = "It's never about the strategy or the results. That's not the leader you are."
+challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Daily interruptions keep pulling you away from the targets that matter most."
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
