@@ -39,7 +39,7 @@
 <section class="stats-strip">
   <div class="stats-strip-inner">
     {% for stat in section.extra.stats %}
-    <div class="stats-strip-item">
+    <div class="stats-strip-item" data-reveal style="--reveal-delay: {{ loop.index0 * 0.1 }}s">
       <span class="stats-strip-number">{{ stat.number }}</span>
       <span class="stats-strip-label">{{ stat.label }}</span>
     </div>
@@ -53,23 +53,23 @@
     style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
     class="about-bio-grid">
     <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.challenge_eyebrow }}</p>
-      <h2
-        style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
+      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.challenge_eyebrow }}</p>
+      <h2 class="hl-em" data-reveal
+        style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
         {{ section.extra.challenge_heading | safe }}</h2>
-      <p
-        style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
+      <p data-reveal
+        style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.challenge_paragraph_1 }}
       </p>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
+      <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
         {{ section.extra.challenge_paragraph_2 }}
       </p>
     </div>
     <div>
       <div class="card-grid" style="grid-template-columns: 1fr; gap: var(--space-8);">
         {% for item in section.extra.checklist %}
-        <div class="service-card"
-          style="padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
+        <div class="service-card" data-reveal="right"
+          style="--reveal-delay: {{ loop.index0 * 0.12 }}s; padding: var(--space-6) var(--space-8) var(--space-6) var(--space-10); position: relative; overflow: visible;">
           <img src="/images/check-1.webp" alt="" aria-hidden="true" width="300" height="281" loading="lazy"
             style="position: absolute; top: 50%; right: -20px; transform: translateY(-75%) rotate(10deg); width: 80px; height: 80px;">
           <p class="service-card-desc" style="margin: 0;">{{ item.text | safe }}</p>
@@ -82,7 +82,7 @@
 
 {# ── PULL QUOTE 1 ────────────────────────────────────────── #}
 <section class="pull-quote">
-  <div class="pull-quote-inner">
+  <div class="pull-quote-inner" data-reveal>
     <div class="pull-quote-line"></div>
     <p class="pull-quote-text">{{ section.extra.pull_quote_1 }}</p>
   </div>
@@ -91,14 +91,14 @@
 {# ── MEET LAURENCE ───────────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.meet_eyebrow }}</p>
-    <h2
-      style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.meet_eyebrow }}</p>
+    <h2 class="hl-em" data-reveal
+      style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
       {{ section.extra.meet_heading | safe }}</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;"
       class="about-bio-grid">
-      <div>
+      <div data-reveal style="--reveal-delay: 0.16s">
         <p
           style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
           {{ section.extra.meet_bio_1 }}
@@ -111,7 +111,7 @@
           {{ section.extra.meet_bio_3 }}
         </p>
       </div>
-      <div>
+      <div data-reveal="right" style="--reveal-delay: 0.24s">
         <div
           style="background: var(--color-purple-lightest); border-radius: var(--radius-2xl); padding: var(--space-10);">
           <h3
@@ -146,14 +146,14 @@
 {# ── FAQ ─────────────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.faq_eyebrow }}</p>
-    <h2
-      style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.faq_eyebrow }}</p>
+    <h2 class="hl-em" data-reveal
+      style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">
       {{ section.extra.faq_heading | safe }}</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);" class="about-bio-grid">
       {% for faq in section.extra.faqs %}
-      <div class="service-card"{% if faq.full_width is defined and faq.full_width %} style="grid-column: span 2;"{% endif %}>
+      <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 % 2 * 0.12 }}s;{% if faq.full_width is defined and faq.full_width %} grid-column: span 2;{% endif %}">
         <h3 class="service-card-title" style="font-size: var(--text-xl); margin-bottom: var(--space-4);">{{ faq.question }}</h3>
         <p class="service-card-desc">{{ faq.answer }}</p>
       </div>
@@ -164,7 +164,7 @@
 
 {# ── PULL QUOTE 2 ────────────────────────────────────────── #}
 <section class="pull-quote">
-  <div class="pull-quote-inner">
+  <div class="pull-quote-inner" data-reveal>
     <div class="pull-quote-line"></div>
     <p class="pull-quote-text">{{ section.extra.pull_quote_2 }}</p>
   </div>
@@ -172,7 +172,7 @@
 
 {# ── TESTIMONIAL ─────────────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
     <blockquote
       style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
       <img src="/images/big-quote.svg" alt="" aria-hidden="true" width="120" height="120" loading="lazy"
@@ -189,17 +189,17 @@
   <div
     style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-16); align-items: center;"
     class="about-bio-grid">
-    <div style="border-radius: var(--radius-2xl); overflow: hidden;">
+    <div data-reveal="left" style="border-radius: var(--radius-2xl); overflow: hidden;">
       <img src="/images/networking-opportunities.avif" alt="{{ section.extra.collective_image_alt }}" width="140" height="140" loading="lazy"
         style="width: 60%; height: auto; display: block; float: right;">
     </div>
     <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.collective_eyebrow }}</p>
-      <h2
-        style="font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
+      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.collective_eyebrow }}</p>
+      <h2 class="hl-em" data-reveal
+        style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">
         {{ section.extra.collective_heading | safe }}</h2>
-      <p
-        style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
+      <p data-reveal
+        style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
         {{ section.extra.collective_desc }}
       </p>
       <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank"
@@ -213,7 +213,7 @@
 
 {# ── CTA ────────────────────────────────────────────────────── #}
 <section class="section-warm" style="padding: var(--space-20) var(--space-8); text-align: center;">
-  <div style="max-width: var(--container-max); margin: 0 auto;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto;">
     <p
       style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-4);">
       {{ section.extra.cta_eyebrow }}</p>

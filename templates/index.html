@@ -301,45 +301,6 @@
 
 {% block scripts_extra %}
 <script>
-// ── Scroll reveal + stat count-up ──────────────────────────────
-(function() {
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('[data-reveal]');
-
-  // Count-up animation for stat numbers, e.g. "500+" or "Fortune 100"
-  function countUp(el) {
-    var m = el.textContent.match(/^([^0-9]*)(\d+)(.*)$/);
-    if (!m) return;
-    var prefix = m[1], target = parseInt(m[2], 10), suffix = m[3], t0 = null;
-    function step(ts) {
-      if (!t0) t0 = ts;
-      var p = Math.min((ts - t0) / 1400, 1);
-      var eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
-      el.textContent = prefix + Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  if (!('IntersectionObserver' in window) || reduced) {
-    // No JS animation support or user prefers less motion: show everything.
-    return;
-  }
-
-  document.documentElement.classList.add('js-reveal');
-
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-revealed');
-      entry.target.querySelectorAll('.stat-number').forEach(countUp);
-      io.unobserve(entry.target);
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -48px 0px' });
-
-  els.forEach(function(el) { io.observe(el); });
-})();
-
 (function() {
   var c = document.querySelector('.hero-particles');
   if (!c || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
