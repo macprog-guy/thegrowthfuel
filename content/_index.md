@@ -23,7 +23,7 @@ challenge_lead_in = "Three truths you know too well:"
 challenge_bullets = [
     "Your team is in freeze — and you still have to get them through the year.",
     "You stay until 10pm, firefighting every day.",
-    "Every plan you make gets cancelled — something urgent always comes first.",
+    "Most of your plans get derailed. Something urgent keeps coming first.",
 ]
 challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Daily interruptions keep pulling you away from the targets that matter most."
 challenge_image_alt = "Laurence coaching at her desk"
@@ -41,7 +41,7 @@ imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
     "Your team is out of freeze: moving, delivering, getting through the year.",
     "You can switch off at a reasonable hour. At 7 instead of 10pm.",
-    "Your plan holds. Nothing urgent cancels it.",
+    "Your plan holds most of the time now. There's more structure.",
     "Your days go to the high-value work: stakeholders, strategy, talent.",
 ]
 imagine_closing = "That's you, playing to your full potential."
