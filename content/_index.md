@@ -19,11 +19,11 @@ cta_secondary_url = "/services/private-sector"
 challenge_eyebrow = "The Reality"
 challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
 challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
-challenge_lead_in = "Maybe this sounds familiar:"
+challenge_lead_in = "Three truths you know too well:"
 challenge_bullets = [
-    "Your day gets swallowed by your team leads' emergencies.",
-    "Your own work gets pushed to the night — administration at 10pm.",
-    "You tell yourself: \"I'm on it. They can trust me.\"",
+    "Your team is in freeze — and you still have to get them through the year.",
+    "You stay until 10pm, firefighting every day.",
+    "Every plan you make gets cancelled — something urgent always comes first.",
 ]
 challenge_paragraph_2 = "It's never about the strategy or the results. That's not the leader you are."
 challenge_image_alt = "Laurence coaching at her desk"
@@ -36,14 +36,13 @@ realtalk_paragraph_2 = "Deep down, everybody knows firefighting isn't the job. Y
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
-imagine_eyebrow = "Imagine"
-imagine_heading = "Imagine your days went to the <em>high-value work</em>"
+imagine_eyebrow = "Close Your Eyes"
+imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
-    "Build strong stakeholder relationships.",
-    "Set the strategy — mapped to this year's constraints.",
-    "Delegate effectively.",
-    "Identify talent and grow it.",
-    "Ensure your team leads do the same.",
+    "Your team is out of freeze — moving, delivering, getting through the year.",
+    "You leave at a reasonable hour. No 10pm. No daily fires.",
+    "Your plan holds — nothing urgent cancels it.",
+    "Your days go to the high-value work: stakeholders, strategy, talent.",
 ]
 imagine_closing = "That's a leader playing to their potential."
 
@@ -51,7 +50,7 @@ imagine_closing = "That's a leader playing to their potential."
 impact_eyebrow = "The Promise"
 impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
 impact_paragraph_1 = "Ownership, boundaries, responsibility — you know all that. The issue is the emergencies keeping you from leading."
-impact_paragraph_2 = "I work with you and your team to make the firefighting stop."
+impact_paragraph_2 = "I work with you and your team — so the freeze breaks, the firefighting stops, and your plan holds."
 impact_cta_text = "I can help with that"
 impact_image_alt = "Laurence working with a client"
 
