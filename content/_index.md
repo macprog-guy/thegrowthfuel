@@ -9,7 +9,7 @@ sort_by = "weight"
 hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Getting your team through this year."
 hero_title_emphasis = "through this year."
-hero_description = "Some are procrastinating; some are working too hard, caught in the urgency. I work with you and your team to end the daily firefighting — so you get back to the work only you can do."
+hero_description = "All the emergencies or interruptions are stopping you from playing to your full potential. You're being held back from your high-value work."
 cta_primary_text = "Book a Free Consultation"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 cta_secondary_text = "Browse Services"
@@ -17,49 +17,48 @@ cta_secondary_url = "/services/private-sector"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_eyebrow = "The Reality"
-challenge_heading = "Your team's daily emergencies are stopping you from playing to your <em>full potential</em>."
-challenge_paragraph_1 = "You're an experienced leader. You see the gap, you see the firefighting — and you want it to stop. But your team doesn't see it the way you do. For them, firefighting feels good: it's how they feel useful, strong, and committed. So they keep doing it — and justify it."
+challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
+challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
 challenge_lead_in = "Maybe this sounds familiar:"
 challenge_bullets = [
     "Your day gets swallowed by your team leads' emergencies.",
-    "Your own work — the real work — gets pushed to the night. Administration at 10pm, because there was no time during the day.",
-    "You justify it: \"I'm on it. My boss, my company can trust me.\"",
-    "You tell yourself you're not really firefighting — you're showing up when there are issues.",
+    "Your own work gets pushed to the night — administration at 10pm.",
+    "You tell yourself: \"I'm on it. They can trust me.\"",
 ]
-challenge_paragraph_2 = "But then it's never about the big picture, the strategy, or the results. That's not you. That's not the leader you are."
+challenge_paragraph_2 = "It's never about the strategy or the results. That's not the leader you are."
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
 realtalk_eyebrow = "The Trap"
-realtalk_heading = "Your team glorifies firefighting. But being busy doesn't mean the work is moving forward."
-realtalk_paragraph_1 = "For your team, it's easy to play the hero — look at the hours, look how I saved this situation. But they might have saved one thing while dropping five others to do it. And tomorrow they'll fight the same fire again. Eventually, it drains them."
-realtalk_paragraph_2 = "They justify it: \"I stayed late, I sorted it, I showed up.\" It makes them feel useful, strong, committed. Deep down, everybody knows firefighting isn't the job. You see that. They don't yet — and that gap is exactly where I work: with you and with your team."
+realtalk_heading = "Being busy doesn't mean the work is moving forward."
+realtalk_paragraph_1 = "Your team glorifies firefighting: play the hero, save one thing, drop five others — and fight the same fire again tomorrow."
+realtalk_paragraph_2 = "Deep down, everybody knows firefighting isn't the job. You see it. They don't yet — and that gap is where I work: with you and with your team."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
 imagine_eyebrow = "Imagine"
 imagine_heading = "Imagine your days went to the <em>high-value work</em>"
 imagine_items = [
-    "Build strong relationships with your stakeholders.",
-    "Set the new strategy — and map the team to this year's constraints.",
-    "Delegate effectively to your team.",
-    "Identify talent and support their growth.",
+    "Build strong stakeholder relationships.",
+    "Set the strategy — mapped to this year's constraints.",
+    "Delegate effectively.",
+    "Identify talent and grow it.",
     "Ensure your team leads do the same.",
 ]
-imagine_closing = "That's what it looks like when a leader is playing to their potential — instead of being thwarted by the day-to-day."
+imagine_closing = "That's a leader playing to their potential."
 
 # ── The Promise Section ───────────────────────────────────────
 impact_eyebrow = "The Promise"
 impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
-impact_paragraph_1 = "You already know about ownership, boundaries, and taking responsibility. That was never the issue. The issue is the emergencies keeping you from leading."
-impact_paragraph_2 = "I work with you and your team to make the firefighting stop — with a flexible framework built on your expertise, your current challenges, and your leadership style."
+impact_paragraph_1 = "Ownership, boundaries, responsibility — you know all that. The issue is the emergencies keeping you from leading."
+impact_paragraph_2 = "I work with you and your team to make the firefighting stop."
 impact_cta_text = "I can help with that"
 impact_image_alt = "Laurence working with a client"
 
 # ── Case Example Section ──────────────────────────────────────
 case_eyebrow = "A Real Example"
 case_heading = "One leader, one workshop — before and <em>after</em>"
-case_description = "What actually changed for one leader after a single workshop engagement:"
+case_description = "What changed for one leader, after one workshop:"
 case_before_label = "Before"
 case_after_label = "After the workshop"
 
