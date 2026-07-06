@@ -138,7 +138,7 @@ title_line = "VP, i-Nexus &middot; Londres"
 number = "1."
 number_color = "var(--color-purple-lightest)"
 title = "Individuel"
-description = "Nouveau poste, périmètre élargi — ou on vous dit trop dur, ou trop bienveillant ? Vous n'avez pas à devenir quelqu'un d'autre. Ajoutez à ce que vous êtes déjà, et élargissez votre registre de leadership."
+description = "Nouveau poste, périmètre élargi — ou on vous dit trop assertif (voire dur) ou trop bienveillant (voire trop gentil) ? Vous n'avez pas à devenir quelqu'un d'autre. Ajoutez à ce que vous êtes déjà, et élargissez votre répertoire de leadership."
 url = "/fr/programs/unlock-your-career"
 link_text = "En savoir plus"
 

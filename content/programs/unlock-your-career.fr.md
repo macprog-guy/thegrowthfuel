@@ -1,20 +1,20 @@
 +++
 title = "Libérez votre carrière"
-description = "Un coaching pour les leaders qui prennent des rôles plus grands. Vous n'avez pas à devenir quelqu'un d'autre — ajoutez à ce que vous êtes déjà et élargissez votre registre de leadership."
+description = "Un coaching pour les leaders qui prennent des rôles plus grands. Vous n'avez pas à devenir quelqu'un d'autre — ajoutez à ce que vous êtes déjà et élargissez votre répertoire de leadership."
 weight = 2
 template = "program.html"
 
 [extra]
 eyebrow = "Programme"
-subtitle = "Pour les leaders qui prennent des rôles plus grands : gardez vos forces, développez-en de nouvelles, élargissez votre registre de leadership."
+subtitle = "Pour les leaders qui prennent des rôles plus grands : gardez vos forces, développez-en de nouvelles, élargissez votre répertoire de leadership."
 price_info = "Investissement à partir de CHF 3 200 pour le programme complet"
 
 intro_eyebrow = "Vue d'ensemble"
 intro_heading = "Évoluer sans perdre <em>qui vous êtes</em>"
 intro = [
-  "Vous avez mérité ce poste — ou il a grandi autour de vous. Aujourd'hui, le rôle exige de nouvelles qualités : donner un cap clair, trancher, être présent dans des pièces qui semblaient d'un niveau au-dessus. On vous a peut-être dit que vous étiez trop dur. Ou trop bienveillant. Dans les deux cas, le message ressemble à : devenez quelqu'un d'autre.",
+  "Vous avez mérité ce poste — ou il a grandi autour de vous. Aujourd'hui, le rôle exige de nouvelles qualités : donner un cap clair, trancher, être présent dans des pièces qui semblaient d'un niveau au-dessus. On vous a peut-être dit que vous étiez trop assertif, voire dur. Ou trop bienveillant, voire trop gentil. Dans les deux cas, le message ressemble à : devenez quelqu'un d'autre.",
   "Vous n'avez pas à devenir quelqu'un d'autre. Vous avez seulement à ajouter à ce que vous êtes déjà. Comme un athlète : vous gardez vos forces, et vous en développez de nouvelles. Restez fidèle à qui vous êtes — et créez l'espace pour grandir intentionnellement.",
-  "Les bénéfices ? De l'empowerment. Des liens plus profonds. Une vie plus sereine. C'est là que l'inconfort initial commence à en valoir la peine.",
+  "Les bénéfices ? De la confiance (empowerment). Des liens plus profonds. Une vie plus sereine. C'est là que l'inconfort initial commence à en valoir la peine.",
 ]
 
 pull_quote = "Le leadership n'est pas une question de rejet. C'est une question d'intégration."
@@ -30,8 +30,8 @@ audience_eyebrow = "À qui s'adresse ce programme"
 audience_heading = "Est-ce fait pour <em>vous</em> ?"
 audience = [
   "Vous venez d'être promu — ou votre périmètre s'est élargi — et vous voulez vous sentir à la hauteur du rôle",
-  "On vous a dit trop dur, ou trop bienveillant, et vous vous demandez ce qu'il faut ajuster — pas remplacer",
-  "Vous croyez au leadership au service des autres, mais vous avez appris que l'empathie sans autorité mène à la confusion — et à l'épuisement",
+  "On vous a dit trop assertif (voire dur), ou trop bienveillant (voire trop gentil), et vous vous demandez ce qu'il faut ajuster — pas remplacer",
+  "Vous croyez au servant leadership, mais vous avez appris que l'empathie sans autorité mène à la confusion — et à l'épuisement",
   "Vous souhaitez passer d'une reconnaissance pour l'exécution à une reconnaissance pour la réflexion stratégique",
   "Vous visez un poste de directeur ou de vice-président dans les 12 à 24 prochains mois",
 ]
