@@ -14,7 +14,6 @@ cta_primary_text = "Book a Free Consultation"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
-challenge_eyebrow = "The Reality"
 challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
 challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
 challenge_lead_in = "It comes down to three things:"
@@ -27,14 +26,12 @@ challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Dail
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
-realtalk_eyebrow = "The Trap"
 realtalk_heading = "Being busy doesn't mean the work is moving forward."
 realtalk_paragraph_1 = "Your team glorifies firefighting: play the hero, save one thing, drop five others — and fight the same fire again tomorrow."
 realtalk_paragraph_2 = "Deep down, everybody knows firefighting isn't the job. You see it. They don't yet — and that gap is where I work: with you and with your team."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
-imagine_eyebrow = "Close Your Eyes"
 imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
     "Your team is moving, delivering, getting through the year.",
@@ -45,7 +42,6 @@ imagine_items = [
 imagine_closing = "That's you, playing to your full potential."
 
 # ── The Promise Section ───────────────────────────────────────
-impact_eyebrow = "The Promise"
 impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
 impact_paragraph_1 = "Ownership, boundaries, responsibility — you know all that. The issue is the emergencies keeping you from leading."
 impact_paragraph_2 = "I work with you and your team, so the firefighting stops. Your plan mostly holds — and when something urgent hits, you have the space to adapt."
@@ -53,7 +49,6 @@ impact_cta_text = "I can help with that"
 impact_image_alt = "Laurence working with a client"
 
 # ── Case Example Section ──────────────────────────────────────
-case_eyebrow = "A Real Example"
 case_heading = "One leader, one workshop — before and <em>after</em>"
 case_description = "What changed for one leader, after one workshop:"
 case_before_label = "Before"

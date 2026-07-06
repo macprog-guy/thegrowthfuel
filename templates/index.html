@@ -44,7 +44,7 @@
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
     <div>
-      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.challenge_eyebrow }}</p>
+      {% if section.extra.challenge_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.challenge_eyebrow }}</p>{% endif %}
       <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.challenge_heading | safe }}</h2>
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.challenge_paragraph_1 }}
@@ -77,7 +77,7 @@
       <img src="/images/laurence-sit-living-room.avif" alt="{{ section.extra.realtalk_image_alt }}" width="802" height="1000" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div>
-      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.realtalk_eyebrow }}</p>
+      {% if section.extra.realtalk_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.realtalk_eyebrow }}</p>{% endif %}
       <h2 data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.realtalk_heading }}</h2>
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.realtalk_paragraph_1 }}
@@ -93,7 +93,7 @@
 {% if section.extra.imagine_items %}
 <section class="section-warm" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.imagine_eyebrow }}</p>
+    {% if section.extra.imagine_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.imagine_eyebrow }}</p>{% endif %}
     <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ section.extra.imagine_heading | safe }}</h2>
     <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-8) 0; display: grid; gap: var(--space-4); max-width: 60ch;">
       {% for item in section.extra.imagine_items %}
@@ -112,7 +112,7 @@
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;" class="about-bio-grid">
     <div>
-      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.impact_eyebrow }}</p>
+      {% if section.extra.impact_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.impact_eyebrow }}</p>{% endif %}
       <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.impact_heading | safe }}</h2>
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.impact_paragraph_1 }}
@@ -135,7 +135,7 @@
 {% if section.extra.case_rows %}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.case_eyebrow }}</p>
+    {% if section.extra.case_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.case_eyebrow }}</p>{% endif %}
     <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ section.extra.case_heading | safe }}</h2>
     <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 55ch;">{{ section.extra.case_description }}</p>
     <div style="display: grid; gap: var(--space-4);">
