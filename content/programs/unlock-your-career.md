@@ -68,8 +68,8 @@ testimonial_role = "VP, i-Nexus &middot; London"
 # Investment
 investment_eyebrow = "Investment"
 investment_heading = "Your investment"
-investment_text = "Unlock Your Career starts at CHF 150. We shape the scope together — you'll leave the first free conversation knowing exactly what your path, and your investment, would look like."
-price_highlight = "From CHF 150"
+investment_text = "Unlock Your Career starts at CHF 300. We shape the scope together — you'll leave the first free conversation knowing exactly what your path, and your investment, would look like."
+price_highlight = "From CHF 300"
 price_note = "Payment plans are available."
 
 # FAQ — objection handling
