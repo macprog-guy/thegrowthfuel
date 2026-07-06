@@ -6,6 +6,7 @@ template = "program.html"
 
 [extra]
 eyebrow = "Programme"
+hero_image = "/images/laurence-front-facing-black.avif"
 subtitle = "For leaders stepping into bigger roles: keep your strengths, build new ones, expand your leadership range."
 price_info = "Investment starts at CHF 3,200 for the full programme"
 
