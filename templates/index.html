@@ -16,9 +16,11 @@
          aria-label="{{ section.extra.cta_primary_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.cta_primary_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
       </a>
+      {% if section.extra.cta_secondary_text %}
       <a href="{{ section.extra.cta_secondary_url }}" class="btn btn-white">
         {{ section.extra.cta_secondary_text }}
       </a>
+      {% endif %}
     </div>
   </div>
   <div class="hero-portrait" aria-hidden="true">
@@ -200,26 +202,6 @@
   </div>
 </section>
 
-{# ── WHAT TO EXPECT ──────────────────────────────────────── #}
-<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.expect_eyebrow }}</p>
-    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ section.extra.expect_heading | safe }}</h2>
-
-    <div class="card-grid">
-      {% for card in section.extra.expect_cards %}
-      <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 * 0.12 }}s">
-        <div class="service-card-icon service-card-icon-{{ card.icon_color }}">
-          {{ card.icon_svg | safe }}
-        </div>
-        <h3 class="service-card-title">{{ card.title | safe }}</h3>
-        <p class="service-card-desc">{{ card.description }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {# ── NEWSLETTER ─────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
@@ -227,58 +209,6 @@
     <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ section.extra.newsletter_heading | safe }}</h2>
     <div style="text-align: center;">
       <script async data-uid="a42fcbff0c" src="https://thegrowthfuel.kit.com/a42fcbff0c/index.js"></script>
-    </div>
-  </div>
-</section>
-
-{# ── FREE RESOURCES ───────────────────────────────────────── #}
-<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.resources_eyebrow }}</p>
-    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ section.extra.resources_heading | safe }}</h2>
-    <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 55ch;">{{ section.extra.resources_description }}</p>
-
-    <div class="card-grid">
-      {% for card in section.extra.resource_cards %}
-      <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 * 0.12 }}s">
-        <img src="{{ card.image }}" alt="{{ card.image_alt }}" class="service-card-img" width="158" height="158" loading="lazy">
-        <h3 class="service-card-title">{{ card.title }}</h3>
-        <p class="service-card-desc"{% if card.has_list %} style="margin-bottom: var(--space-4);"{% endif %}>{{ card.description }}</p>
-        {% if card.has_list %}
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          {% for item in card.list_items %}
-          <li style="font-size: var(--text-sm); color: var(--color-gray-600); padding: var(--space-2) 0; border-top: 1px solid var(--color-gray-100);{% if loop.last %} border-bottom: 1px solid var(--color-gray-100);{% endif %}">{{ item }}</li>
-          {% endfor %}
-        </ul>
-        <span class="service-card-link" style="margin-top: var(--space-4);">{{ card.link_text }} <span class="btn-arrow">&rarr;</span></span>
-        {% else %}
-        <span class="service-card-link">{{ card.link_text }} <span class="btn-arrow">&rarr;</span></span>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-{# ── CLIENT TESTIMONIALS ─────────────────────────────────── #}
-<section class="section-warm" style="padding: var(--space-24) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.testimonials_eyebrow }}</p>
-    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ section.extra.testimonials_heading | safe }}</h2>
-
-    <div class="testimonial-grid">
-      {% for testimonial in section.extra.home_testimonials %}
-      <div class="testimonial-card{% if testimonial.featured %} testimonial-featured{% endif %}" data-reveal style="--reveal-delay: {{ loop.index0 * 0.12 }}s">
-        <div class="testimonial-quote-mark">&ldquo;</div>
-        <p class="testimonial-text">{{ testimonial.quote }}</p>
-        <div class="testimonial-author">
-          <div>
-            <div class="testimonial-name">{{ testimonial.name }}</div>
-            <div class="testimonial-role">{{ testimonial.role }}</div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
     </div>
   </div>
 </section>

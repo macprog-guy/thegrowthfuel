@@ -2,8 +2,8 @@
 nav-home = Accueil
 nav-about = À propos
 nav-public-sector = Secteur public
-nav-private-sector = Secteur privé
-nav-programs = Programmes
+nav-private-sector = Pour votre équipe
+nav-programs = Pour votre prochain rôle
 nav-contact = Contact
 nav-book-now = Réserver
 

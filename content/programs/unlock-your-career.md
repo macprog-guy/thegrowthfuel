@@ -40,6 +40,16 @@ audience = [
   "You're targeting a director-level or VP-level role within the next 12–24 months",
 ]
 
+# An Honest Filter
+not_for_eyebrow = "An Honest Filter"
+not_for_heading = "This is <em>not</em> for you if…"
+not_for = [
+  "You're looking for a quick fix. Issues that built up over time don't resolve in a week — there is no magic pill.",
+  "You want a coach who will simply validate the approach you already have.",
+  "You're not ready to practise between sessions. The change happens in your real meetings, not in ours.",
+]
+not_for_closing = "Still reading? Then you're probably exactly who this was built for."
+
 # A True Story
 story_eyebrow = "A True Story"
 story = [
@@ -48,6 +58,30 @@ story = [
   "You don't build great teams by being nice the day you need someone. You build trust. You earn respect. And then, you get to work with great people. Quiet influence compounds.",
 ]
 story_quote = "Influence is how you show up when you don't need anything."
+
+# FAQ — objection handling
+faqs_eyebrow = "Questions Leaders Ask"
+faqs_heading = "You might be <em>wondering</em>…"
+
+[[extra.faqs]]
+question = "Can't I figure this out on my own?"
+answer = "You probably could — eventually. Most of my clients tried alone first: \"I think I can do it alone. At least I'll try for a while.\" A year later, the situation was usually waiting for them, unchanged. A structured programme with a neutral partner compresses that year into ten weeks."
+
+[[extra.faqs]]
+question = "I don't have time right now — maybe next month."
+answer = "\"Next month will be better.\" That's the sentence that keeps most leaders exactly where they are. The programme is built for full agendas: one 75-minute session every two weeks, applied directly to the meetings you already have."
+
+[[extra.faqs]]
+question = "Will this turn me into someone I'm not?"
+answer = "No. You don't have to become someone new — you add to who you already are. Like any athlete: you keep your strengths, you build new ones."
+
+[[extra.faqs]]
+question = "Is it worth CHF 3,200?"
+answer = "If a promotion, a calmer team, or a plan that finally holds is worth more than that to you — yes. And you don't have to decide from this page: the first conversation is free, and you'll leave it with something useful either way."
+
+[[extra.faqs]]
+question = "When does the next programme start?"
+answer = "Whenever you do. This is one-on-one coaching, not a cohort — we schedule around your agenda."
 
 # Investment
 investment_eyebrow = "Investment"
