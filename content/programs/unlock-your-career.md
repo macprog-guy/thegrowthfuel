@@ -59,6 +59,11 @@ story = [
 ]
 story_quote = "Influence is how you show up when you don't need anything."
 
+# Testimonial
+testimonial_quote = "After leading in C-suite positions, I thought I had seen it all. A highly complex situation showed me otherwise — and that's when I began working with Laurence. Her guidance helped me reset, realign, and move forward with clarity. My sleep, performance, and day-to-day satisfaction improved significantly."
+testimonial_name = "Christian Loyer"
+testimonial_role = "VP, i-Nexus &middot; London"
+
 # FAQ — objection handling
 faqs_eyebrow = "Questions Leaders Ask"
 faqs_heading = "You might be <em>wondering</em>…"
