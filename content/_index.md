@@ -66,7 +66,7 @@ newsletter_heading = "Get leadership insights delivered to your <em>inbox</em>"
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "The Most Successful Leaders Never Go It Alone"
 cta_bottom_heading = "Ready for the firefighting to <em style=\"font-style: italic; color: var(--color-orange-light)\">stop</em>?"
-cta_bottom_description = "Curious to hear more and see if there's a fit? Grab some time on my calendar."
+cta_bottom_description = "30 minutes, free. You'll leave with one concrete next step — whether we work together or not."
 cta_bottom_button_text = "Grab Some Time On My Calendar"
 
 # ── Stats Row (array of tables) ──────────────────────────────

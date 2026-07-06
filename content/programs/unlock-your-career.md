@@ -28,7 +28,7 @@ includes_description = "Ten weeks. Five sessions. One written strategy you keep.
 
 # Phases
 phases_eyebrow = "How It Works"
-phases_heading = "Your journey in <em>three phases</em>"
+phases_heading = "How the ten weeks <em>run</em>"
 
 # Audience
 audience_eyebrow = "Who It's For"
@@ -94,27 +94,27 @@ answer = "If a promotion, a calmer team, or a plan that finally holds is worth i
 
 [[extra.includes]]
 title = "Five 75-minute coaching sessions"
-description = "Held every two weeks to build and sustain momentum."
+description = "Every two weeks. We work on the meeting you have next, not hypotheticals."
 
 [[extra.includes]]
 title = "Career positioning assessment"
-description = "Where you stand, where you want to go, and what's in the way."
+description = "Where you stand, where you want to go, and what's actually in the way — named, on paper, in week one."
 
 [[extra.includes]]
 title = "Executive presence and personal brand workshop"
-description = "A virtual 2-hour deep dive into how you show up and how you're perceived."
+description = "Two hours, virtual: how you're perceived today vs. how the role needs you to be — and the specific language to close the gap."
 
 [[extra.includes]]
 title = "Stakeholder mapping exercise"
-description = "Identify your sponsors, allies, and decision-makers — and how to engage them."
+description = "Your sponsors, allies, and decision-makers on one page — and what each one needs to hear from you."
 
 [[extra.includes]]
 title = "Written career strategy document"
-description = "A tangible output you can use for years to come."
+description = "Your positioning, your gaps, and your next three moves. Yours to keep and reuse."
 
 [[extra.includes]]
 title = "Email support between sessions"
-description = "Ongoing access for questions, reflections, and real-time guidance."
+description = "A tough conversation coming up between sessions? Write to me."
 
 [[extra.phases]]
 title = "Diagnose"
