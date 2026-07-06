@@ -7,24 +7,24 @@ template = "program.html"
 [extra]
 eyebrow = "Programme"
 hero_image = "/images/laurence-front-facing-black.avif"
-subtitle = "For leaders stepping into bigger roles: keep your strengths, build new ones, expand your leadership range."
+subtitle = "For leaders 12–24 months into a bigger role. Ten weeks, one-on-one, worked on your real meetings — so you lead like the role needs without becoming someone you're not."
 price_info = "Sessions, assessments, and support materials included."
 
 # Intro
 intro_eyebrow = "Overview"
 intro_heading = "Evolve without losing <em>who you are</em>"
 intro = [
-  "You earned the role — or it grew around you. Now the job asks for new qualities: clear direction, tough calls, presence in rooms that used to feel a level above. Maybe you've been told you're too tough. Or too kind. Either way, the message sounds like: become someone else.",
-  "You don't have to become someone new. You just have to add to who you already are. Like any athlete: you keep your strengths, and you build new ones. Stay true to who you are — and create space to grow intentionally.",
-  "The benefits? Empowerment. Deeper connections. A more peaceful life. That's when the initial discomfort starts to feel worth it.",
+  "You were promoted in the last year or two — or the scope grew around you. The habits that earned the role (deep expertise, reliability, saying yes) aren't the ones it rewards now. And the feedback stings: too tough, or too kind. Underneath, the message sounds like: become someone else.",
+  "You don't. You add to who you already are. Like any athlete: you keep your strengths, and you build the two or three the bigger role needs. Not a personality transplant — a wider range.",
+  "The payoff is concrete: you're heard in the rooms that matter, your team trusts your direction, and you stop replaying meetings at 11pm. It's uncomfortable at first — most worthwhile change is.",
 ]
 
 pull_quote = "Leadership isn't about rejection. It's about integration."
 
 # What's Included
 includes_eyebrow = "What's Included"
-includes_heading = "Everything you need to unlock your next level"
-includes_description = "The programme runs over 10 weeks and is designed to produce tangible career acceleration."
+includes_heading = "What you get"
+includes_description = "Ten weeks. Five sessions. One written strategy you keep. Here's exactly what's in it."
 
 # Phases
 phases_eyebrow = "How It Works"
@@ -90,11 +90,7 @@ answer = "No. You don't have to become someone new — you add to who you alread
 
 [[extra.faqs]]
 question = "Is it worth the investment?"
-answer = "If a promotion, a calmer team, or a plan that finally holds is worth it to you — yes. And you don't have to decide from this page: the first conversation is free, and you'll leave it with something useful either way."
-
-[[extra.faqs]]
-question = "When does the next programme start?"
-answer = "Whenever you do. This is one-on-one coaching, not a cohort — we schedule around your agenda."
+answer = "If a promotion, a calmer team, or a plan that finally holds is worth it to you — yes. And you don't have to decide from this page: the first conversation is free, and you'll leave it with something useful either way. It's one-on-one, not a cohort, so we start whenever you do."
 
 [[extra.includes]]
 title = "Five 75-minute coaching sessions"

@@ -36,7 +36,7 @@ imagine_heading = "Imagine this year <em>instead</em>"
 imagine_items = [
     "Your team is moving, delivering, getting through the year.",
     "You can switch off at a reasonable hour. At 7 instead of 10pm.",
-    "Your plan mostly holds. When something urgent hits, you have the space to adapt and address it.",
+    "Fires still happen — you're a leader, not a fortune-teller. But most weeks the plan holds, and when it doesn't, you adapt in minutes, not evenings.",
     "Your days go to the high-value work: stakeholders, strategy, talent.",
 ]
 imagine_closing = "That's you, playing to your full potential."
