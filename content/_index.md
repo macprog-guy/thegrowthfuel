@@ -138,8 +138,8 @@ title_line = "VP, i-Nexus &middot; London"
 number = "1."
 number_color = "var(--color-purple-lightest)"
 title = "One-on-One"
-description = "For leaders looking to adapt, thrive, and lead with confidence in a rapidly changing world. Your journey to clarity, impact, and career transformation."
-url = "/services/private-sector"
+description = "New role, bigger scope — or feedback that you're too tough, or too kind? You don't have to become someone new. Add to who you already are, and expand your leadership range."
+url = "/programs/unlock-your-career"
 link_text = "Learn more"
 
 [[extra.service_cards]]

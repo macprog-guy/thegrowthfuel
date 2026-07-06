@@ -1,23 +1,24 @@
 +++
 title = "Unlock Your Career"
-description = "A structured coaching programme for mid-career professionals ready to break through to senior leadership."
+description = "Coaching for leaders stepping into bigger roles. You don't have to become someone new — add to who you already are and expand your leadership range."
 weight = 2
 template = "program.html"
 
 [extra]
 eyebrow = "Programme"
-subtitle = "Accelerate your path to senior leadership"
+subtitle = "For leaders stepping into bigger roles: keep your strengths, build new ones, expand your leadership range."
 price_info = "Investment starts at CHF 3,200 for the full programme"
 
 # Intro
 intro_eyebrow = "Overview"
-intro_heading = "The Unlock Your Career Programme"
+intro_heading = "Evolve without losing <em>who you are</em>"
 intro = [
-  "You're good at what you do — and you know it. But somewhere between your current role and the leadership position you want, there's a gap. It might be visibility. It might be executive presence. It might be a story you keep telling yourself about what's possible.",
-  "Unlock Your Career is a structured coaching programme for ambitious mid-career professionals who are ready to move from functional expert to strategic leader.",
+  "You earned the role — or it grew around you. Now the job asks for new qualities: clear direction, tough calls, presence in rooms that used to feel a level above. Maybe you've been told you're too tough. Or too kind. Either way, the message sounds like: become someone else.",
+  "You don't have to become someone new. You just have to add to who you already are. Like any athlete: you keep your strengths, and you build new ones. Stay true to who you are — and create space to grow intentionally.",
+  "The benefits? Empowerment. Deeper connections. A more peaceful life. That's when the initial discomfort starts to feel worth it.",
 ]
 
-pull_quote = "Move from functional expert to strategic leader."
+pull_quote = "Leadership isn't about rejection. It's about integration."
 
 # What's Included
 includes_eyebrow = "What's Included"
@@ -32,11 +33,11 @@ phases_heading = "Your journey in <em>three phases</em>"
 audience_eyebrow = "Who It's For"
 audience_heading = "Is this right for <em>you</em>?"
 audience = [
-  "You're targeting a director-level or VP-level role within the next 12–24 months",
-  "You feel overlooked despite strong performance",
+  "You've just been promoted — or your scope has grown — and you want to feel as empowered as the role demands",
+  "You've been called too tough, or too kind, and wonder what needs tweaking — not replacing",
+  "You value servant leadership, but you've learned that empathy without authority leads to confusion — and exhaustion",
   "You want to shift from being valued for execution to being valued for strategic thinking",
-  "You're navigating a career transition — across functions, industries, or geographies",
-  "You work in international or cross-cultural environments and want to leverage that experience",
+  "You're targeting a director-level or VP-level role within the next 12–24 months",
 ]
 
 # Investment
