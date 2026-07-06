@@ -8,7 +8,7 @@ template = "program.html"
 eyebrow = "Programme"
 hero_image = "/images/laurence-front-facing-black.avif"
 subtitle = "For leaders stepping into bigger roles: keep your strengths, build new ones, expand your leadership range."
-price_info = "Investment starts at CHF 3,200 for the full programme"
+price_info = "Sessions, assessments, and support materials included."
 
 # Intro
 intro_eyebrow = "Overview"
@@ -82,8 +82,8 @@ question = "Will this turn me into someone I'm not?"
 answer = "No. You don't have to become someone new — you add to who you already are. Like any athlete: you keep your strengths, you build new ones."
 
 [[extra.faqs]]
-question = "Is it worth CHF 3,200?"
-answer = "If a promotion, a calmer team, or a plan that finally holds is worth more than that to you — yes. And you don't have to decide from this page: the first conversation is free, and you'll leave it with something useful either way."
+question = "Is it worth the investment?"
+answer = "If a promotion, a calmer team, or a plan that finally holds is worth it to you — yes. And you don't have to decide from this page: the first conversation is free, and you'll leave it with something useful either way."
 
 [[extra.faqs]]
 question = "When does the next programme start?"
@@ -92,8 +92,8 @@ answer = "Whenever you do. This is one-on-one coaching, not a cohort — we sche
 # Investment
 investment_eyebrow = "Investment"
 investment_heading = "Your investment"
-investment_text = "The full Unlock Your Career programme starts at CHF 3,200. This includes all sessions, assessments, and support materials."
-price_highlight = "CHF 3,200"
+investment_text = "Unlock Your Career starts at CHF 150. We shape the scope together — you'll leave the first free conversation knowing exactly what your path, and your investment, would look like."
+price_highlight = "From CHF 150"
 price_note = "Payment plans are available."
 
 [[extra.includes]]

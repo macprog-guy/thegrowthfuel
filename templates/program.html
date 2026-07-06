@@ -10,9 +10,6 @@
     {% if page.extra.subtitle is defined %}
     <p class="hero-split-desc">{{ page.extra.subtitle }}</p>
     {% endif %}
-    {% if page.extra.price_info is defined %}
-    <p style="font-size: var(--text-sm); font-weight: 600; color: var(--color-gray-500); margin-bottom: var(--space-6); letter-spacing: 0.02em;">{{ page.extra.price_info }}</p>
-    {% endif %}
     <div class="hero-actions">
       <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
          aria-label="{{ trans(key="cta-book-free", lang=lang) }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
