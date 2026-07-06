@@ -125,7 +125,7 @@ after = "Articulating gaps precisely and working with HR and senior leadership t
 
 [[extra.case_rows]]
 before = "Workshop originally scoped for senior managers only"
-after = "Chose to include the full team — confidence in her own leadership agenda"
+after = "Chose to include the full team — confidence in his own leadership agenda"
 
 # ── Featured Testimonial (table) ─────────────────────────────
 [extra.featured_testimonial]
