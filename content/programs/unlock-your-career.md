@@ -40,6 +40,15 @@ audience = [
   "You're targeting a director-level or VP-level role within the next 12–24 months",
 ]
 
+# A True Story
+story_eyebrow = "A True Story"
+story = [
+  "A former boss once asked me: \"How did you get him on your project? He's so busy!\"",
+  "I just smiled and said: \"You know how you always tell me I'm too kind? Turns out that holds up over time.\" We both laughed — because we both knew it was true.",
+  "You don't build great teams by being nice the day you need someone. You build trust. You earn respect. And then, you get to work with great people. Quiet influence compounds.",
+]
+story_quote = "Influence is how you show up when you don't need anything."
+
 # Investment
 investment_eyebrow = "Investment"
 investment_heading = "Your investment"

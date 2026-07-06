@@ -153,6 +153,24 @@
 </section>
 {% endif %}
 
+{# ── A TRUE STORY (optional personal anecdote) ─────────────── #}
+{% if page.extra.story is defined %}
+<section class="section-alt" style="padding: var(--space-24) var(--space-8);">
+  <div style="max-width: 720px; margin: 0 auto;">
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.story_eyebrow | default(value="A True Story") }}</p>
+    {% for paragraph in page.extra.story %}
+    <p data-reveal style="--reveal-delay: {{ 0.08 + loop.index0 * 0.08 }}s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ paragraph | safe }}</p>
+    {% endfor %}
+    {% if page.extra.story_quote is defined %}
+    <div data-reveal="scale" style="--reveal-delay: 0.32s; background: var(--color-orange); border-radius: var(--radius-xl); padding: var(--space-8); margin-top: var(--space-8); box-shadow: var(--shadow-glow-orange);">
+      <p style="font-family: var(--font-heading); font-size: var(--text-2xl); font-style: italic; line-height: 1.4; color: var(--color-white); margin: 0;">{{ page.extra.story_quote }}</p>
+    </div>
+    <p style="font-size: var(--text-base); color: var(--color-gray-500); margin-top: var(--space-4);"><span style="color: var(--color-orange);" aria-hidden="true">&rarr;</span> Laurence Methot</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
 {# ── INVESTMENT ────────────────────────────────────────────── #}
 {% if page.extra.investment_text is defined %}
 <section style="padding: var(--space-20) var(--space-6);">
