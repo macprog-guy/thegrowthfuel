@@ -6,7 +6,7 @@ sort_by = "weight"
 
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
-hero_eyebrow = "Laurence Methot, PhD, PCC · 500+ Leaders Coached · Fortune 100"
+hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Getting your team through this year."
 hero_title_emphasis = "through this year."
 hero_description = "All the emergencies or interruptions are stopping you from playing to your full potential. You're being held back from your high-value work."
