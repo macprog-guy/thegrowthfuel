@@ -19,7 +19,7 @@ intro = [
   "The payoff is concrete: you're heard in the rooms that matter, your team trusts your direction, and you stop replaying meetings at 11pm. It's uncomfortable at first — most worthwhile change is.",
 ]
 
-pull_quote = "Leadership isn't about rejection. It's about integration."
+pull_quote = "You may think you're a pussycat. Others see a tiger — or the reverse."
 
 # What's Included
 includes_eyebrow = "What's Included"
@@ -45,7 +45,7 @@ audience = [
 not_for_eyebrow = "An Honest Filter"
 not_for_heading = "This is <em>not</em> for you if…"
 not_for = [
-  "You're looking for a quick fix. Issues that built up over time don't resolve in a week — there is no magic pill.",
+  "You're looking for a quick fix. I don't have one to sell you — pretending otherwise would be false, and I won't do that to you.",
   "You want a coach who will simply validate the approach you already have.",
   "You're not ready to practise between sessions. The change happens in your real meetings, not in ours.",
 ]
@@ -78,7 +78,7 @@ faqs_heading = "You might be <em>wondering</em>…"
 
 [[extra.faqs]]
 question = "Can't I figure this out on my own?"
-answer = "You probably could — eventually. Most of my clients tried alone first: \"I think I can do it alone. At least I'll try for a while.\" A year later, the situation was usually waiting for them, unchanged. A structured programme with a neutral partner compresses that year into ten weeks."
+answer = "You probably could — eventually. But problems don't shrink as you climb; they get more complex. What changes is you, and a fresh perspective almost always needs an external one. That's the whole job: a neutral partner who compresses a year of trial-and-error into ten weeks."
 
 [[extra.faqs]]
 question = "I don't have time right now — maybe next month."
