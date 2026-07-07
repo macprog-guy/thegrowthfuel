@@ -1,23 +1,22 @@
 +++
 title = "Libérez votre carrière"
-description = "Un coaching pour les leaders qui prennent des rôles plus grands. Vous n'avez pas à devenir quelqu'un d'autre — ajoutez à ce que vous êtes déjà et élargissez votre répertoire de leadership."
+description = "Un programme de coaching structuré pour les professionnels en milieu de carrière prêts à accéder à des postes de leadership senior."
 weight = 2
 template = "program.html"
 
 [extra]
 eyebrow = "Programme"
-subtitle = "Pour les leaders qui prennent des rôles plus grands : gardez vos forces, développez-en de nouvelles, élargissez votre répertoire de leadership."
+subtitle = "Accélérez votre parcours vers le leadership senior"
 price_info = "Investissement à partir de CHF 3 200 pour le programme complet"
 
 intro_eyebrow = "Vue d'ensemble"
-intro_heading = "Évoluer sans perdre <em>qui vous êtes</em>"
+intro_heading = "Le programme Libérez votre carrière"
 intro = [
-  "Vous avez mérité ce poste — ou il a grandi autour de vous. Aujourd'hui, le rôle exige de nouvelles qualités : donner un cap clair, trancher, être présent dans des pièces qui semblaient d'un niveau au-dessus. On vous a peut-être dit que vous étiez trop assertif, voire dur. Ou trop bienveillant, voire trop gentil. Dans les deux cas, le message ressemble à : devenez quelqu'un d'autre.",
-  "Vous n'avez pas à devenir quelqu'un d'autre. Vous avez seulement à ajouter à ce que vous êtes déjà. Comme un athlète : vous gardez vos forces, et vous en développez de nouvelles. Restez fidèle à qui vous êtes — et créez l'espace pour grandir intentionnellement.",
-  "Les bénéfices ? De la confiance (empowerment). Des liens plus profonds. Une vie plus sereine. C'est là que l'inconfort initial commence à en valoir la peine.",
+  "Vous êtes compétent dans ce que vous faites — et vous le savez. Mais quelque part entre votre poste actuel et le rôle de leadership que vous visez, il y a un écart. C'est peut-être la visibilité. C'est peut-être la posture de dirigeant. C'est peut-être une histoire que vous continuez à vous raconter sur ce qui est possible.",
+  "Libérez votre carrière est un programme de coaching structuré pour les professionnels ambitieux en milieu de carrière, prêts à passer du rôle d'expert fonctionnel à celui de leader stratégique.",
 ]
 
-pull_quote = "Le leadership n'est pas une question de rejet. C'est une question d'intégration."
+pull_quote = "Le leadership ne se gagne pas en travaillant plus dur — il se gagne en se positionnant plus stratégiquement."
 
 includes_eyebrow = "Ce qui est inclus"
 includes_heading = "Tout ce dont vous avez besoin pour <em>accélérer</em>"
@@ -29,21 +28,12 @@ phases_heading = "Votre parcours en <em>trois phases</em>"
 audience_eyebrow = "À qui s'adresse ce programme"
 audience_heading = "Est-ce fait pour <em>vous</em> ?"
 audience = [
-  "Vous venez d'être promu — ou votre périmètre s'est élargi — et vous voulez vous sentir à la hauteur du rôle",
-  "On vous a dit trop assertif (voire dur), ou trop bienveillant (voire trop gentil), et vous vous demandez ce qu'il faut ajuster — pas remplacer",
-  "Vous croyez au servant leadership, mais vous avez appris que l'empathie sans autorité mène à la confusion — et à l'épuisement",
-  "Vous souhaitez passer d'une reconnaissance pour l'exécution à une reconnaissance pour la réflexion stratégique",
   "Vous visez un poste de directeur ou de vice-président dans les 12 à 24 prochains mois",
+  "Vous vous sentez ignoré malgré de solides performances",
+  "Vous souhaitez passer d'une reconnaissance pour l'exécution à une reconnaissance pour la réflexion stratégique",
+  "Vous êtes en transition de carrière — entre fonctions, secteurs ou géographies",
+  "Vous travaillez dans des environnements internationaux ou interculturels et voulez tirer parti de cette expérience",
 ]
-
-# Une histoire vraie
-story_eyebrow = "Une histoire vraie"
-story = [
-  "Un ancien patron m'a demandé un jour : « Comment l'as-tu embarqué sur ton projet ? Il est tellement occupé ! »",
-  "J'ai simplement souri et répondu : « Tu sais, tu me dis toujours que je suis trop gentille ? Il s'avère que ça tient dans la durée. » Nous avons ri tous les deux — parce que nous savions tous les deux que c'était vrai.",
-  "On ne bâtit pas de grandes équipes en étant gentil le jour où on a besoin de quelqu'un. On bâtit la confiance. On gagne le respect. Et ensuite, on a le privilège de travailler avec des personnes formidables. L'influence discrète, ça se cumule.",
-]
-story_quote = "L'influence, c'est la façon dont vous vous présentez quand vous n'avez besoin de rien."
 
 investment_eyebrow = "Investissement"
 investment_heading = "Votre investissement"
