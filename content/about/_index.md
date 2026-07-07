@@ -18,7 +18,7 @@ credentials = [
 # ── Hero Section ────────────────────────────────────────────
 hero_eyebrow = "About"
 hero_title = "Hi! I'm Laurence Methot."
-hero_desc = "After 22 years coaching leaders across 70+ countries, I've learned one thing — the right conversation changes everything."
+hero_desc = "After 22 years coaching leaders across 70+ countries, I've learned one thing — every leader and their situation is unique, and needs its own approach, built together over the sessions."
 hero_cta = "Book a Free Consultation"
 hero_headshot_alt = "Laurence Methot"
 hero_placeholder = "Photo Placeholder"
