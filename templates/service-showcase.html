@@ -37,7 +37,7 @@
 <section class="stats-strip">
   <div class="stats-strip-inner">
     {% for stat in page.extra.stats %}
-    <div class="stats-strip-item">
+    <div class="stats-strip-item" data-reveal style="--reveal-delay: {{ loop.index0 * 0.1 }}s">
       <span class="stats-strip-number">{{ stat.number }}</span>
       <span class="stats-strip-label">{{ stat.label }}</span>
     </div>
@@ -49,11 +49,11 @@
 {# ── THE REALITY (Intro) ─────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.intro_eyebrow | default(value="Overview") }}</p>
-    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ page.extra.intro_heading | default(value="Coaching tailored to your context") | safe }}</h2>
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.intro_eyebrow | default(value="Overview") }}</p>
+    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-10);">{{ page.extra.intro_heading | default(value="Coaching tailored to your context") | safe }}</h2>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start;" class="about-bio-grid">
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col1 | default(value="") }}</p>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col2 | default(value="") }}</p>
+      <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col1 | default(value="") }}</p>
+      <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.intro_col2 | default(value="") }}</p>
     </div>
   </div>
 </section>
@@ -61,7 +61,7 @@
 {# ── PULL QUOTE ───────────────────────────────────────────── #}
 {% if page.extra.pull_quote is defined %}
 <section class="pull-quote">
-  <div class="pull-quote-inner">
+  <div class="pull-quote-inner" data-reveal>
     <div class="pull-quote-line"></div>
     <p class="pull-quote-text">"{{ page.extra.pull_quote }}"</p>
   </div>
@@ -72,8 +72,8 @@
 {% if page.extra.features is defined %}
 <section class="section-alt" style="padding: var(--space-24) var(--space-8);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
-    <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.features_eyebrow | default(value="Focus Areas") }}</p>
-    <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ page.extra.features_heading | default(value="What we work on together") | safe }}</h2>
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.features_eyebrow | default(value="Focus Areas") }}</p>
+    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-12);">{{ page.extra.features_heading | default(value="What we work on together") | safe }}</h2>
 
     <div class="card-grid card-grid-2">
       {% for feature in page.extra.features %}
@@ -84,7 +84,7 @@
       {% else %}
         {% set_global icon_color = "green" %}
       {% endif %}
-      <div class="service-card">
+      <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 % 2 * 0.12 }}s">
         {% if feature.icon is defined %}
         <div class="service-card-icon service-card-icon-{{ icon_color }}">{{ feature.icon | safe }}</div>
         <h3 class="service-card-title">{{ feature.title }}</h3>
@@ -106,13 +106,13 @@
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start;" class="about-bio-grid">
     <div>
-      <p class="hero-eyebrow" style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.process_eyebrow | default(value="The Engagement") }}</p>
-      <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ page.extra.process_heading | default(value="What coaching looks like") | safe }}</h2>
-      <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.process_description | default(value="") }}</p>
+      <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ page.extra.process_eyebrow | default(value="The Engagement") }}</p>
+      <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ page.extra.process_heading | default(value="What coaching looks like") | safe }}</h2>
+      <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">{{ page.extra.process_description | default(value="") }}</p>
     </div>
     <div>
       {% for item in page.extra.process_items %}
-      <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-6); align-items: flex-start;">
+      <div data-reveal="right" style="--reveal-delay: {{ loop.index0 * 0.12 }}s; display: flex; gap: var(--space-4); margin-bottom: var(--space-6); align-items: flex-start;">
         <span style="flex-shrink: 0; width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--color-purple-lightest); color: var(--color-purple); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: var(--text-sm);">{{ loop.index }}</span>
         <p style="font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600); padding-top: var(--space-1);">{{ item }}</p>
       </div>
@@ -125,7 +125,7 @@
 {# ── WHO THIS IS FOR ──────────────────────────────────────── #}
 {% if page.extra.audience is defined %}
 <section class="section-warm" style="padding: var(--space-16) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto; text-align: center;">
     <h3 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ trans(key="service-who-for", lang=lang) }}</h3>
     <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); max-width: 700px; margin: 0 auto;">{{ page.extra.audience }}</p>
   </div>
@@ -135,7 +135,7 @@
 {# ── TESTIMONIAL ──────────────────────────────────────────── #}
 {% if page.extra.testimonial_quote is defined %}
 <section class="section-purple grain-overlay" style="padding: var(--space-20) var(--space-8);">
-  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1; text-align: center;">
     <blockquote style="font-family: var(--font-heading); font-size: var(--text-3xl); font-style: italic; line-height: 1.4; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto var(--space-8);">
       <img src="/images/big-quote.svg" alt="" aria-hidden="true" width="120" height="120" loading="lazy"
         style="width: 48px; height: auto; opacity: 0.5; margin: 0 auto var(--space-4); display: block;">
@@ -151,7 +151,7 @@
 
 {# ── CTA ──────────────────────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
-  <div style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto; position: relative; z-index: 1;">
     <h2 style="font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-white); margin-bottom: var(--space-6);">{{ trans(key="service-ready", lang=lang) | safe }}</h2>
     <p style="font-size: var(--text-lg); color: var(--color-purple-light); margin-bottom: var(--space-10); line-height: 1.7;">{{ trans(key="service-ready-desc", lang=lang) }}</p>
     <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"

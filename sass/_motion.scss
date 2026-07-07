@@ -1,0 +1,143 @@
+// ============================================================
+// THE GROWTH FUEL — Motion & Scroll Reveal
+// Scroll-triggered reveals, stat counters, heading highlights.
+// Gated behind html.js-reveal (added by JS) so content is
+// always visible without JavaScript.
+// ============================================================
+
+// ── Scroll reveal engine ─────────────────────────────────────
+// Usage: data-reveal (fade-up, default) | data-reveal="left" |
+//        "right" | "scale". Stagger with --reveal-delay.
+
+html.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+html.js-reveal [data-reveal="left"]  { transform: translateX(-36px); }
+html.js-reveal [data-reveal="right"] { transform: translateX(36px); }
+html.js-reveal [data-reveal="scale"] { transform: scale(0.95); }
+
+html.js-reveal [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+// ── Heading highlight sweep ──────────────────────────────────
+// The <em> in a .hl-em heading gets a soft orange highlighter
+// that sweeps in once the heading is revealed.
+
+.hl-em em {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-orange-light) 0%,
+    var(--color-orange-light) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: 0 72%;
+  background-size: 100% 0.4em;
+  border-radius: 2px;
+  padding: 0 0.08em;
+  margin: 0 -0.08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+html.js-reveal .hl-em em {
+  background-size: 0% 0.4em;
+  transition: background-size 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+}
+
+html.js-reveal .hl-em.is-revealed em {
+  background-size: 100% 0.4em;
+}
+
+// ── Eyebrow accent rule ──────────────────────────────────────
+// Small brand-orange dash before section eyebrows.
+
+.eyebrow-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    flex-shrink: 0;
+    border-radius: 1px;
+    background: var(--color-orange);
+  }
+}
+
+// ── Offset accent frame behind photos ────────────────────────
+// Soft tinted rectangle peeking out behind an image container.
+
+.img-accent {
+  position: relative;
+  overflow: visible !important;
+
+  img {
+    border-radius: var(--radius-2xl);
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -14px;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-2xl);
+    background: var(--color-purple-lightest);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &.img-accent-right::after  { right: -14px; }
+  &.img-accent-left::after   { left: -14px; }
+  &.img-accent-orange::after { background: var(--color-orange-light); }
+  &.img-accent-green::after  { background: var(--color-green-lightest); }
+
+  &:hover::after {
+    transform: translate(4px, 4px);
+  }
+}
+
+// ── Mobile: sideways slides become fade-up (no x-overflow) ───
+
+@media (max-width: 768px) {
+  html.js-reveal [data-reveal="left"],
+  html.js-reveal [data-reveal="right"] {
+    transform: translateY(28px);
+  }
+
+  html.js-reveal [data-reveal="left"].is-revealed,
+  html.js-reveal [data-reveal="right"].is-revealed {
+    transform: none;
+  }
+}
+
+// ── Reduced motion: show everything, animate nothing ─────────
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html.js-reveal .hl-em em {
+    background-size: 100% 0.4em !important;
+    transition: none !important;
+  }
+
+  .img-accent::after {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,437 @@
+================================================================
+  FRENCH COPY TO CORRECT  —  The Growth Fuel
+  (Homepage + "Libérez votre carrière" page)
+================================================================
+
+HOW TO USE THIS FILE
+- Just edit the French text after each label. Leave the LABELS alone.
+- Words wrapped in *asterisks* appear emphasised (orange italic) on the
+  site. Move or remove the asterisks if you want a different word emphasised.
+- When you're done, hand this back and I'll put every correction into the
+  site for you. Nothing is live — this is all on the private draft.
+- Note: the homepage hero still says "mode pompier" — the term you wanted
+  to replace. Change it here wherever you see it (marked ⚠).
+
+
+================================================================
+  PAGE 1 — HOMEPAGE  (l'accueil)
+================================================================
+
+---- TOP BANNER (hero) ----
+
+Small label above title:
+Coaching Exécutif pour Leaders Confirmés
+
+Big title:
+Mener votre équipe *au bout de l'année.*
+
+Subtitle under title:
+Toutes ces urgences et interruptions vous empêchent de jouer à votre plein
+potentiel. Vous êtes tenu à l'écart de votre travail à haute valeur.
+
+Button 1:  Réserver une consultation gratuite
+Button 2:  Découvrir les services
+
+
+---- SECTION: THE REALITY ----
+
+Eyebrow:  La réalité
+
+Heading:
+La journée disparaît dans *les urgences des autres* — votre travail attend
+la nuit.
+
+Paragraph:
+Vous voyez le mode pompier ⚠, et vous voulez que ça cesse. Pas votre équipe —
+pour elle, c'est se sentir utile, forte, engagée.
+
+Lead-in line:  Tout se résume à trois choses :
+  Bullet 1:  Mener votre équipe au bout de l'année.
+  Bullet 2:  Partir à 19 h, pas à 22 h.
+  Bullet 3:  Construire un plan qui survit à la semaine.
+
+Closing paragraph:
+Vous n'avez pas oublié la stratégie ni les résultats. Les interruptions
+quotidiennes vous éloignent sans cesse des objectifs qui comptent le plus.
+
+
+---- SECTION: THE TRAP ----
+
+Eyebrow:  Le piège
+
+Heading:
+Être occupé ne veut pas dire que le travail avance.
+
+Paragraph 1:
+Votre équipe glorifie le mode pompier ⚠ : jouer les héros, sauver une chose,
+en laisser tomber cinq — et combattre le même feu demain.
+
+Paragraph 2:
+Au fond, tout le monde sait que ce n'est pas ça, le travail. Vous le voyez.
+Eux pas encore — et c'est exactement là que j'interviens : avec vous et avec
+votre équipe.
+
+
+---- SECTION: IMAGINE ----
+
+Eyebrow:  Fermez les yeux
+
+Heading:  Imaginez cette année *autrement*
+
+  Item 1:  Votre équipe est en mouvement : elle avance, elle livre, elle
+           tient l'année.
+  Item 2:  Vous pouvez décrocher à une heure raisonnable. À 19 h au lieu
+           de 22 h.
+  Item 3:  Votre plan tient la plupart du temps. Quand une urgence surgit,
+           vous avez l'espace pour vous adapter et la traiter.
+  Item 4:  Vos journées vont au travail à haute valeur : parties prenantes,
+           stratégie, talents.
+
+Closing line:  C'est vous, à votre plein potentiel.
+
+
+---- SECTION: THE PROMISE ----
+
+Eyebrow:  La promesse
+
+Heading:
+Menez votre équipe au bout de l'année — et retrouvez le travail que
+*vous seul pouvez faire*.
+
+Paragraph 1:
+Responsabilité, limites, engagement — tout cela, vous le connaissez déjà.
+Le problème, ce sont les urgences qui vous empêchent de diriger.
+
+Paragraph 2:
+Je travaille avec vous et votre équipe pour que le mode pompier ⚠ cesse.
+Votre plan tient l'essentiel du temps — et quand une urgence surgit, vous
+avez l'espace pour vous adapter.
+
+Button:  Je peux vous aider
+
+
+---- SECTION: A REAL EXAMPLE (before / after) ----
+
+Eyebrow:  Un exemple concret
+
+Heading:  Une leader, un atelier — avant et *après*
+
+Intro line:  Ce qui a changé pour une leader, après un seul atelier :
+
+Column labels:  Avant   /   Après l'atelier
+
+  Row 1 — before:  Opère au niveau de l'équipe — absorbée par le quotidien
+  Row 1 — after:   Fixe le cap et le fait tenir, au lieu de gérer les tâches
+                   une à une
+
+  Row 2 — before:  Hésite à affirmer son autorité ; perçue comme trop
+                   conciliante
+  Row 2 — after:   Pose des limites claires et responsabilise ses équipes —
+                   même face à la résistance
+
+  Row 3 — before:  Communication réactive et sporadique avec les parties
+                   prenantes
+  Row 3 — after:   Points structurés : signale les risques et propose des
+                   solutions avant qu'on les lui demande
+
+  Row 4 — before:  Visibilité limitée sur les lacunes de compétences de
+                   l'équipe
+  Row 4 — after:   Nomme précisément les manques et les traite avec les RH
+                   et la direction
+
+  Row 5 — before:  Atelier prévu au départ pour les seuls cadres seniors
+  Row 5 — after:   Choisit d'inclure toute l'équipe — confiance dans son
+                   propre agenda de leadership
+
+
+---- SECTION: THREE WAYS TO WORK TOGETHER (service cards) ----
+
+Eyebrow:  Trois façons de travailler ensemble
+Heading:  Un coaching adapté à *votre* défi
+Intro:    Chaque leader fait face à des pressions uniques. Choisissez la
+          voie qui correspond à votre situation.
+
+  Card 1 title:  Individuel
+  Card 1 text:   Nouveau poste, périmètre élargi — ou on vous dit trop
+                 assertif (voire dur) ou trop bienveillant (voire trop
+                 gentil) ? Vous n'avez pas à devenir quelqu'un d'autre.
+                 Ajoutez à ce que vous êtes déjà, et élargissez votre
+                 répertoire de leadership.
+
+  Card 2 title:  Le Collectif de Leadership
+  Card 2 text:   Rejoignez un réseau multicontinental de leaders
+                 expérimentés, dédiés à un leadership durable et à fort
+                 impact — pour bénéficier d'éclairages et d'une collaboration
+                 qui vous aideront à vous épanouir dans un monde en rapide
+                 évolution.
+
+  Card 3 title:  Équipes
+  Card 3 text:   Des programmes sur mesure pour les entreprises du secteur
+                 privé afin de renforcer leurs équipes, relever les défis à
+                 venir et aligner leur leadership.
+
+
+---- SECTION: WHAT TO EXPECT ----
+
+Eyebrow:  À quoi s'attendre
+Heading:  Des changements concrets, pas de vagues *promesses*
+
+  Card 1 title:  Identifiez & renforcez vos compétences les plus impactantes
+  Card 1 text:   Que l'on vous qualifie de trop assertif ou de trop
+                 bienveillant — trouvez l'approche qui fonctionne dans votre
+                 contexte.
+
+  Card 2 title:  Tirez parti de vos qualités uniques
+  Card 2 text:   Propulsez votre prochaine évolution de carrière en vous
+                 appuyant sur ce qui vous rend déjà exceptionnel — pas en
+                 suivant le modèle de quelqu'un d'autre.
+
+  Card 3 title:  Dirigez avec confiance & posez vos limites
+  Card 3 text:   Même quand tout change autour de vous. Sans perdre votre
+                 motivation, votre ambition, ni vos lundis matins.
+
+
+---- SECTION: NEWSLETTER ----
+
+Eyebrow:  Restez informé(e)
+Heading:  Recevez des conseils de leadership dans votre *boîte mail*
+
+
+---- SECTION: FREE RESOURCES ----
+
+Eyebrow:  Ressources gratuites
+Heading:  Envie d'en savoir *plus* ?
+Intro:    Voici quelques pistes pour découvrir des perspectives de leadership
+          non conventionnelles...
+
+  Card 1 title:  Le podcast The Authentic Leader
+  Card 1 text:   Des perspectives de leadership non conventionnelles pour les
+                 leaders confirmés — en 20 minutes maximum par semaine.
+                 Pertinent. Fondé sur la recherche. Résolument optimiste.
+
+  Card 2 title:  Thèmes les plus populaires
+  Card 2 text:   Explorez les sujets que nos clients trouvent les plus
+                 précieux :
+      list item:  Comment manager dans un monde polarisé ?
+      list item:  Prendre des décisions dans les moments difficiles
+      list item:  La frontière ténue entre influence et coercition
+
+  Card 3 title:  3 questions pour débloquer votre carrière
+  Card 3 text:   Une auto-évaluation et un guide pour vous aider à comprendre
+                 ce qui vous bloque dans votre carrière. La plupart des
+                 leaders confirmés se reconnaissent dans au moins un de ces
+                 points.
+
+
+---- SECTION: CLIENT TESTIMONIALS ----
+
+Eyebrow:  Découvrez ce que c'est de travailler ensemble
+Heading:  En leurs *mots*
+
+Featured quote (Christian Loyer, VP i-Nexus · Londres):
+Après avoir dirigé à des postes de direction générale, je pensais avoir tout
+vu. Une situation très complexe m'a prouvé le contraire — et c'est là que
+j'ai commencé à travailler avec Laurence. Ses conseils m'ont aidé à me
+recentrer, me réaligner et avancer avec clarté. Mon sommeil, mes performances
+et ma satisfaction au quotidien se sont considérablement améliorés.
+
+Quote — Sonia B. (Fundraising):
+Grace au style de coaching dynamique de Laurence, j'ai retrouvé confiance en
+mon style de leadership. Elle a été très soutenante et a respecté mon
+parcours et mes décisions, un changement rafraîchissant par rapport à
+d'autres coaches. Avec cette force retrouvée, je suis motivée et autonome
+pour poursuivre mes objectifs.
+
+Quote — Agnes H. (Gestion comptable):
+J'ai senti que la forte présence de Laurence m'a guidée hors d'un
+environnement toxique et m'a aidée à naviguer vers ma prochaine évolution de
+carrière tout en me laissant la liberté de choisir, ce que je ne ressentais
+pas avec d'autres coaches : c'était mon agenda, jamais le sien, et j'ai
+apprécié cela.
+
+Quote — Diane L. (Direction):
+Elle m'a aidée à naviguer un changement de carrière, tout en faisant face à
+de grands changements et défis sur le plan personnel aussi. Je suis certaine
+qu'elle s'adapte aux besoins de chaque personne, et que ses suggestions et
+recommandations varient selon les personnes avec lesquelles elle travaille.
+J'apprécie cela.
+
+
+---- SECTION: FINAL CALL TO ACTION ----
+
+Eyebrow:  Les leaders les plus accomplis ne font jamais cavalier seul
+Heading:  Prêt à en finir avec le mode *pompier* ⚠ ?
+Text:     Curieux d'en savoir plus et de voir si nous sommes faits pour
+          travailler ensemble ? Prenez un moment dans mon agenda.
+Button:   Prenez un moment dans mon agenda
+
+
+---- STAT LABELS (the numbers stay; the labels are French) ----
+
+20+          →  Années d'expérience
+70+          →  Pays couverts
+500+         →  Leaders coachés
+Fortune 100  →  Organisations clientes
+
+
+================================================================
+  PAGE 2 — LIBÉREZ VOTRE CARRIÈRE
+  (the leadership-skills / promotion programme)
+================================================================
+
+---- TOP BANNER (hero) ----
+
+Small label:  Programme
+
+Page title:   Libérez votre carrière
+
+Subtitle:
+Pour les leaders qui prennent des rôles plus grands : gardez vos forces,
+développez-en de nouvelles, élargissez votre répertoire de leadership.
+
+Price line:   Investissement à partir de CHF 3 200 pour le programme complet
+
+
+---- SECTION: OVERVIEW ----
+
+Eyebrow:  Vue d'ensemble
+
+Heading:  Évoluer sans perdre *qui vous êtes*
+
+Paragraph 1:
+Vous avez mérité ce poste — ou il a grandi autour de vous. Aujourd'hui, le
+rôle exige de nouvelles qualités : donner un cap clair, trancher, être
+présent dans des pièces qui semblaient d'un niveau au-dessus. On vous a
+peut-être dit que vous étiez trop assertif, voire dur. Ou trop bienveillant,
+voire trop gentil. Dans les deux cas, le message ressemble à : devenez
+quelqu'un d'autre.
+
+Paragraph 2:
+Vous n'avez pas à devenir quelqu'un d'autre. Vous avez seulement à ajouter à
+ce que vous êtes déjà. Comme un athlète : vous gardez vos forces, et vous en
+développez de nouvelles. Restez fidèle à qui vous êtes — et créez l'espace
+pour grandir intentionnellement.
+
+Paragraph 3:
+Les bénéfices ? De la confiance (empowerment). Des liens plus profonds. Une
+vie plus sereine. C'est là que l'inconfort initial commence à en valoir la
+peine.
+
+Pull quote:
+Le leadership n'est pas une question de rejet. C'est une question
+d'intégration.
+
+
+---- SECTION: WHAT'S INCLUDED ----
+
+Eyebrow:  Ce qui est inclus
+Heading:  Tout ce dont vous avez besoin pour *accélérer*
+Intro:    Le programme se déroule sur 10 semaines et est conçu pour produire
+          une accélération de carrière tangible.
+
+  Item 1 title:  Cinq séances de coaching de 75 minutes
+  Item 1 text:   Des séances toutes les deux semaines pour construire votre
+                 stratégie de leadership et passer à l'action.
+
+  Item 2 title:  Évaluation de positionnement de carrière
+  Item 2 text:   Un diagnostic complet : où vous en êtes, où vous voulez
+                 aller, et ce qui vous en empêche.
+
+  Item 3 title:  Atelier posture de dirigeant et marque personnelle
+  Item 3 text:   Un atelier virtuel de 2 heures pour affûter votre présence
+                 et votre impact.
+
+  Item 4 title:  Exercice de cartographie des parties prenantes
+  Item 4 text:   Identifiez vos sponsors, alliés et décideurs pour maximiser
+                 votre influence.
+
+  Item 5 title:  Document de stratégie de carrière
+  Item 5 text:   Un document écrit et personnalisé que vous pourrez utiliser
+                 pendant des années.
+
+  Item 6 title:  Soutien par e-mail entre les séances
+  Item 6 text:   Un accompagnement continu pour maintenir votre élan entre
+                 les rendez-vous.
+
+
+---- SECTION: HOW IT WORKS (three phases) ----
+
+Eyebrow:  Comment ça fonctionne
+Heading:  Votre parcours en *trois phases*
+
+  Phase 1 title:  Diagnostiquer   (Semaines 1–3)
+  Phase 1 text:   Nous évaluons votre positionnement de carrière actuel avec
+                  rigueur. Comment les autres vous perçoivent-ils ? Comment
+                  voulez-vous être perçu ? Quel est l'écart — et est-il réel
+                  ou perçu ?
+
+  Phase 2 title:  Positionner   (Semaines 4–7)
+  Phase 2 text:   Nous construisons votre récit de leadership, affûtons votre
+                  posture de dirigeant et cartographions les relations et les
+                  actions qui vous feront remarquer par les bonnes personnes.
+
+  Phase 3 title:  Agir   (Semaines 8–10)
+  Phase 3 text:   Vous passez à l'action. Qu'il s'agisse d'une conversation
+                  avec votre manager, d'une candidature pour un nouveau poste
+                  ou d'une stratégie de visibilité, vous quittez ce programme
+                  avec de l'élan et un plan.
+
+
+---- SECTION: WHO IT'S FOR ----
+
+Eyebrow:  À qui s'adresse ce programme
+Heading:  Est-ce fait pour *vous* ?
+
+  Point 1:  Vous venez d'être promu — ou votre périmètre s'est élargi — et
+            vous voulez vous sentir à la hauteur du rôle
+  Point 2:  On vous a dit trop assertif (voire dur), ou trop bienveillant
+            (voire trop gentil), et vous vous demandez ce qu'il faut ajuster
+            — pas remplacer
+  Point 3:  Vous croyez au servant leadership, mais vous avez appris que
+            l'empathie sans autorité mène à la confusion — et à l'épuisement
+  Point 4:  Vous souhaitez passer d'une reconnaissance pour l'exécution à une
+            reconnaissance pour la réflexion stratégique
+  Point 5:  Vous visez un poste de directeur ou de vice-président dans les
+            12 à 24 prochains mois
+
+
+---- SECTION: A TRUE STORY ----
+
+Eyebrow:  Une histoire vraie
+
+Paragraph 1:
+Un ancien patron m'a demandé un jour : « Comment l'as-tu embarqué sur ton
+projet ? Il est tellement occupé ! »
+
+Paragraph 2:
+J'ai simplement souri et répondu : « Tu sais, tu me dis toujours que je suis
+trop gentille ? Il s'avère que ça tient dans la durée. » Nous avons ri tous
+les deux — parce que nous savions tous les deux que c'était vrai.
+
+Paragraph 3:
+On ne bâtit pas de grandes équipes en étant gentil le jour où on a besoin de
+quelqu'un. On bâtit la confiance. On gagne le respect. Et ensuite, on a le
+privilège de travailler avec des personnes formidables. L'influence discrète,
+ça se cumule.
+
+Orange highlight box (signed → Laurence Methot):
+L'influence, c'est la façon dont vous vous présentez quand vous n'avez besoin
+de rien.
+
+
+---- SECTION: INVESTMENT ----
+
+Eyebrow:  Investissement
+Heading:  Votre investissement
+
+Text:
+Le programme complet Libérez votre carrière inclut toutes les séances, les
+évaluations et les supports d'accompagnement.
+
+Big price:  CHF 3 200
+Note:       Des facilités de paiement sont disponibles.
+
+
+================================================================
+  END — hand this back when corrected and I'll apply it all.
+================================================================

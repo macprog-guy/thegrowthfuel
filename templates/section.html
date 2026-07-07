@@ -36,7 +36,7 @@
   <div style="max-width: var(--container-max); margin: 0 auto;">
     <div class="card-grid">
       {% for page in section.pages %}
-      <div class="service-card">
+      <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 % 3 * 0.12 }}s">
         {% if page.extra.icon_color is defined %}
         <div class="service-card-icon service-card-icon-{{ page.extra.icon_color }}">
           {% if page.extra.icon is defined %}{{ page.extra.icon | safe }}{% else %}
@@ -63,7 +63,7 @@
     <div class="card-grid">
       {% for subsection_path in section.subsections %}
         {% set subsection = get_section(path=subsection_path) %}
-        <div class="service-card">
+        <div class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 % 3 * 0.12 }}s">
           <h3 class="service-card-title">{{ subsection.title }}</h3>
           {% if subsection.description %}
           <p class="service-card-desc">{{ subsection.description }}</p>

@@ -16,7 +16,7 @@
 
 {# ── CONTACT FORM ───────────────────────────────────────────── #}
 <section style="padding: var(--space-24) var(--space-6);">
-  <div style="max-width: 560px; margin: 0 auto;">
+  <div data-reveal style="max-width: 560px; margin: 0 auto;">
     <form id="contact-form" novalidate data-sending="{{ trans(key="form-sending", lang=lang) }}" data-success="{{ trans(key="form-success", lang=lang) }}" data-error="{{ trans(key="form-error", lang=lang) }}">
       <div class="form-group">
         <label class="form-label" for="contact-name">{{ trans(key="form-full-name", lang=lang) }}</label>
@@ -62,7 +62,7 @@
 
 {# ── ALTERNATIVE CONTACT ───────────────────────────────────── #}
 <section class="section-alt" style="padding: var(--space-16) var(--space-8); text-align: center;">
-  <div style="max-width: var(--container-max); margin: 0 auto;">
+  <div data-reveal style="max-width: var(--container-max); margin: 0 auto;">
     <p style="font-size: var(--text-lg); color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ trans(key="form-prefer-direct", lang=lang) }}</p>
     <a href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer"
        aria-label="{{ trans(key="cta-book-free", lang=lang) }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
