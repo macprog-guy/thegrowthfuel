@@ -6,7 +6,7 @@ sort_by = "weight"
 
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
-hero_eyebrow = "Laurence Methot, PhD, PCC · 500+ Leaders Coached · Fortune 100"
+hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Getting your team through this year."
 hero_title_emphasis = "through this year."
 hero_description = "All the emergencies or interruptions are stopping you from playing to your full potential. You're being held back from your high-value work."
@@ -59,9 +59,12 @@ services_eyebrow = "Where To Start"
 services_heading = "Which describes <em>you</em>?"
 services_description = "Pick your situation. Each path has its own page."
 
-# ── Newsletter Section ────────────────────────────────────────
+# ── Start Here (free) Section ─────────────────────────────────
+freestart_eyebrow = "Start Here — Free"
+freestart_heading = "Not ready to talk? <em>Start here.</em>"
+freestart_intro = "Read and listen for free. Get the newsletter. When you're ready, book a free consult — you'll leave with one concrete next step."
 newsletter_eyebrow = "Stay In The Loop"
-newsletter_heading = "Get leadership insights delivered to your <em>inbox</em>"
+newsletter_heading = "Leadership insights, straight to your <em>inbox</em>."
 
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "The Most Successful Leaders Never Go It Alone"
@@ -137,5 +140,29 @@ title = "The Leadership Collective"
 description = "A multi-continental circle of experienced leaders — for the questions you can't ask inside your own company."
 url = "/services/public-sector"
 link_text = "Get info"
+
+# ── Free Rungs (array of tables) ─────────────────────────────
+# Only rungs with a non-empty `url` are shown. Fill the two TODO urls
+# (podcast + assessment) to light them up.
+[[extra.free_rungs]]
+title = "Follow on LinkedIn"
+description = "Weekly, unfiltered leadership notes — the same thinking behind this site."
+url = "https://www.linkedin.com/in/laurencemethot/"
+cta = "Follow"
+external = true
+
+[[extra.free_rungs]]
+title = "The Authentic Leader Podcast"
+description = "Unconventional leadership insights — 20 minutes, once a week."
+url = ""
+cta = "Listen"
+external = true
+
+[[extra.free_rungs]]
+title = "3 Questions to Unlock Your Career"
+description = "A short assessment: what's actually blocking you. Most leaders recognise at least one."
+url = ""
+cta = "Take it"
+external = true
 
 +++

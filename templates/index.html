@@ -3,7 +3,6 @@
 {% block content %}
 {# ── HERO — Full-width gradient ─────────────────────────────── #}
 <section class="hero-gradient grain-overlay">
-  <div class="hero-particles" aria-hidden="true"></div>
   <div class="hero-content animate-in">
     <p class="hero-eyebrow">{{ section.extra.hero_eyebrow }}</p>
     <h1 class="hero-title">
@@ -202,7 +201,36 @@
   </div>
 </section>
 
-{# ── NEWSLETTER ─────────────────────────────────────────── #}
+{# ── START HERE (free rungs → ladder) ───────────────────── #}
+{% if section.extra.freestart_eyebrow %}
+<section style="padding: var(--space-24) var(--space-6);">
+  <div style="max-width: var(--container-max); margin: 0 auto;">
+    <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.freestart_eyebrow }}</p>
+    <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-4);">{{ section.extra.freestart_heading | safe }}</h2>
+    <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); color: var(--color-gray-500); margin-bottom: var(--space-12); max-width: 60ch;">{{ section.extra.freestart_intro }}</p>
+
+    <div class="card-grid">
+      {% for rung in section.extra.free_rungs %}
+      {% if rung.url %}
+      <a href="{{ rung.url }}" class="service-card" data-reveal style="--reveal-delay: {{ loop.index0 * 0.1 }}s"{% if rung.external %} target="_blank" rel="noopener noreferrer"{% endif %}>
+        <h3 class="service-card-title">{{ rung.title }}</h3>
+        <p class="service-card-desc">{{ rung.description }}</p>
+        <span class="service-card-link" style="margin-top: auto;">{{ rung.cta }} <span class="btn-arrow">&rarr;</span></span>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    {# Newsletter signup — the rung that keeps you close until you're ready #}
+    <div data-reveal style="margin-top: var(--space-8); background: var(--color-gray-50); border-radius: var(--radius-2xl); padding: var(--space-12) var(--space-8);">
+      <p style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 400; text-align: center; color: var(--color-gray-900); margin-bottom: var(--space-6);">{{ section.extra.newsletter_heading | safe }}</p>
+      <div style="text-align: center;">
+        <script async data-uid="a42fcbff0c" src="https://thegrowthfuel.kit.com/a42fcbff0c/index.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+{% elif section.extra.newsletter_eyebrow %}
 <section style="padding: var(--space-24) var(--space-6);">
   <div style="max-width: var(--container-max); margin: 0 auto;">
     <p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.newsletter_eyebrow }}</p>
@@ -212,6 +240,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 
 {# ── CTA SECTION ────────────────────────────────────────────── #}
 <section class="section-purple grain-overlay" style="padding: var(--space-24) var(--space-8); text-align: center;">
@@ -229,42 +258,3 @@
 </section>
 {% endblock content %}
 
-{% block scripts_extra %}
-<script>
-(function() {
-  var c = document.querySelector('.hero-particles');
-  if (!c || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var N = 75;
-  function r(min, max) { return Math.random() * (max - min) + min; }
-  function jitter(base, pct) { return base * r(1 - pct, 1 + pct); }
-
-  for (var i = 0; i < N; i++) {
-    // d = 0 (far) to 1 (near) — continuous depth
-    var d = i / (N - 1);
-
-    // Size: 2px (far) to 128px (near), exponential curve for natural distribution
-    var size = Math.round(jitter(2 + 126 * Math.pow(d, 2.5), 0.2));
-
-    // Blur: 0 (far/sharp) to ~12px (near/bokeh), scaled with size
-    var blur = jitter(d * d * 12, 0.25);
-
-    // Opacity: 0.06 (far/faint) to 0.30 (near/bold)
-    var alpha = jitter(0.06 + 0.24 * d, 0.2);
-
-    // Speed: 80s (far/slow) to 12s (near/fast)
-    var speed = jitter(80 - 68 * d, 0.15);
-
-    var s = document.createElement('span');
-    s.style.cssText =
-      'left:' + r(1, 99).toFixed(1) + '%;' +
-      'width:' + size + 'px;height:' + size + 'px;' +
-      'animation-duration:' + Math.max(4, speed).toFixed(1) + 's;' +
-      'animation-delay:' + r(0, 20).toFixed(1) + 's;' +
-      'background:rgba(255,255,255,' + Math.min(alpha, 0.35).toFixed(2) + ');' +
-      (blur > 0.3 ? 'filter:blur(' + blur.toFixed(1) + 'px)' : '');
-    c.appendChild(s);
-  }
-})();
-</script>
-{% endblock scripts_extra %}
