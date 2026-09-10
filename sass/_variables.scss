@@ -15,6 +15,9 @@
   --color-orange-dark:     #D14A1C;
   --color-orange-light:    #FDEBE5;
   --color-orange-lightest: #FEF5F1;
+  // AA-safe orange for TEXT on the navy hero (brand orange fails there).
+  // 4.54:1 on the lightest navy in the gradient, 7.4:1 on the darkest.
+  --color-orange-on-navy:  #F6AC8B;
 
   --color-green:           #88C029;
   --color-green-dark:      #6B9A1F;

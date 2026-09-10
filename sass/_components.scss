@@ -498,6 +498,15 @@
   }
 }
 
+// ── Accessibility: orange TEXT on the navy hero (WCAG AA) ─────
+// Brand orange (#ED5E2D) is only ~2.5:1 on the navy gradient. Lighten it
+// to --color-orange-on-navy for the eyebrow + title emphasis; brand orange
+// is untouched on light backgrounds.
+.hero-gradient .hero-eyebrow,
+.hero-gradient .hero-title em {
+  color: var(--color-orange-on-navy);
+}
+
 .hero-desc {
   font-size: var(--text-lg);
   font-weight: 400;
