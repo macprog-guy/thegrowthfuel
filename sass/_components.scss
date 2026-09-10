@@ -50,14 +50,21 @@
 // ── Primary Button (Orange) ─────────────────────────────────
 
 .btn-primary {
-  background: var(--color-orange);
-  color: var(--color-white);
-  border-bottom: 4px solid #F4946E;
+  // WCAG AA: lighter salmon fill + dark navy label (white on brand orange is
+  // only 3.4:1). Label 7.3:1 on the fill; fill 3.7:1 against the navy hero.
+  background: var(--color-btn-salmon);
+  color: var(--color-ink-navy);
+  // Brand-orange border so the button edge stays distinct on white sections
+  // (fill alone is 2.3:1 on white; border is 3.4:1). On navy the salmon fill
+  // itself carries it (3.7:1).
+  border: 1.5px solid var(--color-orange);
+  border-bottom: 4px solid var(--color-orange);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 
   &:hover {
-    background: var(--color-orange-dark);
-    border-bottom-color: #E8845E;
+    // Intensify to brand orange on hover — navy label still 4.95:1 (AA).
+    background: var(--color-orange);
+    border-bottom-color: var(--color-orange-dark);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), var(--shadow-glow-orange);
     transform: translateY(-1px);
   }

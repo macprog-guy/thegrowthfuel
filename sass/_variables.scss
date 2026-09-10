@@ -18,6 +18,10 @@
   // AA-safe orange for TEXT on the navy hero (brand orange fails there).
   // 4.54:1 on the lightest navy in the gradient, 7.4:1 on the darkest.
   --color-orange-on-navy:  #F6AC8B;
+  // AA-safe primary button: lighter salmon fill + dark navy label.
+  // Label 7.3:1 on the fill; fill 3.7:1 against the navy hero.
+  --color-btn-salmon:      #F0946E;
+  --color-ink-navy:        #1A1B3A;
 
   --color-green:           #88C029;
   --color-green-dark:      #6B9A1F;
