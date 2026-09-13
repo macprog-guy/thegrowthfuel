@@ -101,7 +101,7 @@ before = "You answer the question you were asked"
 after = "You proactively structure your feedback and updates. Your communication is clear"
 
 [[extra.case_rows]]
-before = "You bring options — not always clear — and wait to be told"
+before = "You bring options — and trust a process, or a person, for longer than it serves you"
 after = "You bring a recommendation and the reasoning behind it, or state clearly that you're ready to proceed: \"Stop me now, or I'll proceed\""
 
 [[extra.case_rows]]
