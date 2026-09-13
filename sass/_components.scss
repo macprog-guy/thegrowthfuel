@@ -1478,6 +1478,12 @@ textarea.form-input {
     text-align: center;
   }
 
+  // 2b ── A child with `grid-column: span 2` forces a phantom second column
+  //       once the grid collapses to one, squeezing every card into a sliver.
+  .about-bio-grid > * {
+    grid-column: auto !important;
+  }
+
   // 3 ── Always put the photo after its text when the grid stacks,
   //      so two images never end up adjacent.
   .about-bio-grid > .img-accent {
@@ -1488,5 +1494,21 @@ textarea.form-input {
   // scrolling on narrow screens.
   .img-accent::after {
     display: none;
+  }
+
+  // Decorative marks are positioned past the card edge (right: -20px), which
+  // pushed the page 1px wider than the viewport.
+  .service-card > img[aria-hidden="true"] {
+    right: 0 !important;
+  }
+
+  // 4 ── Cards carried 40px padding plus a trailing 24px margin — ~125px of
+  //      dead space per card, which is a lot of scrolling on a phone.
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  .service-card-desc:last-child {
+    margin-bottom: 0;
   }
 }
