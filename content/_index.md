@@ -102,7 +102,7 @@ after = "You proactively structure your feedback and updates. Your communication
 
 [[extra.case_rows]]
 before = "You bring options — and trust a process, or a person, for longer than it serves you"
-after = "You bring a recommendation and the reasoning behind it, or state clearly that you're ready to proceed: \"Stop me now, or I'll proceed\""
+after = "You map your timing beforehand and prepare a backup plan — other solutions, other people — in case the initial situation changes"
 
 [[extra.case_rows]]
 before = "You agree in the room, then worry at 11pm"
