@@ -1,6 +1,6 @@
 +++
 title = "The Growth Fuel"
-description = "End the daily firefighting. Executive coaching for senior leaders — get your team through this year and get back to the high-value work only you can do. Laurence Methot, PhD, PCC."
+description = "You weren't rejected — you were passed over. Executive coaching for established leaders: go from trusted team player to recognised leader in three months. Laurence Methot, PhD, PCC."
 template = "index.html"
 sort_by = "weight"
 
@@ -14,45 +14,44 @@ cta_primary_text = "Break Your Blame & Ownership Cycle"
 cta_primary_url = "/tools/break-the-ownership-cycle.html"
 
 # ── The Problem Section ───────────────────────────────────────
-challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
-challenge_paragraph_1 = "You see the firefighting, and you want it to stop. Your team doesn't — for them, it feels useful, strong, and committed."
-challenge_lead_in = "It comes down to three things:"
+challenge_heading = "You weren't rejected for not being the right fit. You were <em>passed over</em>."
+challenge_paragraph_1 = "They couldn't see you leading the team during a crisis. That is a positioning gap, not a character flaw — and it is entirely fixable."
+challenge_lead_in = "Maybe this is you:"
 challenge_bullets = [
-    "Get your team through the year.",
-    "Leave by 7, not 10.",
-    "Make a plan that survives the week.",
+    "Your team respects and trusts you. They see you lead every day.",
+    "Your stakeholders have never seen that authority come through.",
+    "They only ever see you collaborative and smiling — so a team player is all you are in their eyes.",
 ]
-challenge_paragraph_2 = "You haven't forgotten the strategy or the results. Daily interruptions keep pulling you away from the targets that matter most."
+challenge_paragraph_2 = "The problem isn't that you lack authority within your team. It's that the people deciding have never seen it."
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
-realtalk_heading = "Being busy doesn't mean the work is moving forward."
-realtalk_paragraph_1 = "Your team glorifies firefighting: play the hero, save one thing, drop five others — and fight the same fire again tomorrow."
-realtalk_paragraph_2 = "Deep down, everybody knows firefighting isn't the job. You see it. They don't yet — and that gap is where I work: with you and with your team."
+realtalk_heading = "Kindness without authority reads as weakness. Kindness with authority reads as strength."
+realtalk_paragraph_1 = "Great leadership is not about removing empathy. It's about embracing all of it: being assertive, listening well, exchanging easily with your stakeholders, creating reciprocity, seeking support when you need it."
+realtalk_paragraph_2 = "It's not about becoming someone else. It's about your ability to adapt to the situation."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
-imagine_heading = "Imagine this year <em>instead</em>"
+imagine_heading = "From trusted team player to <em>recognised leader</em>"
 imagine_items = [
-    "Your team is moving, delivering, getting through the year.",
-    "You can switch off at a reasonable hour. At 7 instead of 10pm.",
-    "Fires still happen — you're a leader, not a fortune-teller. But most weeks the plan holds, and when it doesn't, you adapt in minutes, not evenings.",
-    "Your days go to the high-value work: stakeholders, strategy, talent.",
+    "That's how you truly level up. It's not about more responsibility.",
+    "It's playing at a different level.",
+    "And yes, even introverts can play there. Actually, they're quite good at it.",
 ]
-imagine_closing = "That's you, playing to your full potential."
+imagine_closing = "You act your way into the role before it's offered."
 
 # ── The Promise Section ───────────────────────────────────────
-impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
-impact_paragraph_1 = "Ownership, boundaries, responsibility — you know all that. The issue is the emergencies keeping you from leading."
-impact_paragraph_2 = "I work with you and your team, so the firefighting stops. Your plan mostly holds — and when something urgent hits, you have the space to adapt."
-impact_cta_text = "I can help with that"
+impact_heading = "What you're buying, <em>stated outright</em>"
+impact_paragraph_1 = "Twenty years of sitting on the other side of these decisions, applied to your situation — so you stop guessing what \"not quite ready\" meant."
+impact_paragraph_2 = "It isn't about changing who you are. It's about aligning your capabilities with what your organisation values most right now — so your integrity, and the way you want to lead, become visible and land."
+impact_cta_text = "Let's talk about your three months"
 impact_image_alt = "Laurence working with a client"
 
 # ── Case Example Section ──────────────────────────────────────
-case_heading = "One leader, one workshop — before and <em>after</em>"
-case_description = "What changed for one leader, after one workshop:"
-case_before_label = "Before"
-case_after_label = "After the workshop"
+case_heading = "Where you are now → where you <em>want to go</em>"
+case_description = "The concrete before-and-after:"
+case_before_label = "Today"
+case_after_label = "In three months"
 
 # ── Services Section ──────────────────────────────────────────
 services_eyebrow = "Where To Start"
@@ -68,7 +67,7 @@ newsletter_heading = "Leadership insights, straight to your <em>inbox</em>."
 
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "The Most Successful Leaders Never Go It Alone"
-cta_bottom_heading = "Ready for the firefighting to <em style=\"font-style: italic; color: var(--color-orange-light)\">stop</em>?"
+cta_bottom_heading = "Ready to be <em style=\"font-style: italic; color: var(--color-orange-light)\">recognised</em> for what you already do?"
 cta_bottom_description = "30 minutes, free. You'll leave with one concrete next step — whether we work together or not."
 cta_bottom_button_text = "Grab Some Time On My Calendar"
 
@@ -91,24 +90,28 @@ label = "Client Organizations"
 
 # ── Case Example Rows (array of tables) ──────────────────────
 [[extra.case_rows]]
-before = "Operating at team level — absorbed in day-to-day delivery"
-after = "Setting direction and holding the team to it, rather than managing individual tasks"
+before = "You answer the question you were asked"
+after = "You proactively structure your feedback and updates. Your communication is clear"
 
 [[extra.case_rows]]
-before = "Reluctant to assert authority; perceived as too accommodating"
-after = "Setting clear boundaries and holding direct reports accountable — even under pushback"
+before = "You bring options — not always clear — and wait to be told"
+after = "You bring a recommendation and the reasoning behind it, or state clearly that you're ready to proceed: \"Stop me now, or I'll proceed\""
 
 [[extra.case_rows]]
-before = "Reactive, infrequent communication with senior stakeholders"
-after = "Structured stakeholder updates — flagging risks and proposing solutions before being asked"
+before = "You agree in the room, then worry at 11pm"
+after = "You say the hard thing at 3pm, in the room, professionally"
 
 [[extra.case_rows]]
-before = "Limited visibility into team capability gaps"
-after = "Articulating gaps precisely and working with HR and senior leadership to address them"
+before = "Your value is visible to your manager — and stops there"
+after = "You've built a network of stakeholders at your level and above, while keeping the respect of your team"
 
 [[extra.case_rows]]
-before = "Workshop originally scoped for senior managers only"
-after = "Chose to include the full team — confidence in his own leadership agenda"
+before = "\"Too kind\""
+after = "\"Fair — and you know where you stand with her\""
+
+[[extra.case_rows]]
+before = "You love reactive situations. You feel alive"
+after = "You have a robust structure that keeps you on your bigger goals, with space for the unavoidable emergencies"
 
 # ── Featured Testimonial (table) ─────────────────────────────
 [extra.featured_testimonial]
