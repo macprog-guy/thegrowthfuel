@@ -95,6 +95,11 @@
       <p data-reveal style="--reveal-delay: 0.4s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
         {{ section.extra.realtalk_paragraph_2 }}
       </p>
+      {% if section.extra.realtalk_paragraph_3 %}
+      <p data-reveal style="--reveal-delay: 0.48s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-800); border-left: 3px solid var(--color-orange); padding-left: var(--space-5); margin-top: var(--space-6);">
+        {{ section.extra.realtalk_paragraph_3 }}
+      </p>
+      {% endif %}
     </div>
   </div>
 </section>

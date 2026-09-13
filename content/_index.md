@@ -34,7 +34,8 @@ realtalk_bullets = [
     "He thought he was being fair and square.",
     "The same people called him \"Terminator\".",
 ]
-realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse. It's not about becoming someone else. It's about your ability to adapt to the situation."
+realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse."
+realtalk_paragraph_3 = "With both, I worked with their personality, their situation, and their current stakeholders — on communication, influence, and strategy. Not by making them someone else, but by building their ability to adapt to the situation."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
