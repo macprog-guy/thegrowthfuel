@@ -107,7 +107,7 @@ after = "You've built a network of stakeholders at your level and above, while k
 
 [[extra.case_rows]]
 before = "\"Too kind\""
-after = "\"Fair — and you know where you stand with Dave\""
+after = "\"Fair — and you know where you stand with Annie\""
 
 [[extra.case_rows]]
 before = "You love reactive situations. You feel alive"
