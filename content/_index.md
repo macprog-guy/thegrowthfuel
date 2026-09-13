@@ -118,7 +118,7 @@ before = "\"Too kind\""
 after = "\"Fair — and people know where you stand, and respect you for that\""
 
 [[extra.case_rows]]
-before = "You love reactive situations. You feel alive"
+before = "You feel reactive — and put it down to how the market works"
 after = "You have a robust structure that keeps you on your bigger goals, with space for the unavoidable emergencies"
 
 # ── Featured Testimonial (table) ─────────────────────────────
