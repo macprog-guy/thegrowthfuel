@@ -16,13 +16,13 @@ cta_primary_url = "/tools/break-the-ownership-cycle.html"
 # ── The Problem Section ───────────────────────────────────────
 challenge_heading = "You weren't rejected for not being the right fit. You were <em>passed over</em>."
 challenge_paragraph_1 = "They couldn't see you leading the team during a crisis. That is a positioning gap, not a character flaw — and it is entirely fixable."
-challenge_lead_in = "Maybe this is you:"
+challenge_lead_in = "Take Annie:"
 challenge_bullets = [
-    "Your team respects and trusts you. They see you lead every day.",
-    "Your stakeholders have never seen that authority come through.",
-    "They only ever see you collaborative and smiling — so a team player is all you are in their eyes.",
+    "Annie has her team's respect and trust. They see her lead every day.",
+    "Her stakeholders have never seen that authority come through.",
+    "They only ever see her collaborative and smiling — so a team player is all she ever is in their eyes.",
 ]
-challenge_paragraph_2 = "The problem isn't that you lack authority within your team. It's that the people deciding have never seen it."
+challenge_paragraph_2 = "The problem isn't that she lacks authority within her team. It's that the people deciding have never seen it."
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
@@ -107,7 +107,7 @@ after = "You've built a network of stakeholders at your level and above, while k
 
 [[extra.case_rows]]
 before = "\"Too kind\""
-after = "\"Fair — and you know where you stand with her\""
+after = "\"Fair — and you know where you stand with Dave\""
 
 [[extra.case_rows]]
 before = "You love reactive situations. You feel alive"
