@@ -210,13 +210,6 @@
     text-anchor: middle;
     fill: var(--ink-muted);
   }
-  .ring-tally{
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 34px;
-    text-anchor: middle;
-    fill: var(--ink);
-    font-variant-numeric: tabular-nums;
-  }
   .ring-caption{
     margin: 18px 0 0;
     font-size: .875rem;
@@ -434,8 +427,6 @@
         <text class="ring-label" x="200" y="28">OWNERSHIP</text>
         <g id="wedges"></g>
         <line class="ring-axis" x1="28" y1="200" x2="372" y2="200"></line>
-        <text class="ring-tally" id="ownCount" x="200" y="176">0</text>
-        <text class="ring-tally" id="blameCount" x="200" y="236">0</text>
         <text class="ring-label" x="200" y="384">BLAME</text>
       </svg>
       <p class="ring-caption">Most people fill the bottom half in ninety seconds and then sit staring at the top half. That gap is the whole diagnosis.</p>
@@ -709,21 +700,15 @@
     });
   }
 
-  var ownCountEl = document.getElementById("ownCount");
-  var blameCountEl = document.getElementById("blameCount");
   var verdictEl = document.getElementById("verdict");
 
   function render(){
     ["blame", "own"].forEach(function(group){
-      var filled = 0;
       state[group].forEach(function(v, i){
         var on = v.trim().length > 0;
-        if (on) { filled++; }
         wedges[group][i].classList.toggle("is-filled", on);
         nums[group][i].classList.toggle("on-fill", on);
       });
-      // Show filled-out-of-total, so the count can't be mistaken for the total.
-      (group === "own" ? ownCountEl : blameCountEl).textContent = filled + "/" + N;
     });
 
     var listed = 0, them = 0, me = 0;
