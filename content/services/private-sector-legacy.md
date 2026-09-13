@@ -1,12 +1,14 @@
 +++
-title = "Private Sector"
-description = "I support executives navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
-weight = 2
+title = "Private Sector — Detail"
+description = "I support senior leaders navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
+weight = 9
 template = "service-showcase.html"
+in_search_index = false
 
 [extra]
+noindex = true
 eyebrow = "Private Sector"
-subtitle = "I support executives navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
+subtitle = "I support senior leaders navigating complexity and leading confidently by equipping them and their teams with proven skills, methods, and top leadership strategies."
 hero_image = "/images/laurence-dog.webp"
 pull_quote = "Growth used to feel important but not urgent. Now, disruption forces every leader to rethink their approach."
 
@@ -47,7 +49,7 @@ process_items = [
     "Support the teams through change",
 ]
 
-audience = "Executives, senior leaders, and their teams in the private sector who are navigating complexity, driving growth, and leading through constant change. We've been researching and working on these topics since 2006."
+audience = "Senior leaders and their teams in the private sector who are navigating complexity, driving growth, and leading through constant change. We've been researching and working on these topics since 2006."
 
 testimonial_quote = "Laurence intervened fast… The results came out very quickly: combining individual coaching and collective work made a difference."
 testimonial_name = "Sandro Rosselet"

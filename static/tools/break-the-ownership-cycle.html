@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Blame &amp; Ownership Cycle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=swap">
+<style>
+  :root{
+    --ground:      #F7F6FA;
+    --surface:     #FFFFFF;
+    --ink:         #1E2148;
+    --ink-muted:   #55578A;
+    --hairline:    #DCDAE8;
+    --hairline-in: #C2BFD6;
+    --blame:       #6E6C89;
+    --blame-soft:  #E7E6EE;
+    --on-blame:    #FFFFFF;
+    --own:         #8CC152;
+    --own-edge:    #5E8A2B;
+    --own-soft:    #E8F1DC;
+    --on-own:      #1A1B3A;
+    --wedge-empty: #ECEAF3;
+    --accent:      #A8451F;
+    --accent-on:   #FFFFFF;
+    --focus:       #A8451F;
+    --shadow:      0 1px 2px rgba(30,33,72,.06), 0 8px 24px -12px rgba(30,33,72,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:      #16172E;
+      --surface:     #1D1F3A;
+      --ink:         #EDECF5;
+      --ink-muted:   #A7A5C2;
+      --hairline:    #323454;
+      --hairline-in: #454778;
+      --blame:       #8C8AA8;
+      --blame-soft:  #262842;
+      --on-blame:    #1A1B3A;
+      --own:         #8CC152;
+      --own-edge:    #A8D473;
+      --own-soft:    #232D1D;
+      --on-own:      #1A1B3A;
+      --wedge-empty: #232544;
+      --accent:      #F0946E;
+      --accent-on:   #1A1B3A;
+      --focus:       #F0946E;
+      --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:      #16172E;
+    --surface:     #1D1F3A;
+    --ink:         #EDECF5;
+    --ink-muted:   #A7A5C2;
+    --hairline:    #323454;
+    --hairline-in: #454778;
+    --blame:       #8C8AA8;
+    --blame-soft:  #262842;
+    --on-blame:    #1A1B3A;
+    --own:         #8CC152;
+    --own-edge:    #A8D473;
+    --own-soft:    #232D1D;
+    --on-own:      #1A1B3A;
+    --wedge-empty: #232544;
+    --accent:      #F0946E;
+    --accent-on:   #1A1B3A;
+    --focus:       #F0946E;
+    --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  html,body{ margin:0; padding:0; }
+  img{ max-width:100%; }
+  body{
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  *, *::before, *::after{ box-sizing: border-box; }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 28px 72px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  h1{
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 em{ font-style: italic; color: var(--ink-muted); }
+  .standfirst{
+    margin: 0;
+    max-width: 62ch;
+    font-size: 1.0625rem;
+    color: var(--ink-muted);
+  }
+
+  /* ---------- toolbar ---------- */
+  .toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin: 22px 0 40px;
+  }
+  .btn{
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline-in);
+    border-radius: 7px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .btn:hover{ border-color: var(--ink-muted); }
+  .btn-primary{
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-on);
+  }
+  .btn-primary:hover{ filter: brightness(.94); border-color: var(--accent); }
+  .toolbar-note{
+    font-size: .8125rem;
+    color: var(--ink-muted);
+    margin-left: auto;
+  }
+  .toolbar-note.is-example{ color: var(--accent); font-weight: 500; }
+  :is(.btn, .line, .seg-btn):focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* ---------- sheet grid ---------- */
+  .sheet{
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .ring-col{ position: sticky; top: 28px; }
+  @media (max-width: 940px){
+    .sheet{ grid-template-columns: 1fr; gap: 36px; }
+    .ring-col{ position: static; }
+  }
+
+  /* ---------- ring ---------- */
+  .ring{ width: 100%; height: auto; display: block; }
+  .wedge{
+    fill: var(--wedge-empty);
+    stroke: var(--hairline-in);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    transition: fill .35s ease, stroke .2s ease;
+  }
+  .wedge.is-filled{
+    stroke-dasharray: none;
+    stroke-width: 1.25;
+  }
+  .wedge.g-own.is-filled{ fill: var(--own); stroke: var(--own-edge); }
+  .wedge.g-blame.is-filled{ fill: var(--blame); stroke: var(--blame); }
+  .wedge.is-active{ stroke: var(--focus); stroke-width: 2.5; stroke-dasharray: none; }
+  .wedge-num{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    fill: var(--ink-muted);
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+  }
+  .wedge-num.n-own.on-fill{ fill: var(--on-own); }
+  .wedge-num.n-blame.on-fill{ fill: var(--on-blame); }
+  .ring-axis{ stroke: var(--ink); stroke-width: 1.25; }
+  .ring-label{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: .18em;
+    text-anchor: middle;
+    fill: var(--ink-muted);
+  }
+  .ring-tally{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 34px;
+    text-anchor: middle;
+    fill: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .ring-caption{
+    margin: 18px 0 0;
+    font-size: .875rem;
+    color: var(--ink-muted);
+    max-width: 40ch;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wedge{ transition: none; }
+  }
+
+  /* ---------- steps ---------- */
+  .steps{ display: flex; flex-direction: column; gap: 44px; }
+  .step-head{ display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .step-kicker{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  h2{
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  .step-hint{ margin: 0; font-size: .9375rem; color: var(--ink-muted); max-width: 58ch; }
+  .step-hint b{ color: var(--ink); font-weight: 500; }
+
+  .rows{ display: flex; flex-direction: column; gap: 8px; }
+  .row{ display: flex; align-items: center; gap: 12px; }
+  .row-num{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .8125rem;
+    color: var(--ink-muted);
+    width: 16px;
+    flex: none;
+    text-align: right;
+  }
+  .line{
+    font: inherit;
+    font-size: .9375rem;
+    line-height: 1.45;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline-in);
+    border-radius: 6px;
+    padding: 10px 13px;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    resize: none;
+    overflow: hidden;
+    field-sizing: content;
+  }
+  .line::placeholder{ color: var(--ink-muted); opacity: .62; }
+  .line:hover{ border-color: var(--hairline-in); }
+
+  .rows-blame .line:not(:placeholder-shown){
+    background: var(--blame-soft);
+    border-color: var(--blame);
+  }
+  .rows-own .line:not(:placeholder-shown){
+    background: var(--own-soft);
+    border-color: var(--own-edge);
+  }
+
+  /* ---------- actions table ---------- */
+  .actions-head{
+    display: grid;
+    grid-template-columns: 1fr 168px;
+    gap: 12px;
+    align-items: end;
+    padding: 0 0 8px 28px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 10px;
+  }
+  .col-label{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .action-row{
+    display: grid;
+    grid-template-columns: 28px 1fr 168px;
+    gap: 12px;
+    align-items: center;
+  }
+  .seg{
+    display: inline-flex;
+    border: 1px solid var(--hairline-in);
+    border-radius: 7px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .seg-btn{
+    font: inherit;
+    font-size: .8125rem;
+    font-weight: 500;
+    flex: 1;
+    padding: 9px 4px;
+    background: var(--surface);
+    color: var(--ink-muted);
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .seg-btn + .seg-btn{ border-left: 1px solid var(--hairline-in); }
+  .seg-btn[aria-pressed="true"][data-who="me"]{ background: var(--own); color: var(--on-own); }
+  .seg-btn[aria-pressed="true"][data-who="them"]{ background: var(--blame); color: var(--on-blame); }
+  @media (max-width: 620px){
+    .actions-head{ grid-template-columns: 1fr; padding-left: 0; }
+    .actions-head .col-label + .col-label{ display: none; }
+    #actionRows{ gap: 22px; }
+    .action-row{ grid-template-columns: 28px 1fr; row-gap: 5px; }
+    .action-row .seg{ grid-column: 2; width: auto; max-width: 210px; }
+    .action-row .seg-btn{ padding: 6px 4px; font-size: .78125rem; }
+  }
+
+  .verdict{
+    margin: 18px 0 0;
+    padding: 14px 18px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 7px 7px 0;
+    font-size: .9375rem;
+    color: var(--ink);
+    box-shadow: var(--shadow);
+  }
+  .verdict b{ font-weight: 600; }
+
+  /* ---------- commitment ---------- */
+  .commit{
+    padding: 26px 28px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .commit h2{ margin-bottom: 6px; }
+  .commit .line{
+    margin-top: 14px;
+    font-size: 1.0625rem;
+    padding: 13px 15px;
+  }
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top: 56px;
+    padding-top: 26px;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 32px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .foot p{ margin: 0; font-size: .875rem; color: var(--ink-muted); max-width: 46ch; }
+  .foot a{ color: var(--accent); }
+  .foot-actions{ display: flex; gap: 10px; flex-wrap: wrap; }
+
+  /* ---------- print ---------- */
+  @media print{
+    :root{
+      --ground: #FFFFFF; --surface: #FFFFFF; --ink: #1A1B3A; --ink-muted: #4A4C74;
+      --hairline: #C9C7D8; --hairline-in: #A9A7C0; --wedge-empty: #F0EFF5;
+      --blame: #6E6C89; --on-blame: #FFFFFF; --own: #8CC152; --on-own: #1A1B3A;
+      --accent: #A8451F; --shadow: none;
+    }
+    @page{ margin: 12mm; }
+    body{ font-size: 10.5pt; }
+    .wrap{ padding: 0; max-width: none; }
+    .toolbar, .foot-actions{ display: none; }
+    .masthead{ padding-bottom: 14px; }
+    h1{ font-size: 24pt; }
+    .sheet{ grid-template-columns: 190px 1fr; gap: 20px; }
+    .ring-col{ position: static; }
+    .ring-caption{ display: none; }
+    .steps{ gap: 15px; }
+    .step-head{ margin-bottom: 8px; }
+    .commit, .verdict{ box-shadow: none; }
+    .step, .commit, .verdict{ break-inside: avoid; }
+    .foot{ margin-top: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">A five-minute self-audit</p>
+    <h1>The Blame &amp; Ownership Cycle</h1>
+    <p class="standfirst">Ten short lines and five ticks. Nothing here is submitted anywhere &mdash; it saves in your own browser, and the point is what the shape looks like when you are done.</p>
+  </header>
+
+  <div class="toolbar">
+    <button class="btn" id="demo" type="button">Show a worked example</button>
+    <button class="btn" id="clear" type="button">Clear the sheet</button>
+    <button class="btn btn-primary" id="print" type="button">Print / save as PDF</button>
+    <span class="toolbar-note" id="saved">Saves automatically as you type</span>
+  </div>
+
+  <div class="sheet">
+
+    <div class="ring-col">
+      <svg class="ring" viewBox="0 0 400 400" role="img" aria-labelledby="ringTitle">
+        <title id="ringTitle">A ring split in half: ownership above the line, blame below. Each segment fills as you complete a line.</title>
+        <text class="ring-label" x="200" y="28">OWNERSHIP</text>
+        <g id="wedges"></g>
+        <line class="ring-axis" x1="28" y1="200" x2="372" y2="200"></line>
+        <text class="ring-tally" id="ownCount" x="200" y="176">0</text>
+        <text class="ring-tally" id="blameCount" x="200" y="236">0</text>
+        <text class="ring-label" x="200" y="384">BLAME</text>
+      </svg>
+      <p class="ring-caption">Most people fill the bottom half in ninety seconds and then sit staring at the top half. That gap is the whole diagnosis.</p>
+    </div>
+
+    <div class="steps">
+
+      <section class="step">
+        <div class="step-head">
+          <span class="step-kicker">Step 1 &middot; the bottom half</span>
+          <h2>What&rsquo;s standing between you and the role you want</h2>
+          <p class="step-hint">Five lines, fast, without editing yourself. Write what you&rsquo;d say to <b>a friend</b>, not what you&rsquo;d say to a recruiter.</p>
+        </div>
+        <div class="rows rows-blame" id="blameRows"></div>
+      </section>
+
+      <section class="step">
+        <div class="step-head">
+          <span class="step-kicker">Step 2 &middot; the top half</span>
+          <h2>What you could do about each one</h2>
+          <p class="step-hint">Take your five lines in order. For each, write one move you could make <b>without anyone&rsquo;s permission</b>. Not a solution &mdash; a move. If a line has no move, leave it blank and notice which one it was.</p>
+        </div>
+        <div class="rows rows-own" id="ownRows"></div>
+      </section>
+
+      <section class="step">
+        <div class="step-head">
+          <span class="step-kicker">Step 3 &middot; the record</span>
+          <h2>What you have actually done so far</h2>
+          <p class="step-hint">List what you have tried since this started. Then mark each one: did it depend on <b>you doing something</b>, or on <b>someone else replying</b>?</p>
+        </div>
+        <div class="actions-head">
+          <span class="col-label">Action taken</span>
+          <span class="col-label">Depended on&hellip;</span>
+        </div>
+        <div class="rows" id="actionRows"></div>
+        <p class="verdict" id="verdict">Mark your actions above and this line will tell you something you already suspect.</p>
+      </section>
+
+      <section class="step commit">
+        <div class="step-head">
+          <span class="step-kicker">Step 4 &middot; the only line that matters</span>
+          <h2>One move this week that needs nobody&rsquo;s yes</h2>
+          <p class="step-hint">Pick it from your top half. Small and specific beats ambitious and vague.</p>
+        </div>
+        <textarea class="line" id="commitInput" rows="1" maxlength="220" placeholder="By Friday I will&hellip;" aria-label="One move this week"></textarea>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p>Bring your filled sheet to <a href="https://calendly.com/the-growth-fuel/30min-free-consult" id="callLink" target="_blank" rel="noopener noreferrer">a free 30 minute consultation</a>.</p>
+    <div class="foot-actions">
+      <button class="btn btn-primary" id="printFoot" type="button">Print / save as PDF</button>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // N = lines in steps 1 & 2 (and wedges per half-ring). NA = action rows in step 3.
+  var N = 6, NA = 5, CX = 200, CY = 200, R_OUT = 150, R_IN = 82, R_MID = 116, GAP = 1.3;
+  var STEP = 180 / N;
+
+  var EXAMPLE = {
+    blame: [
+      "The recruiter went quiet after the second or final round.",
+      "I have my team's respect, but someone else gets promoted (or kept in the role).",
+      "The market at my level is frozen right now.",
+      "HR filters me out before a human reads anything.",
+      "I was let go for reasons that had nothing to do with me."
+    ],
+    own: [
+      "Ask the recruiter what motivated their choice, and commit to them before they answer that you will not challenge back.",
+      "Write the three results I own with real numbers. That will be key to highlighting those competencies in the next role.",
+      "Make a new search for the current roles available now.",
+      "Stop applying through forms where I know nobody. Find one person inside instead.",
+      "Get feedback on how I'm perceived; there is always something to integrate so I can level up as my roles evolve."
+    ],
+    actions: [
+      "Sent x applications through job boards.",
+      "Rewrote my CV for one specific role.",
+      "Registered with a recruitment agency.",
+      "Updated my LinkedIn headline.",
+      "Asked former colleagues to keep an ear open."
+    ],
+    who: ["them", "me", "them", "me", "them"],
+    commit: "Message the two hiring managers I already know."
+  };
+
+  function pt(r, deg){
+    var a = deg * Math.PI / 180;
+    return [CX + r * Math.cos(a), CY - r * Math.sin(a)];
+  }
+  function sector(a0, a1){
+    var oa = pt(R_OUT, a0), ob = pt(R_OUT, a1),
+        ib = pt(R_IN,  a1), ia = pt(R_IN,  a0);
+    return "M" + oa[0].toFixed(2) + " " + oa[1].toFixed(2) +
+           "A" + R_OUT + " " + R_OUT + " 0 0 0 " + ob[0].toFixed(2) + " " + ob[1].toFixed(2) +
+           "L" + ib[0].toFixed(2) + " " + ib[1].toFixed(2) +
+           "A" + R_IN + " " + R_IN + " 0 0 1 " + ia[0].toFixed(2) + " " + ia[1].toFixed(2) + "Z";
+  }
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var wedgeGroup = document.getElementById("wedges");
+  var wedges = { blame: [], own: [] }, nums = { blame: [], own: [] };
+
+  function buildWedges(){
+    var i, lo, hi, mid, path, label, spanned;
+    for (i = 0; i < N; i++){
+      hi = 180 - i * STEP - GAP;
+      lo = 180 - (i + 1) * STEP + GAP;
+      path = document.createElementNS(SVGNS, "path");
+      path.setAttribute("d", sector(lo, hi));
+      path.setAttribute("class", "wedge g-own");
+      wedgeGroup.appendChild(path);
+      wedges.own.push(path);
+
+      mid = pt(R_MID, (lo + hi) / 2);
+      label = document.createElementNS(SVGNS, "text");
+      label.setAttribute("class", "wedge-num n-own");
+      label.setAttribute("x", mid[0].toFixed(1));
+      label.setAttribute("y", mid[1].toFixed(1));
+      label.textContent = String(i + 1);
+      wedgeGroup.appendChild(label);
+      nums.own.push(label);
+    }
+    for (i = 0; i < N; i++){
+      lo = 180 + i * STEP + GAP;
+      hi = 180 + (i + 1) * STEP - GAP;
+      path = document.createElementNS(SVGNS, "path");
+      path.setAttribute("d", sector(lo, hi));
+      path.setAttribute("class", "wedge g-blame");
+      wedgeGroup.appendChild(path);
+      wedges.blame.push(path);
+
+      mid = pt(R_MID, (lo + hi) / 2);
+      label = document.createElementNS(SVGNS, "text");
+      label.setAttribute("class", "wedge-num n-blame");
+      label.setAttribute("x", mid[0].toFixed(1));
+      label.setAttribute("y", mid[1].toFixed(1));
+      label.textContent = String(i + 1);
+      wedgeGroup.appendChild(label);
+      nums.blame.push(label);
+      spanned = true;
+    }
+    return spanned;
+  }
+
+  function makeRow(group, index, placeholder){
+    var row = document.createElement("div");
+    row.className = "row";
+    var num = document.createElement("span");
+    num.className = "row-num";
+    num.textContent = String(index + 1);
+    var input = document.createElement("textarea");
+    input.className = "line";
+    input.rows = 1;
+    input.maxLength = 220;
+    input.placeholder = placeholder;
+    input.setAttribute("aria-label", group + " line " + (index + 1));
+    input.dataset.group = group;
+    input.dataset.index = String(index);
+    row.appendChild(num);
+    row.appendChild(input);
+    return { row: row, input: input };
+  }
+
+  var inputs = { blame: [], own: [], actions: [] };
+  var whoButtons = [];
+  var state = { blame: [], own: [], actions: [], who: [], commit: "" };
+
+  var BLAME_PH = [
+    "The biggest thing in my way is…",
+    "…and another is…",
+    "…and honestly, also…",
+    "…the one I would not say out loud…",
+    "…and the oldest one of all…",
+    "…and anything still nagging…"
+  ];
+  var OWN_PH = [
+    "The first small action to get this started is…",
+    "For line 2, the first step I can take is…",
+    "For line 3…",
+    "For line 4…",
+    "For line 5…",
+    "For line 6…"
+  ];
+
+  function buildRows(){
+    var i, made, container;
+    container = document.getElementById("blameRows");
+    for (i = 0; i < N; i++){
+      made = makeRow("blame", i, BLAME_PH[i]);
+      container.appendChild(made.row);
+      inputs.blame.push(made.input);
+      state.blame.push("");
+    }
+    container = document.getElementById("ownRows");
+    for (i = 0; i < N; i++){
+      made = makeRow("own", i, OWN_PH[i]);
+      container.appendChild(made.row);
+      inputs.own.push(made.input);
+      state.own.push("");
+    }
+
+    container = document.getElementById("actionRows");
+    for (i = 0; i < NA; i++){
+      container.appendChild(buildActionRow(i));
+      state.actions.push("");
+      state.who.push("");
+    }
+  }
+
+  function buildActionRow(i){
+    var row = document.createElement("div");
+    row.className = "action-row";
+
+    var num = document.createElement("span");
+    num.className = "row-num";
+    num.textContent = String(i + 1);
+
+    var input = document.createElement("textarea");
+    input.className = "line";
+    input.rows = 1;
+    input.maxLength = 220;
+    input.placeholder = i === 0 ? "Something you have already tried…" : "…and the next thing";
+    input.setAttribute("aria-label", "Action " + (i + 1));
+    input.dataset.group = "actions";
+    input.dataset.index = String(i);
+    inputs.actions.push(input);
+
+    var seg = document.createElement("div");
+    seg.className = "seg";
+    seg.setAttribute("role", "group");
+    seg.setAttribute("aria-label", "Action " + (i + 1) + " depended on");
+
+    var pair = [];
+    ["me", "them"].forEach(function(who){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "seg-btn";
+      b.dataset.who = who;
+      b.dataset.index = String(i);
+      b.setAttribute("aria-pressed", "false");
+      b.textContent = who === "me" ? "Me" : "Them";
+      seg.appendChild(b);
+      pair.push(b);
+      b.addEventListener("click", function(){
+        state.who[i] = state.who[i] === who ? "" : who;
+        paintWho(i);
+        render();
+        save();
+      });
+    });
+    whoButtons.push(pair);
+
+    row.appendChild(num);
+    row.appendChild(input);
+    row.appendChild(seg);
+    return row;
+  }
+
+  function paintWho(i){
+    whoButtons[i].forEach(function(b){
+      b.setAttribute("aria-pressed", state.who[i] === b.dataset.who ? "true" : "false");
+    });
+  }
+
+  var ownCountEl = document.getElementById("ownCount");
+  var blameCountEl = document.getElementById("blameCount");
+  var verdictEl = document.getElementById("verdict");
+
+  function render(){
+    ["blame", "own"].forEach(function(group){
+      var filled = 0;
+      state[group].forEach(function(v, i){
+        var on = v.trim().length > 0;
+        if (on) { filled++; }
+        wedges[group][i].classList.toggle("is-filled", on);
+        nums[group][i].classList.toggle("on-fill", on);
+      });
+      (group === "own" ? ownCountEl : blameCountEl).textContent = String(filled);
+    });
+
+    var listed = 0, them = 0, me = 0;
+    state.actions.forEach(function(v, i){
+      if (v.trim().length > 0){
+        listed++;
+        if (state.who[i] === "them") { them++; }
+        if (state.who[i] === "me") { me++; }
+      }
+    });
+
+    var marked = me + them;
+    if (listed === 0){
+      verdictEl.innerHTML = "Mark your actions above and this line will tell you something you already suspect.";
+    } else if (marked === 0){
+      verdictEl.innerHTML = "You have listed <b>" + listed + "</b> " + (listed === 1 ? "action" : "actions") + ". Now mark each one.";
+    } else if (them > me){
+      verdictEl.innerHTML = "<b>" + them + " of your " + marked + " marked actions needed someone else to say yes.</b> That is not laziness — it is where the effort went. The top half of the ring is the part nobody can decline.";
+    } else if (them === me){
+      verdictEl.innerHTML = "Half your effort needed someone else to say yes, half did not. <b>The half that did not is the half that moves.</b>";
+    } else {
+      verdictEl.innerHTML = "<b>" + me + " of your " + marked + " marked actions were entirely yours to make.</b> That is a stronger position than most people arrive with — the question now is whether you have done enough of them.";
+    }
+  }
+
+  /* ---------- persistence (per viewer, best effort) ---------- */
+  var KEY = "boc.sheet.v1";
+  var savedNote = document.getElementById("saved");
+  var commitInput = document.getElementById("commitInput");
+
+  function save(){
+    try{
+      window.localStorage.setItem(KEY, JSON.stringify(state));
+      savedNote.classList.remove("is-example");
+      savedNote.textContent = "Saved in this browser";
+    } catch (e){
+      savedNote.textContent = "This browser is not keeping your answers — print before you close the tab";
+    }
+  }
+
+  function load(){
+    var raw = null;
+    try { raw = window.localStorage.getItem(KEY); } catch (e){ raw = null; }
+    if (!raw) { return false; }
+    var data;
+    try { data = JSON.parse(raw); } catch (e){ return false; }
+    if (!data || typeof data !== "object") { return false; }
+    ["blame", "own", "actions", "who"].forEach(function(k){
+      if (Array.isArray(data[k])){
+        var n = (k === "actions" || k === "who") ? NA : N;
+        for (var i = 0; i < n; i++){
+          state[k][i] = typeof data[k][i] === "string" ? data[k][i] : "";
+        }
+      }
+    });
+    state.commit = typeof data.commit === "string" ? data.commit : "";
+    return true;
+  }
+
+  function autosize(el){
+    if (!el) { return; }
+    el.style.height = "auto";
+    el.style.height = (el.scrollHeight + 2) + "px";
+  }
+  function autosizeAll(){
+    ["blame", "own", "actions"].forEach(function(group){
+      inputs[group].forEach(autosize);
+    });
+    autosize(commitInput);
+  }
+
+  function paintAll(){
+    ["blame", "own", "actions"].forEach(function(group){
+      for (var i = 0; i < inputs[group].length; i++){
+        inputs[group][i].value = state[group][i] || "";
+      }
+    });
+    for (var i = 0; i < whoButtons.length; i++){ paintWho(i); }
+    commitInput.value = state.commit;
+    autosizeAll();
+    render();
+  }
+
+  /* ---------- wiring ---------- */
+  buildWedges();
+  buildRows();
+
+  ["blame", "own", "actions"].forEach(function(group){
+    inputs[group].forEach(function(input, i){
+      input.addEventListener("input", function(){
+        state[group][i] = input.value;
+        autosize(input);
+        render();
+        save();
+      });
+      input.addEventListener("keydown", function(ev){
+        if (ev.key !== "Enter" || ev.shiftKey) { return; }
+        ev.preventDefault();
+        var next = inputs[group][i + 1];
+        if (next) { next.focus(); } else { input.blur(); }
+      });
+      if (group !== "actions"){
+        input.addEventListener("focus", function(){ wedges[group][i].classList.add("is-active"); });
+        input.addEventListener("blur",  function(){ wedges[group][i].classList.remove("is-active"); });
+      }
+    });
+  });
+
+  commitInput.addEventListener("input", function(){
+    state.commit = commitInput.value;
+    autosize(commitInput);
+    save();
+  });
+
+  var resizeQueued = false;
+  window.addEventListener("resize", function(){
+    if (resizeQueued) { return; }
+    resizeQueued = true;
+    window.requestAnimationFrame(function(){ resizeQueued = false; autosizeAll(); });
+  });
+  window.addEventListener("beforeprint", autosizeAll);
+
+  function fillFromExample(){
+    // The worked example ships 5 lines; any extra line stays blank rather than
+    // inventing words for it.
+    for (var i = 0; i < N; i++){
+      state.blame[i] = EXAMPLE.blame[i] || "";
+      state.own[i] = EXAMPLE.own[i] || "";
+    }
+    for (var j = 0; j < NA; j++){
+      state.actions[j] = EXAMPLE.actions[j] || "";
+      state.who[j] = EXAMPLE.who[j] || "";
+    }
+    state.commit = EXAMPLE.commit;
+  }
+
+  document.getElementById("demo").addEventListener("click", function(){
+    fillFromExample();
+    paintAll();
+    save();
+  });
+
+  document.getElementById("clear").addEventListener("click", function(){
+    for (var i = 0; i < N; i++){ state.blame[i] = ""; state.own[i] = ""; }
+    for (var j = 0; j < NA; j++){ state.actions[j] = ""; state.who[j] = ""; }
+    state.commit = "";
+    paintAll();
+    save();
+    this.textContent = "Clear the sheet";
+    inputs.blame[0].focus();
+  });
+
+  function doPrint(){ window.print(); }
+  document.getElementById("print").addEventListener("click", doPrint);
+  document.getElementById("printFoot").addEventListener("click", doPrint);
+
+  if (!load()){
+    fillFromExample();
+    state.commit = "";
+    savedNote.classList.add("is-example");
+    savedNote.textContent = "Someone else’s example — clear the sheet to start yours";
+    document.getElementById("clear").textContent = "Start my own sheet";
+  }
+  paintAll();
+})();
+</script>
+
+</body>
+</html>

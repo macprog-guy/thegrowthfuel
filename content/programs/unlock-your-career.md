@@ -101,7 +101,7 @@ title = "Career positioning assessment"
 description = "Where you stand, where you want to go, and what's actually in the way — named, on paper, in week one."
 
 [[extra.includes]]
-title = "Executive presence and personal brand workshop"
+title = "Leadership presence and personal brand workshop"
 description = "Two hours, virtual: how you're perceived today vs. how the role needs you to be — and the specific language to close the gap."
 
 [[extra.includes]]
@@ -124,7 +124,7 @@ description = "We assess your current career positioning with rigour. Where do o
 [[extra.phases]]
 title = "Position"
 weeks = "Weeks 4–7"
-description = "We build your leadership narrative, sharpen your executive presence, and map the relationships and moves that will get you noticed by the right people."
+description = "We build your leadership narrative, sharpen your leadership presence, and map the relationships and moves that will get you noticed by the right people."
 
 [[extra.phases]]
 title = "Move"

@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  {#- Hidden pages opt out of indexing (set extra.noindex = true) -#}
+  {% if page is defined and page.extra.noindex is defined and page.extra.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
   {#- SEO — pages can override by defining {% block seo %} -#}
   {% block seo %}
     {{ seo::head() }}

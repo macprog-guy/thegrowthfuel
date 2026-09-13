@@ -48,7 +48,7 @@ icon = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="cu
 
 [[extra.features]]
 title = "A Leader's First 100 Days"
-description = "When you step into a new executive role, your presence and approach has an impact on many. Mastering this new game is key for you to be the leader your team trusts and looks up to. This service is bespoke and structured around the new leader's experience and personality, because first impressions have a lasting effect."
+description = "When you step into a new leadership role, your presence and approach has an impact on many. Mastering this new game is key for you to be the leader your team trusts and looks up to. This service is bespoke and structured around the new leader's experience and personality, because first impressions have a lasting effect."
 icon = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>"""
 
 process_eyebrow = "How It Works"

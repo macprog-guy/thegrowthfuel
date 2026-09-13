@@ -7,11 +7,11 @@ sort_by = "weight"
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
 hero_eyebrow = "Executive Coaching for Established Leaders"
-hero_title = "Getting your team through this year."
-hero_title_emphasis = "through this year."
-hero_description = "All the emergencies or interruptions are stopping you from playing to your full potential. You're being held back from your high-value work."
-cta_primary_text = "Book a Free Consultation"
-cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
+hero_title = "Don't miss out on your next big opportunity."
+hero_title_emphasis = "big opportunity."
+hero_description = "Great leadership is all about levelling up. Yes, it's easy to get distracted by your daily routine and the emergencies at work. But it's time to take a different approach…"
+cta_primary_text = "Break Your Blame & Ownership Cycle"
+cta_primary_url = "/tools/break-the-ownership-cycle.html"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_heading = "The day disappears into <em>other people's fires</em> — your own work waits until night."
