@@ -27,8 +27,14 @@ challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
 realtalk_heading = "Kindness without authority reads as weakness. Kindness with authority reads as strength."
-realtalk_paragraph_1 = "Great leadership is not about removing empathy. It's about embracing all of it: being assertive, listening well, exchanging easily with your stakeholders, creating reciprocity, seeking support when you need it."
-realtalk_paragraph_2 = "It's not about becoming someone else. It's about your ability to adapt to the situation."
+realtalk_paragraph_1 = "Great leadership is not about removing empathy. It's about embracing all of it: being assertive, listening well, exchanging easily with your stakeholders, creating reciprocity, seeking support when you need it. And the opposite extreme costs just as much."
+realtalk_lead_in = "Take Jeff:"
+realtalk_bullets = [
+    "Jeff took charge and let go of a manager who was disruptive, aggressive, even destructive to the team.",
+    "He thought he was being fair and square.",
+    "The same people called him \"Terminator\".",
+]
+realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse. It's not about becoming someone else. It's about your ability to adapt to the situation."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────

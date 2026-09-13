@@ -81,7 +81,18 @@
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.realtalk_paragraph_1 }}
       </p>
-      <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
+      {% if section.extra.realtalk_bullets %}
+      <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-700); font-weight: 600; margin-bottom: var(--space-3);">{{ section.extra.realtalk_lead_in }}</p>
+      <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: grid; gap: var(--space-3);">
+        {% for bullet in section.extra.realtalk_bullets %}
+        <li data-reveal style="--reveal-delay: {{ 0.32 + loop.index0 * 0.1 }}s; display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-base); line-height: 1.7; color: var(--color-gray-600);">
+          <span style="flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--color-orange); margin-top: 0.6em;" aria-hidden="true"></span>
+          <span>{{ bullet }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <p data-reveal style="--reveal-delay: 0.4s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600);">
         {{ section.extra.realtalk_paragraph_2 }}
       </p>
     </div>
