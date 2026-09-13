@@ -23,7 +23,7 @@ challenge_bullets = [
     "They only ever see her collaborative and smiling — so a team player is all she ever is in their eyes.",
 ]
 challenge_paragraph_2 = "The problem isn't that she lacks authority within her team. It's that the people deciding have never seen it."
-challenge_paragraph_3 = "With Annie, I worked with her personality and her real stakeholders — on communication, influence and strategy. The aim: make the authority her team already sees visible to the people who decide."
+challenge_paragraph_3 = "We worked on what empathy and servant leadership really mean. It entails strength, and making the hard calls so the whole team doesn't suffer from one person's issues. It also means being comfortable across the full range of leadership and influence — from the softer side (consensus, time) to the tougher one: \"this isn't a discussion anymore. We go there.\""
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
@@ -36,7 +36,7 @@ realtalk_bullets = [
     "The same people called him \"Terminator\".",
 ]
 realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse."
-realtalk_paragraph_3 = "With Jeff, the same work — personality, situation, stakeholders; communication, influence and strategy. The aim: keep the decisiveness, change how it lands. Neither of them became someone else."
+realtalk_paragraph_3 = "Being assertive and driven is what got Jeff there. Taking more time for diplomacy, while keeping strong boundaries, let him stay strong — without doubting himself — and gave people time to appreciate what he brings the team, instead of judging him as too tough."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
