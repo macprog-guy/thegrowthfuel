@@ -23,6 +23,7 @@ challenge_bullets = [
     "They only ever see her collaborative and smiling — so a team player is all she ever is in their eyes.",
 ]
 challenge_paragraph_2 = "The problem isn't that she lacks authority within her team. It's that the people deciding have never seen it."
+challenge_paragraph_3 = "With Annie, I worked with her personality and her real stakeholders — on communication, influence and strategy. The aim: make the authority her team already sees visible to the people who decide."
 challenge_image_alt = "Laurence coaching at her desk"
 
 # ── The Trap Section ──────────────────────────────────────────
@@ -35,7 +36,7 @@ realtalk_bullets = [
     "The same people called him \"Terminator\".",
 ]
 realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse."
-realtalk_paragraph_3 = "With both, I worked with their personality, their situation, and their current stakeholders — on communication, influence, and strategy. Not by making them someone else, but by building their ability to adapt to the situation."
+realtalk_paragraph_3 = "With Jeff, the same work — personality, situation, stakeholders; communication, influence and strategy. The aim: keep the decisiveness, change how it lands. Neither of them became someone else."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
