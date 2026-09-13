@@ -481,7 +481,7 @@
   </div>
 
   <footer class="foot">
-    <p>Want the story behind the cycle? <a href="#" id="videoLink">Watch the short walkthrough</a> &mdash; or bring your filled sheet to <a href="#" id="callLink">a free consultation</a>.</p>
+    <p>Bring your filled sheet to <a href="#" id="callLink">a free consultation</a>.</p>
     <div class="foot-actions">
       <button class="btn btn-primary" id="printFoot" type="button">Print / save as PDF</button>
     </div>
@@ -861,7 +861,7 @@
   if (!load()){
     for (var i = 0; i < N; i++){
       state.blame[i] = EXAMPLE.blame[i];
-      state.own[i] = i < 2 ? EXAMPLE.own[i] : "";
+      state.own[i] = EXAMPLE.own[i];
       state.actions[i] = EXAMPLE.actions[i];
       state.who[i] = EXAMPLE.who[i];
     }
