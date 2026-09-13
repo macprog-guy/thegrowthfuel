@@ -144,13 +144,6 @@ description = "New role, bigger scope — or feedback that you're too tough, or 
 url = "/programs/unlock-your-career"
 link_text = "See the programme"
 
-[[extra.service_cards]]
-number = "3."
-number_color = "var(--color-green-light)"
-title = "The Leadership Collective"
-description = "A multi-continental circle of experienced leaders — for the questions you can't ask inside your own company."
-url = "/services/public-sector"
-link_text = "Get info"
 
 # ── Free Rungs (array of tables) ─────────────────────────────
 # Only rungs with a non-empty `url` are shown. Fill the two TODO urls

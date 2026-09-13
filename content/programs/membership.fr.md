@@ -5,6 +5,7 @@ weight = 3
 template = "program.html"
 
 [extra]
+noindex = false
 eyebrow = "Programme"
 subtitle = "Une croissance durable pour les leaders qui ne cessent d'évoluer"
 price_info = "CHF 450/mois — résiliable à tout moment après 3 mois"

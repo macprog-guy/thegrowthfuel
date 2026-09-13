@@ -3,8 +3,12 @@ title = "Reignite"
 description = "A focused coaching programme for experienced leaders who feel stuck, stalled, or ready for a bold next chapter."
 weight = 1
 template = "program.html"
+in_search_index = false
 
 [extra]
+# Hidden for now: still reachable by direct URL, but kept out of the menu,
+# the sitemap and search indexing.
+noindex = true
 eyebrow = "Programme"
 subtitle = "Rediscover your edge. Rebuild your momentum."
 price_info = "Investment starts at CHF 4,500 for the full programme"

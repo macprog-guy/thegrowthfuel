@@ -5,6 +5,7 @@ weight = 2
 template = "program.html"
 
 [extra]
+noindex = false
 eyebrow = "Programme"
 hero_image = "/images/laurence-front-facing-black.avif"
 subtitle = "For leaders 12–24 months into a bigger role. Ten weeks, one-on-one, worked on your real meetings — so you lead like the role needs without becoming someone you're not."

@@ -5,6 +5,7 @@ weight = 2
 template = "program.html"
 
 [extra]
+noindex = false
 eyebrow = "Programme"
 subtitle = "Accélérez votre parcours vers le leadership senior"
 price_info = "Investissement à partir de CHF 3 200 pour le programme complet"

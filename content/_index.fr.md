@@ -100,21 +100,10 @@ link_text = "En savoir plus"
 [[extra.service_cards]]
 number = "2."
 number_color = "var(--color-orange-light)"
-title = "Le Collectif de Leadership"
-description = "Rejoignez un réseau multicontinental de leaders expérimentés, dédiés à un leadership durable et à fort impact — pour bénéficier d'éclairages et d'une collaboration qui vous aideront à vous épanouir dans un monde en rapide évolution."
-url = "/fr/services/public-sector"
-link_text = "En savoir plus"
-
-[[extra.service_cards]]
-number = "3."
-number_color = "var(--color-green-light)"
 title = "Équipes"
-description = "Des programmes sur mesure pour les entreprises du secteur privé afin de renforcer leurs équipes, relever les défis à venir et aligner leur leadership."
+description = "Des programmes sur mesure pour les entreprises afin de renforcer leurs équipes, relever les défis à venir et aligner leur leadership."
 url = "/fr/services/private-sector"
-link_text_1 = "Secteur privé"
-link_url_1 = "/fr/services/private-sector"
-link_text_2 = "Secteur public"
-link_url_2 = "/fr/services/public-sector"
+link_text = "En savoir plus"
 
 # ── What To Expect Cards (array of tables) ───────────────────
 [[extra.expect_cards]]

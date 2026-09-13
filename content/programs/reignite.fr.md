@@ -3,8 +3,10 @@ title = "Reignite"
 description = "Un programme de coaching ciblé pour les leaders expérimentés qui se sentent bloqués, en perte de vitesse ou prêts pour un nouveau chapitre audacieux."
 weight = 1
 template = "program.html"
+in_search_index = false
 
 [extra]
+noindex = true
 eyebrow = "Programme"
 subtitle = "Retrouvez votre élan. Reconstruisez votre dynamique."
 price_info = "Investissement à partir de CHF 4 500 pour le programme complet"

@@ -5,6 +5,7 @@ weight = 3
 template = "program.html"
 
 [extra]
+noindex = false
 eyebrow = "Programme"
 subtitle = "Sustained growth for leaders who never stop evolving"
 price_info = "CHF 450/month — cancel anytime after 3 months"
