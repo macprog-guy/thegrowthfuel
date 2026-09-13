@@ -722,7 +722,8 @@
         wedges[group][i].classList.toggle("is-filled", on);
         nums[group][i].classList.toggle("on-fill", on);
       });
-      (group === "own" ? ownCountEl : blameCountEl).textContent = String(filled);
+      // Show filled-out-of-total, so the count can't be mistaken for the total.
+      (group === "own" ? ownCountEl : blameCountEl).textContent = filled + "/" + N;
     });
 
     var listed = 0, them = 0, me = 0;
