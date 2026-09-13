@@ -1403,3 +1403,90 @@ textarea.form-input {
   flex-shrink: 0;
   line-height: 1;
 }
+
+// ─── MOBILE FIXES ───────────────────────────────────────────
+// 1. The hamburger toggles .nav-links--open / body.nav-open in JS, but no CSS
+//    ever showed the panel, so the mobile menu did nothing.
+// 2. Long CTA labels overflowed because .btn is white-space: nowrap.
+// 3. Sections alternate image-left / image-right; stacked on mobile that put
+//    two images back-to-back with no text between them.
+
+@media (max-width: 768px) {
+
+  // 1 ── Mobile menu panel
+  .nav-links--open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    padding: var(--space-6) var(--space-8) var(--space-8);
+    border-top: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-lg);
+    z-index: 200;
+  }
+
+  .nav-links--open .nav-lang {
+    margin-left: 0;
+  }
+
+  .nav-links--open .nav-cta {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav-links--open .nav-cta .btn {
+    width: 100%;
+  }
+
+  // Hamburger turns into a close (X) while the panel is open
+  .nav-hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  // 2 ── Let long CTA labels wrap instead of overflowing
+  .btn {
+    white-space: normal;
+  }
+
+  .btn-lg {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-sm);
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  // 3 ── Always put the photo after its text when the grid stacks,
+  //      so two images never end up adjacent.
+  .about-bio-grid > .img-accent {
+    order: 2;
+  }
+
+  // The offset accent block sits outside the image and caused sideways
+  // scrolling on narrow screens.
+  .img-accent::after {
+    display: none;
+  }
+}
