@@ -99,7 +99,7 @@ label = "Client Organizations"
 # ── Case Example Rows (array of tables) ──────────────────────
 [[extra.case_rows]]
 before = "You answer the question you were asked"
-after = "You proactively structure your feedback and updates. Your communication is clear"
+after = "You proactively structure your feedback and updates. Your communication is clear, in both very formal and informal discussions"
 
 [[extra.case_rows]]
 before = "You bring options — and trust a process, or a person, for longer than it serves you"
@@ -111,11 +111,11 @@ after = "You say the hard thing at 3pm, in the room, professionally"
 
 [[extra.case_rows]]
 before = "Your value is visible to your manager — and stops there"
-after = "You've built a network of stakeholders at your level and above, while keeping the respect of your team"
+after = "You can't change the past, but you're now building a network"
 
 [[extra.case_rows]]
 before = "\"Too kind\""
-after = "\"Fair — and you know where you stand with Annie\""
+after = "\"Fair — and people know where you stand, and respect you for that\""
 
 [[extra.case_rows]]
 before = "You love reactive situations. You feel alive"
