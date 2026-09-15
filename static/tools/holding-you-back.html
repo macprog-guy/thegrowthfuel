@@ -457,7 +457,27 @@
   .cta-block .btn{ font-size: 1rem; padding: 14px 26px; }
   .cta-note{ font-size:.85rem; color:var(--ink-muted); margin:10px 0 0; }
 
-  @media print{ .chip[aria-pressed="false"]{ display:none; } .cta-block{ display:none; } }
+  .capture{
+    margin-top: 26px; padding: 22px 24px;
+    background: var(--own-soft); border: 1px solid var(--own-edge);
+    border-radius: 12px;
+  }
+  .capture h3{
+    font-family:"Source Serif 4",Georgia,serif; font-size:1.1rem;
+    font-weight:600; margin:0 0 6px;
+  }
+  .capture p{ margin:0 0 14px; font-size:.9375rem; color:var(--ink); }
+
+  .action{ margin-top: 30px; }
+  .action .picker-q em{ font-style: italic; color: var(--accent); }
+  .action-blurb{
+    margin: 12px 0 0; font-size:.875rem; line-height:1.6; color: var(--ink-muted);
+  }
+
+  @media print{
+    .chip[aria-pressed="false"]{ display:none; }
+    .cta-block, .capture{ display:none; }
+  }
 </style>
 </head>
 <body>
@@ -471,8 +491,8 @@
   </header>
 
   <div class="picker">
-    <p class="picker-q">Pick the three closest to you.</p>
-    <p class="picker-note" id="pickCount">Choose 3</p>
+    <p class="picker-q">What applies to you?</p>
+    <p class="picker-note" id="pickCount">Pick the three that sound most like your situation</p>
     <div class="chips" id="chips"></div>
     <div id="otherWrap" hidden>
       <textarea class="line" id="otherText" rows="1" maxlength="120" placeholder="In a few words&hellip;" aria-label="Something else"></textarea>
@@ -481,6 +501,19 @@
 
   <div class="result is-empty" id="result">
     <p>Pick three above and you&rsquo;ll see what usually sits underneath them.</p>
+  </div>
+
+  <div class="capture" id="capture">
+    <h3>Want your results, and what to do about each one?</h3>
+    <p>Put your email in and I will send you a short PDF with your three, what usually sits underneath each, and the next step for it.</p>
+    <script async data-uid="a42fcbff0c" src="https://thegrowthfuel.kit.com/a42fcbff0c/index.js"></script>
+  </div>
+
+  <div class="action">
+    <p class="picker-q">What is one thing <em>you</em> can do this week?</p>
+    <p class="picker-note">Small and specific beats ambitious and vague. It only has to need nobody else&rsquo;s permission.</p>
+    <textarea class="line" id="actionText" rows="1" maxlength="200" placeholder="This week I will&hellip;" aria-label="One thing you can do this week"></textarea>
+    <p class="action-blurb">Write it here and it goes in your PDF too &mdash; alongside a few more tips, and a reminder from me in a week to ask how it went. Accountability is most of the difference.</p>
   </div>
 
   <div class="cta-block">
@@ -512,13 +545,14 @@
   ];
 
   var picked = [];
-  var otherOn = false, otherText = "";
+  var otherOn = false, otherText = "", actionText = "";
 
   var chipsEl   = document.getElementById("chips");
   var resultEl  = document.getElementById("result");
   var countEl   = document.getElementById("pickCount");
   var otherWrap = document.getElementById("otherWrap");
   var otherEl   = document.getElementById("otherText");
+  var actionEl  = document.getElementById("actionText");
 
   function makeChip(id, label, dashed){
     var b = document.createElement("button");
@@ -564,9 +598,11 @@
     if (otherOn) { otherEl.value = otherText; autosize(otherEl); }
 
     var left = MAX - count();
-    countEl.textContent = left > 0
-      ? ("Choose " + left + " more")
-      : "That's three. Here's what usually sits underneath.";
+    countEl.textContent = left === 3
+      ? "Pick the three that sound most like your situation"
+      : left > 0
+        ? ("Pick " + left + " more")
+        : "That sounds like your situation. Here is what usually sits underneath.";
 
     render();
   }
@@ -611,7 +647,7 @@
   /* ---------- persistence ---------- */
   var KEY = "holdingback.v1";
   function save(){
-    try { window.localStorage.setItem(KEY, JSON.stringify({ picked: picked, otherText: otherText })); } catch (e){}
+    try { window.localStorage.setItem(KEY, JSON.stringify({ picked: picked, otherText: otherText, actionText: actionText })); } catch (e){}
   }
   function load(){
     var raw = null;
@@ -621,9 +657,15 @@
       var d = JSON.parse(raw);
       if (Array.isArray(d.picked)) picked = d.picked.slice(0, MAX);
       if (typeof d.otherText === "string") otherText = d.otherText;
+      if (typeof d.actionText === "string") actionText = d.actionText;
       otherOn = picked.indexOf("other") >= 0;
     } catch (e){}
   }
+
+  actionEl.addEventListener("input", function(){
+    actionText = actionEl.value;
+    autosize(actionEl); save();
+  });
 
   otherEl.addEventListener("input", function(){
     otherText = otherEl.value;
@@ -632,6 +674,8 @@
 
   build();
   load();
+  actionEl.value = actionText;
+  autosize(actionEl);
   paint();
 })();
 </script>
