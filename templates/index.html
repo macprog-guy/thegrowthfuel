@@ -165,6 +165,11 @@
       <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
         {{ section.extra.impact_paragraph_2 }}
       </p>
+      {% if section.extra.impact_paragraph_3 %}
+      <p data-reveal style="--reveal-delay: 0.3s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-800); border-left: 3px solid var(--color-orange); padding-left: var(--space-5); margin-bottom: var(--space-8);">
+        {{ section.extra.impact_paragraph_3 }}
+      </p>
+      {% endif %}
       <a data-reveal style="--reveal-delay: 0.32s" href="{{ trans(key="calendly-free-url", lang=lang) }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
          aria-label="{{ section.extra.impact_cta_text }} {{ trans(key="aria-opens-new-tab", lang=lang) }}">
         {{ section.extra.impact_cta_text }} <span class="btn-arrow" aria-hidden="true">&rarr;</span>
