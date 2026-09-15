@@ -6,6 +6,13 @@
       "runtimeExecutable": "zola",
       "runtimeArgs": ["serve", "--port", "1112", "--interface", "127.0.0.1", "--base-url", "127.0.0.1"],
       "port": 1112
+    },
+    {
+      "name": "experiments",
+      "cwd": ".claude/worktrees/experiments",
+      "runtimeExecutable": "zola",
+      "runtimeArgs": ["serve", "--port", "1113", "--interface", "127.0.0.1", "--base-url", "127.0.0.1"],
+      "port": 1113
     }
   ]
 }

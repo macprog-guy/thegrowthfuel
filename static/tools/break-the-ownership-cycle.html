@@ -438,7 +438,7 @@
         <div class="step-head">
           <span class="step-kicker">Step 1 &middot; the bottom half</span>
           <h2>What&rsquo;s standing between you and the role you want</h2>
-          <p class="step-hint">Five lines, fast, without editing yourself. Write what you&rsquo;d say to <b>a friend</b>, not what you&rsquo;d say to a recruiter.</p>
+          <p class="step-hint">Six lines, fast, without editing yourself. Write what you&rsquo;d say to <b>a friend</b>, not what you&rsquo;d say to a recruiter.</p>
         </div>
         <div class="rows rows-blame" id="blameRows"></div>
       </section>
@@ -447,7 +447,7 @@
         <div class="step-head">
           <span class="step-kicker">Step 2 &middot; the top half</span>
           <h2>What you could do about each one</h2>
-          <p class="step-hint">Take your five lines in order. For each, write one move you could make <b>without anyone&rsquo;s permission</b>. Not a solution &mdash; a move. If a line has no move, leave it blank and notice which one it was.</p>
+          <p class="step-hint">Take your six lines in order. For each, write one move you could make <b>without anyone&rsquo;s permission</b>. Not a solution &mdash; a move. &ldquo;Update my CV&rdquo; and &ldquo;refresh my LinkedIn&rdquo; don&rsquo;t count: you have done those, and they changed nothing. If a line has no move, leave it blank and notice which one it was.</p>
         </div>
         <div class="rows rows-own" id="ownRows"></div>
       </section>
@@ -456,7 +456,7 @@
         <div class="step-head">
           <span class="step-kicker">Step 3 &middot; the record</span>
           <h2>What you have actually done so far</h2>
-          <p class="step-hint">List what you have tried since this started. Then mark each one: did it depend on <b>you doing something</b>, or on <b>someone else replying</b>?</p>
+          <p class="step-hint">Your competence was never the question. The question is how much of the past months went into <b>waiting</b>. List what you have actually done &mdash; including how well the support around you is really performing, and how long you have been waiting on it. Then mark each one: did it depend on <b>you</b>, or on <b>someone else coming back to you</b>?</p>
         </div>
         <div class="actions-head">
           <span class="col-label">Action taken</span>
@@ -470,7 +470,7 @@
         <div class="step-head">
           <span class="step-kicker">Step 4 &middot; the only line that matters</span>
           <h2>One move this week that needs nobody&rsquo;s yes</h2>
-          <p class="step-hint">Pick it from your top half. Small and specific beats ambitious and vague.</p>
+          <p class="step-hint">Pick it from your top half. In my experience the move is rarely tactical &mdash; it is something in <b>you</b>: where you stay too soft, too tough, or simply keep waiting. Small and specific beats ambitious and vague.</p>
         </div>
         <textarea class="line" id="commitInput" rows="1" maxlength="220" placeholder="By Friday I will&hellip;" aria-label="One move this week"></textarea>
       </section>
@@ -511,14 +511,15 @@
       "Get feedback on how I'm perceived; there is always something to integrate so I can level up as my roles evolve."
     ],
     actions: [
-      "Sent x applications through job boards.",
-      "Rewrote my CV for one specific role.",
-      "Registered with a recruitment agency.",
-      "Updated my LinkedIn headline.",
-      "Asked former colleagues to keep an ear open."
+      "Briefed two search firms — without ever asking how hard they are actually working my profile.",
+      "Waited four months for the agency to come back after the final round.",
+      "Repositioned my profile around the results I own, with real numbers.",
+      "Asked a former colleague for a candid read on how I actually come across.",
+      "Waited on an introduction that was promised and never came."
     ],
-    who: ["them", "me", "them", "me", "them"],
-    commit: "Message the two hiring managers I already know."
+    who: ["them", "them", "me", "me", "them"],
+    // Deliberately blank: this line is theirs to write, not to copy.
+    commit: ""
   };
 
   function pt(r, deg){
@@ -612,12 +613,20 @@
     "Anything else you want to add…"
   ];
   var OWN_PH = [
-    "The first small action to get this started is…",
-    "For line 2, the first step I can take is…",
-    "For line 3…",
-    "For line 4…",
-    "For line 5…",
+    "A move you can make this week — nobody's permission needed…",
+    "Not \"update my CV\". What would make them see you differently?",
+    "Where does your natural style get misread — and what would you adjust, without becoming someone else?",
+    "Who already sees you the way the decision-makers need to? What could they do?",
+    "The conversation you keep postponing…",
     "Anything else you want to add…"
+  ];
+
+  var ACTION_PH = [
+    "Something you have actually done — not intended to do…",
+    "How well is the support around you really performing?",
+    "Something you have been waiting on. How long now?",
+    "Feedback you asked for on how you come across…",
+    "And the one you would rather not write down…"
   ];
 
   function buildRows(){
@@ -657,7 +666,7 @@
     input.className = "line";
     input.rows = 1;
     input.maxLength = 220;
-    input.placeholder = i === 0 ? "Something you have already tried…" : "…and the next thing";
+    input.placeholder = ACTION_PH[i] || "…and the next thing";
     input.setAttribute("aria-label", "Action " + (i + 1));
     input.dataset.group = "actions";
     input.dataset.index = String(i);
