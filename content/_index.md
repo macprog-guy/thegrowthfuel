@@ -9,16 +9,16 @@ sort_by = "weight"
 hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Don't miss out on your next big opportunity."
 hero_title_emphasis = "big opportunity."
-hero_description = "Great leadership is all about levelling up. Yes, it's easy to get distracted by your daily routine and the emergencies at work. But it's time to take a different approach…"
+hero_description = "Somebody else is being promoted. Again. It isn't your competence — the people who decide have never seen it. In three months, that changes. See what shifted for Sophie and Daniel, below."
 cta_primary_text = "Break Your Blame & Ownership Cycle"
 cta_primary_url = "/tools/break-the-ownership-cycle.html"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_heading = "You weren't rejected for not being the right fit. You were <em>passed over</em>."
 challenge_paragraph_1 = "They couldn't see you leading the team during a crisis. That is a positioning gap, not a character flaw — and it is entirely fixable."
-challenge_lead_in = "Take Annie:"
+challenge_lead_in = "Take Sophie:"
 challenge_bullets = [
-    "Annie has her team's respect and trust. They see her lead every day.",
+    "Sophie has her team's respect and trust. They see her lead every day.",
     "Her stakeholders have never seen that authority come through.",
     "They only ever see her collaborative and smiling — so a team player is all she ever is in their eyes.",
 ]
@@ -29,14 +29,14 @@ challenge_image_alt = "Laurence coaching at her desk"
 # ── The Trap Section ──────────────────────────────────────────
 realtalk_heading = "Kindness without authority reads as weakness. Kindness with authority reads as strength."
 realtalk_paragraph_1 = "Great leadership is not about removing empathy. It's about embracing all of it: being assertive, listening well, exchanging easily with your stakeholders, creating reciprocity, seeking support when you need it. And the opposite extreme costs just as much."
-realtalk_lead_in = "Take Jeff:"
+realtalk_lead_in = "Take Daniel:"
 realtalk_bullets = [
-    "Jeff took charge and let go of a manager who was disruptive, aggressive, even destructive to the team.",
+    "Daniel took charge and let go of a manager who was disruptive, aggressive, even destructive to the team.",
     "He thought he was being fair and square.",
     "The same people called him \"Terminator\".",
 ]
 realtalk_paragraph_2 = "Too kind or too tough — either way, your leadership gets questioned. You may think you're a pussycat; others see a tiger. Or the reverse."
-realtalk_paragraph_3 = "Being assertive and driven is what got Jeff there. Taking more time for diplomacy, while keeping strong boundaries, let him stay strong — without doubting himself — and gave people time to appreciate what he brings the team, instead of judging him as too tough."
+realtalk_paragraph_3 = "Being assertive and driven is what got Daniel there. Taking more time for diplomacy, while keeping strong boundaries, let him stay strong — without doubting himself — and gave people time to appreciate what he brings the team, instead of judging him as too tough."
 realtalk_image_alt = "Laurence in a coaching session"
 
 # ── Imagine Section ───────────────────────────────────────────
