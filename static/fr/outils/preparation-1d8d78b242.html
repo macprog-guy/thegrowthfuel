@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Questionnaire de préparation — Votre programme de leadership</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=swap">
+<style>
+  :root{
+    --ground:      #F7F6FA;
+    --surface:     #FFFFFF;
+    --ink:         #1E2148;
+    --ink-muted:   #55578A;
+    --hairline:    #DCDAE8;
+    --hairline-in: #C2BFD6;
+    --blame:       #6E6C89;
+    --blame-soft:  #E7E6EE;
+    --on-blame:    #FFFFFF;
+    --own:         #8CC152;
+    --own-edge:    #5E8A2B;
+    --own-soft:    #E8F1DC;
+    --on-own:      #1A1B3A;
+    --wedge-empty: #ECEAF3;
+    --accent:      #A8451F;
+    --accent-on:   #FFFFFF;
+    --focus:       #A8451F;
+    --shadow:      0 1px 2px rgba(30,33,72,.06), 0 8px 24px -12px rgba(30,33,72,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:      #16172E;
+      --surface:     #1D1F3A;
+      --ink:         #EDECF5;
+      --ink-muted:   #A7A5C2;
+      --hairline:    #323454;
+      --hairline-in: #454778;
+      --blame:       #8C8AA8;
+      --blame-soft:  #262842;
+      --on-blame:    #1A1B3A;
+      --own:         #8CC152;
+      --own-edge:    #A8D473;
+      --own-soft:    #232D1D;
+      --on-own:      #1A1B3A;
+      --wedge-empty: #232544;
+      --accent:      #F0946E;
+      --accent-on:   #1A1B3A;
+      --focus:       #F0946E;
+      --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:      #16172E;
+    --surface:     #1D1F3A;
+    --ink:         #EDECF5;
+    --ink-muted:   #A7A5C2;
+    --hairline:    #323454;
+    --hairline-in: #454778;
+    --blame:       #8C8AA8;
+    --blame-soft:  #262842;
+    --on-blame:    #1A1B3A;
+    --own:         #8CC152;
+    --own-edge:    #A8D473;
+    --own-soft:    #232D1D;
+    --on-own:      #1A1B3A;
+    --wedge-empty: #232544;
+    --accent:      #F0946E;
+    --accent-on:   #1A1B3A;
+    --focus:       #F0946E;
+    --shadow:      0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  html,body{ margin:0; padding:0; }
+  img{ max-width:100%; }
+  body{
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  *, *::before, *::after{ box-sizing: border-box; }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 28px 72px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  h1{
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 em{ font-style: italic; color: var(--ink-muted); }
+  .standfirst{
+    margin: 0;
+    max-width: 62ch;
+    font-size: 1.0625rem;
+    color: var(--ink);
+  }
+  .standfirst-note{
+    margin: 0;
+    max-width: 62ch;
+    font-size: .875rem;
+    color: var(--ink-muted);
+  }
+
+  /* ---------- toolbar ---------- */
+  .toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin: 22px 0 40px;
+  }
+  .btn{
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline-in);
+    border-radius: 7px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .btn:hover{ border-color: var(--ink-muted); }
+  .btn-primary{
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-on);
+  }
+  .btn-primary:hover{ filter: brightness(.94); border-color: var(--accent); }
+  .toolbar-note{
+    font-size: .8125rem;
+    color: var(--ink-muted);
+    margin-left: auto;
+  }
+  .toolbar-note.is-example{ color: var(--accent); font-weight: 500; }
+  :is(.btn, .line, .seg-btn):focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* ---------- sheet grid ---------- */
+  .sheet{
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .ring-col{ position: sticky; top: 28px; }
+  @media (max-width: 940px){
+    .sheet{ grid-template-columns: 1fr; gap: 36px; }
+    .ring-col{ position: static; }
+  }
+
+  /* ---------- ring ---------- */
+  .ring{ width: 100%; height: auto; display: block; }
+  .wedge{
+    fill: var(--wedge-empty);
+    stroke: var(--hairline-in);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    transition: fill .35s ease, stroke .2s ease;
+  }
+  .wedge.is-filled{
+    stroke-dasharray: none;
+    stroke-width: 1.25;
+  }
+  .wedge.g-own.is-filled{ fill: var(--own); stroke: var(--own-edge); }
+  .wedge.g-blame.is-filled{ fill: var(--blame); stroke: var(--blame); }
+  .wedge.is-active{ stroke: var(--focus); stroke-width: 2.5; stroke-dasharray: none; }
+  .wedge-num{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    fill: var(--ink-muted);
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+  }
+  .wedge-num.n-own.on-fill{ fill: var(--on-own); }
+  .wedge-num.n-blame.on-fill{ fill: var(--on-blame); }
+  .ring-axis{ stroke: var(--ink); stroke-width: 1.25; }
+  .ring-label{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: .18em;
+    text-anchor: middle;
+    fill: var(--ink-muted);
+  }
+  .ring-caption{
+    margin: 18px 0 0;
+    font-size: .875rem;
+    color: var(--ink-muted);
+    max-width: 40ch;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wedge{ transition: none; }
+  }
+
+  /* ---------- steps ---------- */
+  .steps{ display: flex; flex-direction: column; gap: 44px; }
+  .step-head{ display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .step-kicker{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  h2{
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  .step-hint{ margin: 0; font-size: .9375rem; color: var(--ink-muted); max-width: 58ch; }
+  .step-hint b{ color: var(--ink); font-weight: 500; }
+
+  .rows{ display: flex; flex-direction: column; gap: 8px; }
+  .row{ display: flex; align-items: center; gap: 12px; }
+  .row-num{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .8125rem;
+    color: var(--ink-muted);
+    width: 16px;
+    flex: none;
+    text-align: right;
+  }
+  .line{
+    font: inherit;
+    font-size: .9375rem;
+    line-height: 1.45;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline-in);
+    border-radius: 6px;
+    padding: 10px 13px;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    resize: none;
+    overflow: hidden;
+    field-sizing: content;
+  }
+  .line::placeholder{ color: var(--ink-muted); opacity: .62; }
+  .line:hover{ border-color: var(--hairline-in); }
+
+  .rows-blame .line:not(:placeholder-shown){
+    background: var(--blame-soft);
+    border-color: var(--blame);
+  }
+  .rows-own .line:not(:placeholder-shown){
+    background: var(--own-soft);
+    border-color: var(--own-edge);
+  }
+
+  /* ---------- actions table ---------- */
+  .actions-head{
+    display: grid;
+    grid-template-columns: 1fr 168px;
+    gap: 12px;
+    align-items: end;
+    padding: 0 0 8px 28px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 10px;
+  }
+  .col-label{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .action-row{
+    display: grid;
+    grid-template-columns: 28px 1fr 168px;
+    gap: 12px;
+    align-items: center;
+  }
+  .seg{
+    display: inline-flex;
+    border: 1px solid var(--hairline-in);
+    border-radius: 7px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .seg-btn{
+    font: inherit;
+    font-size: .8125rem;
+    font-weight: 500;
+    flex: 1;
+    padding: 9px 4px;
+    background: var(--surface);
+    color: var(--ink-muted);
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .seg-btn + .seg-btn{ border-left: 1px solid var(--hairline-in); }
+  .seg-btn[aria-pressed="true"][data-who="me"]{ background: var(--own); color: var(--on-own); }
+  .seg-btn[aria-pressed="true"][data-who="them"]{ background: var(--blame); color: var(--on-blame); }
+  @media (max-width: 620px){
+    .actions-head{ grid-template-columns: 1fr; padding-left: 0; }
+    .actions-head .col-label + .col-label{ display: none; }
+    #actionRows{ gap: 22px; }
+    .action-row{ grid-template-columns: 28px 1fr; row-gap: 5px; }
+    .action-row .seg{ grid-column: 2; width: auto; max-width: 210px; }
+    .action-row .seg-btn{ padding: 6px 4px; font-size: .78125rem; }
+  }
+
+  .verdict{
+    margin: 18px 0 0;
+    padding: 14px 18px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 7px 7px 0;
+    font-size: .9375rem;
+    color: var(--ink);
+    box-shadow: var(--shadow);
+  }
+  .verdict b{ font-weight: 600; }
+
+  /* ---------- commitment ---------- */
+  .commit{
+    padding: 26px 28px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .commit h2{ margin-bottom: 6px; }
+  .commit .line{
+    margin-top: 14px;
+    font-size: 1.0625rem;
+    padding: 13px 15px;
+  }
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top: 56px;
+    padding-top: 26px;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 32px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .foot p{ margin: 0; font-size: .875rem; color: var(--ink-muted); max-width: 46ch; }
+  .foot a{ color: var(--accent); }
+  .foot-actions{ display: flex; gap: 10px; flex-wrap: wrap; }
+
+  /* ---------- print ---------- */
+  @media print{
+    :root{
+      --ground: #FFFFFF; --surface: #FFFFFF; --ink: #1A1B3A; --ink-muted: #4A4C74;
+      --hairline: #C9C7D8; --hairline-in: #A9A7C0; --wedge-empty: #F0EFF5;
+      --blame: #6E6C89; --on-blame: #FFFFFF; --own: #8CC152; --on-own: #1A1B3A;
+      --accent: #A8451F; --shadow: none;
+    }
+    @page{ margin: 12mm; }
+    body{ font-size: 10.5pt; }
+    .wrap{ padding: 0; max-width: none; }
+    .toolbar, .foot-actions{ display: none; }
+    .masthead{ padding-bottom: 14px; }
+    h1{ font-size: 24pt; }
+    .sheet{ grid-template-columns: 190px 1fr; gap: 20px; }
+    .ring-col{ position: static; }
+    .ring-caption{ display: none; }
+    .steps{ gap: 15px; }
+    .step-head{ margin-bottom: 8px; }
+    .commit, .verdict{ box-shadow: none; }
+    .step, .commit, .verdict{ break-inside: avoid; }
+    .foot{ margin-top: 20px; }
+  }
+</style><style>
+  .wrap{ max-width: 720px; padding: 40px 24px 64px; }
+  .standfirst{ color: var(--ink); }
+  .q{ margin-top: 34px; }
+  .q-num{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+    letter-spacing:.13em; text-transform:uppercase; color:var(--ink-muted);
+    display:block; margin-bottom:4px;
+  }
+  .q h2{ font-size:1.2rem; margin:0 0 4px; }
+  .q-help{ margin:0 0 12px; font-size:.9rem; color:var(--ink-muted); }
+
+  .opts{ display:flex; flex-direction:column; gap:9px; }
+  .opt{
+    font: inherit; font-size:1rem; text-align:left; cursor:pointer;
+    background: var(--surface); color: var(--ink);
+    border:1px solid var(--hairline-in); border-radius:9px;
+    padding:13px 15px; display:flex; gap:12px; align-items:flex-start;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .opt:hover{ border-color: var(--ink-muted); }
+  .opt .tick{
+    flex:none; width:19px; height:19px; border:1.5px solid var(--hairline-in);
+    display:grid; place-items:center; font-size:11px; color:transparent; margin-top:2px;
+  }
+  .opt.radio .tick{ border-radius:50%; }
+  .opt.check .tick{ border-radius:5px; }
+  .opt[aria-pressed="true"]{ background:var(--own-soft); border-color:var(--own-edge); }
+  .opt[aria-pressed="true"] .tick{ background:var(--own); border-color:var(--own-edge); color:var(--on-own); }
+  .opt:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+  .opt b{ display:block; font-weight:600; }
+  .opt span.sub{ display:block; font-size:.875rem; color:var(--ink-muted); margin-top:1px; }
+
+  .send{
+    margin-top:36px; padding:22px 24px; background:var(--surface);
+    border:1px solid var(--hairline); border-left:3px solid var(--accent);
+    border-radius:0 10px 10px 0; box-shadow:var(--shadow);
+  }
+  .send p{ margin:0 0 14px; font-size:.9375rem; line-height:1.6; }
+  .sign{ margin-top:30px; padding-top:18px; border-top:1px solid var(--hairline);
+         font-size:.875rem; color:var(--ink-muted); }
+  @media print{ .send{ display:none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Votre programme de leadership</p>
+    <h1>Questionnaire de pr&eacute;paration</h1>
+    <p class="standfirst">Ce questionnaire prend environ 5 minutes. Il n&rsquo;y a ni bonne ni mauvaise r&eacute;ponse : il s&rsquo;agit simplement de faire le point sur votre situation aujourd&rsquo;hui, pour que notre premi&egrave;re s&eacute;ance parte de votre r&eacute;alit&eacute;.</p>
+  </header>
+
+  <div class="q">
+    <span class="q-num">Vous</span>
+    <h2>Pr&eacute;nom et nom</h2>
+    <textarea class="line" id="name" rows="1" maxlength="120" placeholder="Votre pr&eacute;nom et nom&hellip;" aria-label="Pr&eacute;nom et nom"></textarea>
+  </div>
+
+  <div class="q">
+    <span class="q-num">Question 1</span>
+    <h2>Qu&rsquo;aimeriez-vous avoir accompli &agrave; la fin du programme pour vous sentir pleinement satisfaite&nbsp;?</h2>
+    <textarea class="line" id="q1" rows="2" maxlength="900" placeholder="En quelques phrases&hellip;" aria-label="Question 1"></textarea>
+  </div>
+
+  <div class="q">
+    <span class="q-num">Question 2</span>
+    <h2>Quel aspect du leadership aimeriez-vous travailler en premier&nbsp;?</h2>
+    <p class="q-help">Choisissez celui qui vous parle le plus. Nous pourrons y revenir ensemble lors de la premi&egrave;re s&eacute;ance.</p>
+    <div class="opts" id="pillars"></div>
+    <p class="q-help" style="margin-top:14px;">Un commentaire, une situation pr&eacute;cise&nbsp;? (facultatif)</p>
+    <textarea class="line" id="q2note" rows="1" maxlength="600" placeholder="Facultatif&hellip;" aria-label="Commentaire"></textarea>
+  </div>
+
+  <div class="q">
+    <span class="q-num">Question 3</span>
+    <h2>Qu&rsquo;est-ce qui vous motive le plus quand vous apprenez quelque chose de nouveau&nbsp;?</h2>
+    <p class="q-help">Plusieurs choix possibles.</p>
+    <div class="opts" id="motiv"></div>
+    <div id="otherWrap" hidden>
+      <textarea class="line" id="otherText" rows="1" maxlength="200" placeholder="Autre&hellip;" aria-label="Autre" style="margin-top:9px;"></textarea>
+    </div>
+  </div>
+
+  <div class="send">
+    <p>Une fois compl&eacute;t&eacute;, envoyez-moi vos r&eacute;ponses avant notre premi&egrave;re s&eacute;ance. Le bouton ci-dessous ouvre un e-mail d&eacute;j&agrave; pr&eacute;-rempli &mdash; il ne vous reste qu&rsquo;&agrave; l&rsquo;envoyer.</p>
+    <div class="foot-actions">
+      <button class="btn btn-primary" id="mailBtn" type="button">Envoyer mes r&eacute;ponses par e-mail</button>
+      <button class="btn" id="printBtn" type="button">Imprimer / enregistrer en PDF</button>
+    </div>
+    <p style="margin:14px 0 0;font-size:.85rem;color:var(--ink-muted);">Vos r&eacute;ponses restent dans votre navigateur tant que vous ne les envoyez pas. Rien n&rsquo;est transmis automatiquement.</p>
+  </div>
+
+  <p class="sign">Merci, je me r&eacute;jouis d&rsquo;en discuter avec vous.<br>
+  Laurence M&eacute;thot &nbsp;&middot;&nbsp; rethinkperformance.ch/fr</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var EMAIL = "laurence@thegrowthfuel.com";
+
+  var PILLARS = [
+    { id:"perso",   t:"Personnalit\u00e9s",    s:"conscience de soi, communication, relation aux autres" },
+    { id:"leader",  t:"Leadership",             s:"pr\u00e9sence et influence, se positionner dans l\u2019organisation" },
+    { id:"process", t:"Processus & Structures", s:"fonctionnement de l\u2019\u00e9quipe, rythmes, organisation" }
+  ];
+  var MOTIV = [
+    { id:"feedback", t:"Recevoir du feedback" },
+    { id:"terrain",  t:"Tester directement sur le terrain" },
+    { id:"pourquoi", t:"Comprendre le \u00ab\u00a0pourquoi\u00a0\u00bb avant d\u2019agir" },
+    { id:"echanger", t:"\u00c9changer avec d\u2019autres" },
+    { id:"autre",    t:"Autre\u2026" }
+  ];
+
+  var state = { name:"", q1:"", pillar:"", q2note:"", motiv:[], other:"" };
+
+  var pillarsEl = document.getElementById("pillars");
+  var motivEl   = document.getElementById("motiv");
+  var otherWrap = document.getElementById("otherWrap");
+  var otherEl   = document.getElementById("otherText");
+  var fields    = { name:document.getElementById("name"), q1:document.getElementById("q1"), q2note:document.getElementById("q2note") };
+
+  function makeOpt(kind, id, title, sub){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "opt " + kind;
+    b.dataset.id = id;
+    b.setAttribute("aria-pressed","false");
+    var tick = document.createElement("span");
+    tick.className = "tick"; tick.textContent = "\u2713";
+    var wrap = document.createElement("span");
+    var bold = document.createElement("b"); bold.textContent = title; wrap.appendChild(bold);
+    if (sub){ var sp = document.createElement("span"); sp.className="sub"; sp.textContent = sub; wrap.appendChild(sp); }
+    b.appendChild(tick); b.appendChild(wrap);
+    return b;
+  }
+
+  function build(){
+    PILLARS.forEach(function(p){
+      var b = makeOpt("radio", p.id, p.t, p.s);
+      b.addEventListener("click", function(){
+        state.pillar = state.pillar === p.id ? "" : p.id;
+        paint(); save();
+      });
+      pillarsEl.appendChild(b);
+    });
+    MOTIV.forEach(function(m){
+      var b = makeOpt("check", m.id, m.t, "");
+      b.addEventListener("click", function(){
+        var i = state.motiv.indexOf(m.id);
+        if (i >= 0) state.motiv.splice(i,1); else state.motiv.push(m.id);
+        paint(); save();
+      });
+      motivEl.appendChild(b);
+    });
+  }
+
+  function paint(){
+    [].slice.call(pillarsEl.children).forEach(function(b){
+      b.setAttribute("aria-pressed", state.pillar === b.dataset.id ? "true" : "false");
+    });
+    [].slice.call(motivEl.children).forEach(function(b){
+      b.setAttribute("aria-pressed", state.motiv.indexOf(b.dataset.id) >= 0 ? "true" : "false");
+    });
+    var showOther = state.motiv.indexOf("autre") >= 0;
+    otherWrap.hidden = !showOther;
+    if (showOther){ otherEl.value = state.other; autosize(otherEl); }
+  }
+
+  function autosize(el){
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = (el.scrollHeight + 2) + "px";
+  }
+
+  var KEY = "prep.fr.v1";
+  function save(){ try { window.localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+  function load(){
+    var raw=null; try { raw = window.localStorage.getItem(KEY); } catch(e){ return; }
+    if (!raw) return;
+    try {
+      var d = JSON.parse(raw);
+      ["name","q1","pillar","q2note","other"].forEach(function(k){
+        if (typeof d[k] === "string") state[k] = d[k];
+      });
+      if (Array.isArray(d.motiv)) state.motiv = d.motiv;
+    } catch(e){}
+  }
+
+  Object.keys(fields).forEach(function(k){
+    fields[k].addEventListener("input", function(){
+      state[k] = fields[k].value; autosize(fields[k]); save();
+    });
+  });
+  otherEl.addEventListener("input", function(){
+    state.other = otherEl.value; autosize(otherEl); save();
+  });
+
+  function labelOf(list, id){
+    for (var i=0;i<list.length;i++){ if (list[i].id === id) return list[i].t; }
+    return "";
+  }
+
+  document.getElementById("mailBtn").addEventListener("click", function(){
+    var L = [];
+    L.push("Questionnaire de pr\u00e9paration \u2014 " + (state.name || "(nom non renseign\u00e9)"));
+    L.push("");
+    L.push("1. Ce que j\u2019aimerais avoir accompli \u00e0 la fin du programme :");
+    L.push(state.q1 || "(sans r\u00e9ponse)");
+    L.push("");
+    L.push("2. Aspect du leadership \u00e0 travailler en premier :");
+    L.push(state.pillar ? labelOf(PILLARS, state.pillar) : "(sans r\u00e9ponse)");
+    if ((state.q2note || "").trim()){ L.push("Commentaire : " + state.q2note.trim()); }
+    L.push("");
+    L.push("3. Ce qui me motive quand j\u2019apprends :");
+    if (state.motiv.length){
+      state.motiv.forEach(function(id){
+        if (id === "autre"){
+          L.push("- Autre : " + ((state.other || "").trim() || "(non pr\u00e9cis\u00e9)"));
+        } else {
+          L.push("- " + labelOf(MOTIV, id));
+        }
+      });
+    } else { L.push("(sans r\u00e9ponse)"); }
+    L.push("");
+    L.push("\u2014 envoy\u00e9 depuis le questionnaire de pr\u00e9paration");
+
+    var subject = "Questionnaire de pr\u00e9paration" + (state.name ? " \u2014 " + state.name : "");
+    window.location.href = "mailto:" + EMAIL +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(L.join("\n"));
+  });
+
+  document.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
+  window.addEventListener("beforeprint", function(){
+    Object.keys(fields).forEach(function(k){ autosize(fields[k]); });
+    autosize(otherEl);
+  });
+
+  build();
+  load();
+  Object.keys(fields).forEach(function(k){ fields[k].value = state[k] || ""; autosize(fields[k]); });
+  paint();
+})();
+</script>
+
+</body>
+</html>
