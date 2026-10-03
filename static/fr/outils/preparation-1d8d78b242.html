@@ -486,12 +486,14 @@
   </div>
 
   <div class="send">
-    <p>Une fois compl&eacute;t&eacute;, envoyez-moi vos r&eacute;ponses avant notre premi&egrave;re s&eacute;ance. Le bouton ci-dessous ouvre un e-mail d&eacute;j&agrave; pr&eacute;-rempli &mdash; il ne vous reste qu&rsquo;&agrave; l&rsquo;envoyer.</p>
+    <p>Une fois compl&eacute;t&eacute;, envoyez-moi vos r&eacute;ponses avant notre premi&egrave;re s&eacute;ance. Le premier bouton ouvre un e-mail d&eacute;j&agrave; pr&eacute;-rempli. Si votre messagerie ne s&rsquo;ouvre pas (webmail), utilisez &laquo;&nbsp;Copier mes r&eacute;ponses&nbsp;&raquo; et collez-les dans un e-mail.</p>
     <div class="foot-actions">
       <button class="btn btn-primary" id="mailBtn" type="button">Envoyer mes r&eacute;ponses par e-mail</button>
       <button class="btn" id="printBtn" type="button">Imprimer / enregistrer en PDF</button>
+      <button class="btn" id="copyBtn" type="button">Copier mes r&eacute;ponses</button>
       <button class="btn" id="clearBtn" type="button">Effacer mes r&eacute;ponses</button>
     </div>
+    <p id="copyNote" style="margin:12px 0 0;font-size:.9rem;color:var(--own-edge);font-weight:500;" hidden>R&eacute;ponses copi&eacute;es. Collez-les dans un e-mail &agrave; laurence@thegrowthfuel.com.</p>
     <p style="margin:16px 0 0;font-size:.9375rem;line-height:1.6;">
       Vous pr&eacute;f&eacute;rez un document&nbsp;?
       <a href="/fr/outils/questionnaire-preparation-1d8d78b242.pdf" download>T&eacute;l&eacute;chargez le PDF &agrave; remplir</a>
@@ -616,7 +618,7 @@
     return "";
   }
 
-  document.getElementById("mailBtn").addEventListener("click", function(){
+  function answerText(){
     var L = [];
     L.push("Questionnaire de pr\u00e9paration \u2014 " + (state.name || "(nom non renseign\u00e9)"));
     L.push("");
@@ -640,10 +642,34 @@
     L.push("");
     L.push("\u2014 envoy\u00e9 depuis le questionnaire de pr\u00e9paration");
 
-    var subject = "Questionnaire de pr\u00e9paration" + (state.name ? " \u2014 " + state.name : "");
+    return L.join("\n");
+  }
+
+  function subjectText(){
+    return "Questionnaire de pr\u00e9paration" + (state.name ? " \u2014 " + state.name : "");
+  }
+
+  document.getElementById("mailBtn").addEventListener("click", function(){
     window.location.href = "mailto:" + EMAIL +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(L.join("\n"));
+      "?subject=" + encodeURIComponent(subjectText()) +
+      "&body=" + encodeURIComponent(answerText());
+  });
+
+  document.getElementById("copyBtn").addEventListener("click", function(){
+    var txt = answerText();
+    var note = document.getElementById("copyNote");
+    function done(){ note.hidden = false; setTimeout(function(){ note.hidden = true; }, 6000); }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done, fallback);
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = txt;
+      ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch(e){}
+      document.body.removeChild(ta);
+    }
   });
 
   document.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
