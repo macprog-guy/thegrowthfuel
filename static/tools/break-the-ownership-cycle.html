@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Blame &amp; Ownership Cycle</title>
+<title>You weren&rsquo;t rejected. You were passed over.</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=swap">
 <style>
   :root{
@@ -272,7 +272,7 @@
 
   <header class="masthead">
     <p class="eyebrow">A self-audit</p>
-    <h1>The Blame &amp; Ownership Cycle</h1>
+    <h1><em>You weren&rsquo;t rejected.</em> You were passed over.</h1>
     <p class="standfirst">Changing roles is a challenge. Here&rsquo;s a 5-minute assessment to help you take charge of your future and find your next opportunity. And it starts with one small step you can take this week.</p>
     <p class="standfirst-note">Nothing here is submitted anywhere &mdash; it saves in your own browser.</p>
   </header>
@@ -301,6 +301,7 @@
           <span class="step-kicker">Step 2</span>
           <h2>What you could do about each one</h2>
           <p class="step-hint">Take your four lines in order. For each, write one move you could make <b>without anyone&rsquo;s permission</b>. Not a solution &mdash; a move. &ldquo;Update my CV&rdquo; and &ldquo;refresh my LinkedIn&rdquo; doesn&rsquo;t count: you have done those, and they changed nothing. If a line has no move, leave it blank and notice which one it was.</p>
+          <p class="step-hint">Stuck on one? Ask yourself: what would make them <b>see you differently</b>? Where does your natural style get misread &mdash; and what would you adjust, without becoming someone else? Who already sees you the way the decision-makers need to, and what could they do?</p>
         </div>
         <div class="rows rows-own" id="ownRows"></div>
       </section>
@@ -377,11 +378,14 @@
     "…and honestly, also…",
     "…the one I would not say out loud…"
   ];
+  // Neutral on purpose: each prompt points back at the matching line in step 1,
+  // so "take your four lines in order" is what the page actually asks for.
+  // The probing questions now live in the hint above the rows.
   var OWN_PH = [
-    "A move you can make this week — nobody's permission needed…",
-    "Not \"update my CV\". What would make them see you differently?",
-    "Where does your natural style get misread — and what would you adjust, without becoming someone else?",
-    "Who already sees you the way the decision-makers need to? What could they do?"
+    "Your move for line 1…",
+    "Your move for line 2…",
+    "Your move for line 3…",
+    "Your move for line 4…"
   ];
 
   function buildRows(){
