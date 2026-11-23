@@ -53,9 +53,11 @@
       <p data-reveal style="--reveal-delay: 0.06s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">{{ section.extra.challenge_bridge | safe }}</p>
       {% endif %}
       <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.challenge_heading | safe }}</h2>
+      {% if section.extra.challenge_paragraph_1 %}
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.challenge_paragraph_1 }}
       </p>
+      {% endif %}
       {% if section.extra.challenge_bullets %}
       <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-700); font-weight: 600; margin-bottom: var(--space-3);">{{ section.extra.challenge_lead_in }}</p>
       <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: grid; gap: var(--space-3);">
