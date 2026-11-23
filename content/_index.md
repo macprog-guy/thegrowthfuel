@@ -14,10 +14,9 @@ cta_primary_text = "Book a Consultation"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
-challenge_lead = "&ldquo;The team needs to step up now. We&rsquo;re growing into a mature company.&rdquo;"
-challenge_bridge = "Stepping up also changes who is judging you, and which new gaps to tackle. A few colleagues know what you can really do &mdash; most read you as too tough, or too kind."
-challenge_heading = "They couldn't see you leading the team <em>during a crisis</em>."
-challenge_paragraph_1 = "That is a positioning gap, not a character flaw — and it is entirely fixable."
+challenge_bridge = "Stepping up changes who is judging you, and which new gaps to tackle."
+challenge_heading = "Your boss might not see you leading the team during a crisis <em>(yet)</em>."
+challenge_paragraph_1 = "This is a positioning gap, not a character flaw — and it is entirely fixable."
 challenge_lead_in = "Take Sophie:"
 challenge_bullets = [
     "Sophie has her team's respect and trust. They see her lead every day.",
