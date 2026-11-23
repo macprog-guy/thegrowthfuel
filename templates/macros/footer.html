@@ -39,7 +39,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-legal">&copy; {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}, a trademark of {{ config.extra.legal_entity }}. {{ trans(key="footer-rights", lang=lang) }}</p>
+      <p class="footer-legal">&copy; {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}, {{ trans(key="footer-trademark-of", lang=lang) }} {{ config.extra.legal_entity }}. {{ trans(key="footer-rights", lang=lang) }}</p>
       <div class="footer-socials">
         <a href="{{ config.extra.linkedin_url }}" class="footer-social" title="LinkedIn"
            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn {{ trans(key="aria-opens-new-tab", lang=lang) }}">
