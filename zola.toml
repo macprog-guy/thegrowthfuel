@@ -1,5 +1,5 @@
 # The Growth Fuel — Zola Configuration
-base_url = "https://thegrowthfuel.com"
+base_url = "https://rethinkperformance.ch"
 title = "The Growth Fuel"
 description = "Bespoke coaching to unlock your career"
 default_language = "en"
@@ -22,6 +22,10 @@ theme = "catppuccin-mocha"
 brand_name = "The Growth Fuel"
 tagline = "Bespoke coaching to unlock your career"
 legal_entity = "Rethink Performance Sàrl"
+
+# Shown when a page is shared on LinkedIn/WhatsApp/Slack. 1200x630 JPEG —
+# AVIF and WebP are not reliably rendered by social platforms.
+default_og_image = "/images/og-default.jpg"
 
 # Contact
 contact_api_url = "https://api.thegrowthfuel.com/contact"

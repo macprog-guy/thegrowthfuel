@@ -1,6 +1,6 @@
 +++
 title = "Teams"
-description = "End the daily firefighting. Executive coaching for senior leaders — get your team through this year and get back to the high-value work only you can do. Laurence Methot, PhD, PCC."
+description = "End the daily firefighting. Executive coaching for senior leaders — get your team through this year and back to the work only you can do."
 template = "index.html"
 sort_by = "weight"
 

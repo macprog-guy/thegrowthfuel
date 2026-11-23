@@ -1,6 +1,6 @@
 +++
 title = "Secteur Privé"
-description = "J'accompagne les cadres dirigeants face à la complexité en les dotant, ainsi que leurs équipes, de compétences éprouvées, de méthodes et de stratégies de leadership de premier plan."
+description = "Mettez fin aux urgences quotidiennes. Coaching exécutif pour cadres dirigeants et leurs équipes."
 weight = 2
 template = "service-showcase.html"
 

@@ -7,7 +7,9 @@
 {%- if not page_title and section is defined and section.title -%}
   {%- set page_title = section.title -%}
 {%- endif -%}
-{%- if page_title -%}
+{#- Don't produce "The Growth Fuel | The Growth Fuel" when the section is
+    named the same as the site (the homepage and /fr both were). -#}
+{%- if page_title and page_title != config.title -%}
   {%- set full_title = page_title ~ " | " ~ config.title -%}
 {%- else -%}
   {%- set full_title = config.title -%}
@@ -29,6 +31,13 @@
 {%- set og_image = image -%}
 {%- if not og_image and page is defined and page.extra.og_image is defined -%}
   {%- set og_image = page.extra.og_image -%}
+{%- endif -%}
+{%- if not og_image and section is defined and section.extra.og_image is defined -%}
+  {%- set og_image = section.extra.og_image -%}
+{%- endif -%}
+{#- Site-wide fallback: without this every page shared a blank link preview. -#}
+{%- if not og_image and config.extra.default_og_image -%}
+  {%- set og_image = config.extra.default_og_image -%}
 {%- endif -%}
 {%- if og_image and not og_image is starting_with("http") -%}
   {%- set og_image = config.base_url ~ og_image -%}

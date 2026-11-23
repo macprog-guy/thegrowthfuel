@@ -1,6 +1,6 @@
 +++
 title = "À propos de Laurence"
-description = "Découvrez Laurence Methot, PhD, PCC — coach exécutive avec plus de deux décennies d'expérience, accompagnant des leaders dans plus de 70 pays à révéler leur potentiel."
+description = "Laurence Methot, PhD, PCC — coach exécutive, plus de deux décennies d'expérience auprès de leaders dans plus de 70 pays."
 template = "about.html"
 
 [extra]
