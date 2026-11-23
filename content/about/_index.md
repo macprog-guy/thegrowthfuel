@@ -1,6 +1,6 @@
 +++
 title = "About Laurence"
-description = "Meet Laurence Methot, PhD, PCC — an executive coach with two decades of experience helping leaders across 70+ countries unlock their potential."
+description = "Meet Laurence Methot, PhD, PCC — an executive coach who has led and coached leadership teams since 2008, helping leaders across 70+ countries unlock their potential."
 template = "about.html"
 
 [extra]
@@ -9,7 +9,7 @@ headshot = "/images/laurence-front-facing-black.avif"
 credentials = [
     "PhD in Organizational Psychology",
     "Professional Certified Coach (PCC), International Coaching Federation",
-    "20+ Years of Executive Coaching Experience",
+    "Coaching Leaders Since 2008",
     "Coached Leaders in 70+ Countries",
     "Fortune 100 Client Portfolio",
     "Founder, Rethink Performance Sarl (Switzerland)"
@@ -18,7 +18,7 @@ credentials = [
 # ── Hero Section ────────────────────────────────────────────
 hero_eyebrow = "About"
 hero_title = "Hi! I'm Laurence Methot."
-hero_desc = "After 22 years coaching leaders across 70+ countries, I've learned one thing — every leader and their situation is unique, and needs its own approach, built together over the sessions."
+hero_desc = "After 18 years coaching leaders across 70+ countries, I've learned one thing — every leader and their situation is unique, and needs its own approach, built together over the sessions."
 hero_cta = "Book a Free Consultation"
 hero_headshot_alt = "Laurence Methot"
 hero_placeholder = "Photo Placeholder"
@@ -36,7 +36,7 @@ pull_quote_2 = "\"Real change starts with one honest conversation.\""
 # ── Meet Laurence Section ──────────────────────────────────
 meet_eyebrow = "Meet Laurence"
 meet_heading = "Ph.D., Certified Professional <em>Coach</em>"
-meet_bio_1 = "For over 22 years, I've worked with leaders across Fortune 100 companies, SMEs, and the public sector, navigating high-stakes environments in 70+ countries."
+meet_bio_1 = "Since 2008, I've worked with leaders across Fortune 100 companies, SMEs, and the public sector, navigating high-stakes environments in 70+ countries."
 meet_bio_2 = "I've guided leaders through mergers, acquisitions, and global transitions, maintaining momentum amid uncertainty."
 meet_bio_3 = "Continuous improvement is key. So I work alongside top experts in psychology, NLP, strategy consulting, and change management."
 
@@ -72,8 +72,8 @@ cta_button = "Grab Some Time On My Calendar"
 
 # ── Stats Strip (array of tables — must come after all scalar fields) ──
 [[extra.stats]]
-number = "22+"
-label = "Years Coaching"
+number = "Since 2008"
+label = "Coaching Leaders"
 
 [[extra.stats]]
 number = "70+"
@@ -138,7 +138,7 @@ full_width = true
 
 ## The Coach Behind the Fuel
 
-I'm Laurence Methot, and I've spent more than two decades helping leaders find clarity at the crossroads of their careers. Whether you're navigating a corporate transformation, stepping into a bigger role, or quietly questioning what comes next, I've been in that conversation thousands of times — across boardrooms, virtual calls, and quiet cafes in cities on every continent.
+I'm Laurence Methot, and I've spent 18 years helping leaders find clarity at the crossroads of their careers. Whether you're navigating a corporate transformation, stepping into a bigger role, or quietly questioning what comes next, I've been in that conversation thousands of times — across boardrooms, virtual calls, and quiet cafes in cities on every continent.
 
 My career began in organisational psychology, where I studied how people thrive (and stall) inside large systems. That academic foundation — a PhD focused on leadership development and organisational change — gave me a deep appreciation for the invisible structures that shape careers: culture, politics, identity, and timing.
 

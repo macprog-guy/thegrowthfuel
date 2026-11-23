@@ -1297,6 +1297,19 @@ textarea.form-input {
   line-height: 1;
 }
 
+// Same treatment as .stat-number--long on the homepage: a value that is a
+// phrase ("Start-up → Fortune 100") wraps at 5xl and leaves that column taller
+// than the rest, pushing its label out of line with the others.
+.stats-strip-number--long {
+  font-size: var(--text-2xl);
+  line-height: 1.15;
+  text-wrap: balance;
+  min-height: var(--text-5xl);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .stats-strip-label {
   font-family: var(--font-body);
   font-size: var(--text-sm);

@@ -1,6 +1,6 @@
 +++
 title = "À propos de Laurence"
-description = "Laurence Methot, PhD, PCC — coach exécutive, plus de deux décennies d'expérience auprès de leaders dans plus de 70 pays."
+description = "Laurence Methot, PhD, PCC — coach exécutive, 18 ans d'expérience auprès de leaders dans plus de 70 pays."
 template = "about.html"
 
 [extra]
@@ -18,7 +18,7 @@ credentials = [
 # ── Hero Section ────────────────────────────────────────────
 hero_eyebrow = "À propos"
 hero_title = "Bonjour ! Je suis Laurence Methot."
-hero_desc = "Après 22 ans à accompagner des leaders dans plus de 70 pays, j'ai appris une chose — la bonne conversation change tout."
+hero_desc = "Après 18 ans à accompagner des leaders dans plus de 70 pays, j'ai appris une chose — la bonne conversation change tout."
 hero_cta = "Réserver une consultation gratuite"
 hero_headshot_alt = "Laurence Methot"
 hero_placeholder = "Emplacement photo"
@@ -36,7 +36,7 @@ pull_quote_2 = "\"Le vrai changement commence par une conversation honnête.\""
 # ── Meet Laurence Section ──────────────────────────────────
 meet_eyebrow = "Rencontrez Laurence"
 meet_heading = "Ph.D., Coach professionnelle <em>certifiée</em>"
-meet_bio_1 = "Depuis plus de 22 ans, j'accompagne des leaders au sein d'entreprises Fortune 100, de PME et du secteur public, naviguant dans des environnements à forts enjeux dans plus de 70 pays."
+meet_bio_1 = "Depuis 2008, j'accompagne des leaders au sein d'entreprises Fortune 100, de PME et du secteur public, naviguant dans des environnements à forts enjeux dans plus de 70 pays."
 meet_bio_2 = "J'ai guidé des leaders à travers des fusions, acquisitions et transitions internationales, en maintenant l'élan malgré l'incertitude."
 meet_bio_3 = "L'amélioration continue est essentielle. C'est pourquoi je travaille aux côtés d'experts de premier plan en psychologie, PNL, conseil en stratégie et gestion du changement."
 
@@ -72,7 +72,7 @@ cta_button = "Prenez un moment dans mon agenda"
 
 # ── Stats Strip (array of tables — must come after all scalar fields) ──
 [[extra.stats]]
-number = "22+"
+number = "Depuis 2008"
 label = "Années de coaching"
 
 [[extra.stats]]
@@ -138,7 +138,7 @@ full_width = true
 
 ## La coach derrière le Fuel
 
-Je suis Laurence Methot, et j'ai passé plus de deux décennies à aider des leaders à trouver la clarté aux carrefours de leur carrière. Que vous naviguiez une transformation d'entreprise, que vous accédiez à un poste plus important ou que vous vous interrogiez discrètement sur la suite, j'ai participé à cette conversation des milliers de fois — dans des salles de conseil, lors d'appels vidéo et dans des cafés tranquilles de villes sur tous les continents.
+Je suis Laurence Methot, et j'ai passé 18 ans à aider des leaders à trouver la clarté aux carrefours de leur carrière. Que vous naviguiez une transformation d'entreprise, que vous accédiez à un poste plus important ou que vous vous interrogiez discrètement sur la suite, j'ai participé à cette conversation des milliers de fois — dans des salles de conseil, lors d'appels vidéo et dans des cafés tranquilles de villes sur tous les continents.
 
 Ma carrière a débuté en psychologie organisationnelle, où j'ai étudié comment les personnes s'épanouissent (et stagnent) au sein de grandes organisations. Cette base académique — un doctorat axé sur le développement du leadership et le changement organisationnel — m'a donné une profonde compréhension des structures invisibles qui façonnent les carrières : la culture, la politique, l'identité et le timing.
 

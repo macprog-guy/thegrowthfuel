@@ -74,8 +74,8 @@ cta_bottom_button_text = "Grab Some Time On My Calendar"
 
 # ── Stats Row (array of tables) ──────────────────────────────
 [[extra.stats]]
-number = "20+"
-label = "Years Experience"
+number = "Since 2008"
+label = "Coaching Leaders"
 
 [[extra.stats]]
 number = "70+"
@@ -86,7 +86,7 @@ number = "500+"
 label = "Leaders Coached"
 
 [[extra.stats]]
-number = "Fortune 100"
+number = "Start-up → Fortune 100"
 label = "Client Organizations"
 
 # ── Case Example Rows (array of tables) ──────────────────────

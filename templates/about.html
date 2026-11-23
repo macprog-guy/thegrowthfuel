@@ -40,7 +40,7 @@
   <div class="stats-strip-inner">
     {% for stat in section.extra.stats %}
     <div class="stats-strip-item" data-reveal style="--reveal-delay: {{ loop.index0 * 0.1 }}s">
-      <span class="stats-strip-number">{{ stat.number }}</span>
+      <span class="stats-strip-number{% if stat.number | length > 12 %} stats-strip-number--long{% endif %}">{{ stat.number }}</span>
       <span class="stats-strip-label">{{ stat.label }}</span>
     </div>
     {% endfor %}
