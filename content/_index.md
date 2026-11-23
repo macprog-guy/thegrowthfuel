@@ -1,6 +1,6 @@
 +++
 title = "The Growth Fuel"
-description = "You weren't rejected — you were passed over. Executive coaching for established leaders: go from trusted team player to recognised leader in three months. Laurence Methot, PhD, PCC."
+description = "Executive coaching for CEOs and senior leaders in high-stakes environments: lead with clarity, confidence and control — and still have a life."
 template = "index.html"
 sort_by = "weight"
 
@@ -10,8 +10,8 @@ hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Stay ahead when the pressure never stops."
 hero_title_emphasis = "never stops."
 hero_description = "How you lead today in high-stakes environments defines your future. Let's refine your leadership edge so you can lead with clarity, confidence & control — and have a life, too."
-cta_primary_text = "Break Your Blame & Ownership Cycle"
-cta_primary_url = "/tools/break-the-ownership-cycle.html"
+cta_primary_text = "Book a Free Consultation"
+cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_heading = "They couldn't see you leading the team <em>during a crisis</em>."
@@ -49,7 +49,7 @@ imagine_items = [
 imagine_closing = "You act your way into the role before it's offered."
 
 # ── The Promise Section ───────────────────────────────────────
-impact_heading = "What you're buying, <em>stated outright</em>"
+impact_heading = "Your work and how you show up <em>impact many.</em>"
 impact_paragraph_2 = "It isn't about changing who you are. It's about aligning your capabilities with what your organisation values most right now — so your integrity, and the way you want to lead, become visible and land."
 impact_paragraph_3 = "You're doing everything, and it still isn't working. If it were easy, you'd have done it yourself already. This isn't one session and you're there — but if you're ready to make the effort and put the energy in, you're in the right place."
 impact_cta_text = "Let's talk about your three months"
