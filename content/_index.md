@@ -7,9 +7,9 @@ sort_by = "weight"
 [extra]
 # ── Hero Section ──────────────────────────────────────────────
 hero_eyebrow = "Executive Coaching for Established Leaders"
-hero_title = "Don't miss out on your next big opportunity."
-hero_title_emphasis = "big opportunity."
-hero_description = "Somebody else is being promoted. Again. It isn't your competence — the people who decide have never seen it. If you're ready for the next one, let's see what we can do together."
+hero_title = "Stay ahead when the pressure never stops."
+hero_title_emphasis = "never stops."
+hero_description = "How you lead today in high-stakes environments defines your future. Let's refine your leadership edge so you can lead with clarity, confidence & control — and have a life, too."
 cta_primary_text = "Break Your Blame & Ownership Cycle"
 cta_primary_url = "/tools/break-the-ownership-cycle.html"
 
