@@ -1515,10 +1515,10 @@ textarea.form-input {
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// BEFORE / AFTER TABLE — column labels once, not on every row
+// BEFORE / AFTER TABLE — the two labels appear once, never on the rows
 // ─────────────────────────────────────────────────────────────────────────────
-// The labels used to render inside the row loop, so "Today" and "In three
-// months" repeated above all six rows. They now sit once above the table.
+// They used to render inside the row loop, so "Today" and "In three months"
+// repeated above all six rows.
 
 .case-head {
   display: grid;
@@ -1529,14 +1529,22 @@ textarea.form-input {
   p { margin: 0; }
 }
 
-.case-row-label { display: none; }
-
 @media (max-width: 768px) {
-  // The two columns stack on a phone, so a single header above the table would
-  // leave the lower half of every row unlabelled. Labelling the first row only
-  // states each side once, teaches the pattern, and keeps the rest clean.
-  .case-head { display: none; }
-  .case-row:first-child .case-row-label { display: block; }
+  // The columns stack on a phone, so a two-column header would no longer sit
+  // above the right content. It collapses to one line instead: Today → In
+  // three months, which still orients the reader without repeating anything.
+  .case-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding: 0 0 var(--space-3);
+  }
+
+  .case-head p:last-child::before {
+    content: "\2192\00a0";
+    color: var(--color-gray-400);
+  }
 }
 
 

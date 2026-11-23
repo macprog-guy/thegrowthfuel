@@ -30,8 +30,11 @@
   <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lora-regular-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  {#- Compiled stylesheet (Zola compiles sass/main.scss -> /main.css) -#}
-  <link rel="stylesheet" href="/main.css">
+  {#- Compiled stylesheet (Zola compiles sass/main.scss -> /main.css).
+      cachebust appends a content hash. Cloudflare serves main.css with
+      max-age=86400, so without it a style change takes a day to reach anyone
+      who has visited before: they get the new HTML against the old stylesheet. -#}
+  <link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) }}">
 
   {#- Favicon -#}
   <link rel="icon" href="/images/favicon.ico" sizes="any">
