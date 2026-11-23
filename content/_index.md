@@ -102,8 +102,8 @@ before = "You answer the question you were asked"
 after = "You proactively structure your feedback and updates. Your communication is clear, in both very formal and informal discussions"
 
 [[extra.case_rows]]
-before = "You agree in the room, then worry at 11pm"
-after = "You say the hard thing at 3pm, in the room, professionally"
+before = "You agree in the room, but realise afterwards that you cannot commit anymore"
+after = "You say in the room what you can commit to — and what would have to change"
 
 [[extra.case_rows]]
 before = "\"Too kind\""
