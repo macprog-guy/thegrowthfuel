@@ -1538,3 +1538,23 @@ textarea.form-input {
   .case-head { display: none; }
   .case-row:first-child .case-row-label { display: block; }
 }
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CHALLENGE LEAD — the leader's own words, above the heading that answers them
+// ─────────────────────────────────────────────────────────────────────────────
+// Set in italic serif and marked with a rule so it reads as something a client
+// said, not as the site's own voice — otherwise the heading below it sounds
+// like a reply to nobody.
+
+.challenge-lead {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-xl);
+  line-height: 1.5;
+  color: var(--color-gray-500);
+  border-left: 3px solid var(--color-orange);
+  padding-left: var(--space-5);
+  margin: 0 0 var(--space-6);
+  max-width: 34ch;
+}
