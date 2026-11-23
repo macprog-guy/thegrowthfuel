@@ -10,7 +10,7 @@ hero_eyebrow = "Executive Coaching for Established Leaders"
 hero_title = "Stay ahead when the pressure never stops."
 hero_title_emphasis = "never stops."
 hero_description = "How you lead today in high-stakes environments defines your future. Let's refine your leadership edge so you can lead with clarity, confidence & control — and have a life, too."
-cta_primary_text = "Book a Free Consultation"
+cta_primary_text = "Book a Consultation"
 cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
