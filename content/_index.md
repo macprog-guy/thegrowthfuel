@@ -102,16 +102,8 @@ before = "You answer the question you were asked"
 after = "You proactively structure your feedback and updates. Your communication is clear, in both very formal and informal discussions"
 
 [[extra.case_rows]]
-before = "You bring options — and trust a process, or a person, for longer than it serves you"
-after = "You map your timing beforehand and prepare a backup plan — other solutions, other people — in case the initial situation changes"
-
-[[extra.case_rows]]
 before = "You agree in the room, then worry at 11pm"
 after = "You say the hard thing at 3pm, in the room, professionally"
-
-[[extra.case_rows]]
-before = "Your value is visible to your manager — and stops there"
-after = "You can't change the past, but you're now building a network"
 
 [[extra.case_rows]]
 before = "\"Too kind\""
