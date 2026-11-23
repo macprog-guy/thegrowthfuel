@@ -1517,10 +1517,8 @@ textarea.form-input {
 // ─────────────────────────────────────────────────────────────────────────────
 // BEFORE / AFTER TABLE — column labels once, not on every row
 // ─────────────────────────────────────────────────────────────────────────────
-// The labels used to render inside the row loop, so "Before" and "After"
-// repeated above all six rows. They now sit once above the table. On mobile the
-// two columns stack, which would leave the lower half unlabelled — so there the
-// header hides and the per-row labels come back.
+// The labels used to render inside the row loop, so "Today" and "In three
+// months" repeated above all six rows. They now sit once above the table.
 
 .case-head {
   display: grid;
@@ -1534,6 +1532,9 @@ textarea.form-input {
 .case-row-label { display: none; }
 
 @media (max-width: 768px) {
+  // The two columns stack on a phone, so a single header above the table would
+  // leave the lower half of every row unlabelled. Labelling the first row only
+  // states each side once, teaches the pattern, and keeps the rest clean.
   .case-head { display: none; }
-  .case-row-label { display: block; }
+  .case-row:first-child .case-row-label { display: block; }
 }
