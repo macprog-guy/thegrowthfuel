@@ -67,16 +67,16 @@ services_heading = "Which describes <em>you</em>?"
 services_description = "Pick your situation. Each path has its own page."
 
 # ── Start Here (free) Section ─────────────────────────────────
-freestart_eyebrow = "Start Here — Free"
-freestart_heading = "Not ready to talk? <em>Start here.</em>"
-freestart_intro = "Read and listen for free. Get the newsletter. When you're ready, book a free consult — you'll leave with one concrete next step."
+freestart_eyebrow = "Start Here"
+freestart_heading = "Start sharpening your <em>edge</em>."
+freestart_intro = "Read and listen. Get the newsletter. Book a consultation — you'll leave with one concrete next step."
 newsletter_eyebrow = "Stay In The Loop"
 newsletter_heading = "Leadership insights, straight to your <em>inbox</em>."
 
 # ── CTA Section ───────────────────────────────────────────────
 cta_bottom_eyebrow = "The Most Successful Leaders Never Go It Alone"
 cta_bottom_heading = "Ready to be <em style=\"font-style: italic; color: var(--color-orange-light)\">recognised</em> for what you already do?"
-cta_bottom_description = "30 minutes, free. You'll leave with one concrete next step — whether we work together or not."
+cta_bottom_description = "30 minutes. You'll leave with one concrete next step — whether we work together or not."
 cta_bottom_button_text = "Grab Some Time On My Calendar"
 
 # ── Stats Row (array of tables) ──────────────────────────────
