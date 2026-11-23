@@ -14,8 +14,8 @@ cta_primary_text = "Break Your Blame & Ownership Cycle"
 cta_primary_url = "/tools/break-the-ownership-cycle.html"
 
 # ── The Problem Section ───────────────────────────────────────
-challenge_heading = "You weren't rejected for not being the right fit. You were <em>passed over</em>."
-challenge_paragraph_1 = "They couldn't see you leading the team during a crisis. That is a positioning gap, not a character flaw — and it is entirely fixable."
+challenge_heading = "They couldn't see you leading the team <em>during a crisis</em>."
+challenge_paragraph_1 = "That is a positioning gap, not a character flaw — and it is entirely fixable."
 challenge_lead_in = "Take Sophie:"
 challenge_bullets = [
     "Sophie has her team's respect and trust. They see her lead every day.",
