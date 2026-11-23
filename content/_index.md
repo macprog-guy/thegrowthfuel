@@ -15,6 +15,7 @@ cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_lead = "&ldquo;The team needs to step up now. We&rsquo;re growing into a mature company.&rdquo;"
+challenge_bridge = "Growing into a mature company changes who is judging you. The team already knows what you can do &mdash; the people now watching have never seen it."
 challenge_heading = "They couldn't see you leading the team <em>during a crisis</em>."
 challenge_paragraph_1 = "That is a positioning gap, not a character flaw — and it is entirely fixable."
 challenge_lead_in = "Take Sophie:"
