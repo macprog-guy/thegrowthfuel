@@ -93,7 +93,7 @@ number = "500+"
 label = "Leaders Coached"
 
 [[extra.stats]]
-number = "Fortune 100"
+number = "Start-up → Fortune 100"
 label = "Client Organizations"
 
 # ── Case Example Rows (array of tables) ──────────────────────

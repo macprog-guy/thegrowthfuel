@@ -84,7 +84,7 @@ number = "4"
 label = "Languages"
 
 [[extra.stats]]
-number = "Fortune 100"
+number = "Start-up → Fortune 100"
 label = "Client Portfolio"
 
 # ── Challenge Checklist Cards ──────────────────────────────

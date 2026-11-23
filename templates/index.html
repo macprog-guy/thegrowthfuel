@@ -32,7 +32,7 @@
   <div class="stats-row" style="max-width: var(--container-max); margin: 0 auto;">
     {% for stat in section.extra.stats %}
     <div data-reveal style="--reveal-delay: {{ loop.index0 * 0.1 }}s">
-      <div class="stat-number">{{ stat.number }}</div>
+      <div class="stat-number{% if stat.number | length > 12 %} stat-number--long{% endif %}">{{ stat.number }}</div>
       <div class="stat-label">{{ stat.label }}</div>
     </div>
     {% endfor %}

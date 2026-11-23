@@ -105,6 +105,22 @@ section {
   margin-bottom: var(--space-2);
 }
 
+// A stat whose value is a phrase rather than a figure ("Start-up → Fortune 100")
+// wraps to two lines at 5xl and leaves that column double-height. Scaled down so
+// it sits on one line and the row stays level.
+.stat-number--long {
+  font-size: var(--text-2xl);
+  line-height: 1.15;
+  text-wrap: balance;
+
+  // Occupy the same block height as a 5xl figure and sit on the same bottom
+  // edge, so the labels underneath stay on one line across the row.
+  min-height: var(--text-5xl);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .section-purple .stat-number {
   color: var(--color-orange);
 }

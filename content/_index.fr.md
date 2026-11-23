@@ -79,7 +79,7 @@ number = "500+"
 label = "Leaders coachés"
 
 [[extra.stats]]
-number = "Fortune 100"
+number = "Start-up → Fortune 100"
 label = "Organisations clientes"
 
 # ── Featured Testimonial (table) ─────────────────────────────
