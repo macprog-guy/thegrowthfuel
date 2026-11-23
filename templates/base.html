@@ -156,6 +156,9 @@
       var m = el.textContent.match(/^([^0-9]*)(\d+)(.*)$/);
       if (!m) return;
       var prefix = m[1], target = parseInt(m[2], 10), suffix = m[3], t0 = null;
+      // A year is a point in time, not a quantity — counting up to it reads as
+      // broken ("Since 0", "Since 1757", "Since 2008"). Leave it alone.
+      if (target >= 1900 && target <= 2100) { return; }
       function step(ts) {
         if (!t0) t0 = ts;
         var p = Math.min((ts - t0) / 1400, 1);

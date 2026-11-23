@@ -67,8 +67,8 @@ cta_bottom_button_text = "Prenez un moment dans mon agenda"
 
 # ── Stats Row (array of tables) ──────────────────────────────
 [[extra.stats]]
-number = "20+"
-label = "Années d'expérience"
+number = "Depuis 2008"
+label = "À coacher des leaders"
 
 [[extra.stats]]
 number = "70+"
