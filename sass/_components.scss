@@ -1512,3 +1512,28 @@ textarea.form-input {
     margin-bottom: 0;
   }
 }
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BEFORE / AFTER TABLE — column labels once, not on every row
+// ─────────────────────────────────────────────────────────────────────────────
+// The labels used to render inside the row loop, so "Before" and "After"
+// repeated above all six rows. They now sit once above the table. On mobile the
+// two columns stack, which would leave the lower half unlabelled — so there the
+// header hides and the per-row labels come back.
+
+.case-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  padding: 0 var(--space-8) var(--space-3);
+
+  p { margin: 0; }
+}
+
+.case-row-label { display: none; }
+
+@media (max-width: 768px) {
+  .case-head { display: none; }
+  .case-row-label { display: block; }
+}

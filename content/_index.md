@@ -49,7 +49,7 @@ imagine_items = [
 imagine_closing = "You act your way into the role before it's offered."
 
 # ── The Promise Section ───────────────────────────────────────
-impact_heading = "What you're buying, <em>stated outright</em>"
+impact_heading = "Get your team through this year — and get back to the work <em>only you can do</em>."
 impact_paragraph_1 = "Twenty years of sitting on the other side of these decisions, applied to your situation — so you stop guessing what \"not quite ready\" meant."
 impact_paragraph_2 = "It isn't about changing who you are. It's about aligning your capabilities with what your organisation values most right now — so your integrity, and the way you want to lead, become visible and land."
 impact_paragraph_3 = "You're doing everything, and it still isn't working. If it were easy, you'd have done it yourself already. This isn't one session and you're there — but if you're ready to make the effort and put the energy in, you're in the right place."
@@ -57,10 +57,10 @@ impact_cta_text = "Let's talk about your three months"
 impact_image_alt = "Laurence working with a client"
 
 # ── Case Example Section ──────────────────────────────────────
-case_heading = "Where you are now → where you <em>want to go</em>"
-case_description = "The concrete before-and-after:"
-case_before_label = "Today"
-case_after_label = "In three months"
+case_heading = "One leader, one workshop — before and <em>after</em>"
+case_description = "What changed for one leader, after one workshop:"
+case_before_label = "Before"
+case_after_label = "After the workshop"
 
 # ── Services Section ──────────────────────────────────────────
 services_eyebrow = "Where To Start"
@@ -99,28 +99,24 @@ label = "Client Organizations"
 
 # ── Case Example Rows (array of tables) ──────────────────────
 [[extra.case_rows]]
-before = "You answer the question you were asked"
-after = "You proactively structure your feedback and updates. Your communication is clear, in both very formal and informal discussions"
+before = "Operating at team level — absorbed in day-to-day delivery"
+after = "Setting direction and holding the team to it, rather than managing individual tasks"
 
 [[extra.case_rows]]
-before = "You bring options — and trust a process, or a person, for longer than it serves you"
-after = "You map your timing beforehand and prepare a backup plan — other solutions, other people — in case the initial situation changes"
+before = "Reluctant to assert authority; perceived as too accommodating"
+after = "Setting clear boundaries and holding direct reports accountable — even under pushback"
 
 [[extra.case_rows]]
-before = "You agree in the room, then worry at 11pm"
-after = "You say the hard thing at 3pm, in the room, professionally"
+before = "Reactive, infrequent communication with senior stakeholders"
+after = "Structured stakeholder updates — flagging risks and proposing solutions before being asked"
 
 [[extra.case_rows]]
-before = "Your value is visible to your manager — and stops there"
-after = "You can't change the past, but you're now building a network"
+before = "Limited visibility into team capability gaps"
+after = "Articulating gaps precisely and working with HR and senior leadership to address them"
 
 [[extra.case_rows]]
-before = "\"Too kind\""
-after = "\"Fair — and people know where you stand, and respect you for that\""
-
-[[extra.case_rows]]
-before = "You feel reactive — and put it down to how the market works"
-after = "You have a robust structure that keeps you on your bigger goals, with space for the unavoidable emergencies"
+before = "Workshop originally scoped for senior managers only"
+after = "Chose to include the full team — confidence in his own leadership agenda"
 
 # ── Featured Testimonial (table) ─────────────────────────────
 [extra.featured_testimonial]
