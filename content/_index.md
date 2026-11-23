@@ -50,7 +50,6 @@ imagine_closing = "You act your way into the role before it's offered."
 
 # ── The Promise Section ───────────────────────────────────────
 impact_heading = "What you're buying, <em>stated outright</em>"
-impact_paragraph_1 = "Twenty years of sitting on the other side of these decisions, applied to your situation — so you stop guessing what \"not quite ready\" meant."
 impact_paragraph_2 = "It isn't about changing who you are. It's about aligning your capabilities with what your organisation values most right now — so your integrity, and the way you want to lead, become visible and land."
 impact_paragraph_3 = "You're doing everything, and it still isn't working. If it were easy, you'd have done it yourself already. This isn't one session and you're there — but if you're ready to make the effort and put the energy in, you're in the right place."
 impact_cta_text = "Let's talk about your three months"

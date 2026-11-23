@@ -165,9 +165,11 @@
     <div>
       {% if section.extra.impact_eyebrow %}<p class="hero-eyebrow eyebrow-rule" data-reveal style="color: var(--color-orange); margin-bottom: var(--space-4);">{{ section.extra.impact_eyebrow }}</p>{% endif %}
       <h2 class="hl-em" data-reveal style="--reveal-delay: 0.08s; font-family: var(--font-heading); font-size: var(--text-5xl); font-weight: 400; color: var(--color-gray-900); margin-bottom: var(--space-8);">{{ section.extra.impact_heading | safe }}</h2>
+      {% if section.extra.impact_paragraph_1 %}
       <p data-reveal style="--reveal-delay: 0.16s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-6);">
         {{ section.extra.impact_paragraph_1 }}
       </p>
+      {% endif %}
       <p data-reveal style="--reveal-delay: 0.24s; font-size: var(--text-lg); line-height: 1.8; color: var(--color-gray-600); margin-bottom: var(--space-8);">
         {{ section.extra.impact_paragraph_2 }}
       </p>
