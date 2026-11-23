@@ -15,7 +15,7 @@ cta_primary_url = "https://calendly.com/the-growth-fuel/30min-free-consult"
 
 # ── The Problem Section ───────────────────────────────────────
 challenge_lead = "&ldquo;The team needs to step up now. We&rsquo;re growing into a mature company.&rdquo;"
-challenge_bridge = "Growing into a mature company changes who is judging you. A few colleagues know what you can really do &mdash; most read you as too tough, or too kind."
+challenge_bridge = "Stepping up also changes who is judging you, and which new gaps to tackle. A few colleagues know what you can really do &mdash; most read you as too tough, or too kind."
 challenge_heading = "They couldn't see you leading the team <em>during a crisis</em>."
 challenge_paragraph_1 = "That is a positioning gap, not a character flaw — and it is entirely fixable."
 challenge_lead_in = "Take Sophie:"
@@ -54,7 +54,7 @@ imagine_closing = "You act your way into the role before it's offered."
 impact_heading = "Your work and how you show up <em>impact many.</em>"
 impact_paragraph_2 = "It isn't about changing who you are. It's about aligning your capabilities with what your organisation values most right now — so your integrity, and the way you want to lead, become visible and land."
 impact_paragraph_3 = "You're doing everything, and it still isn't working. If it were easy, you'd have done it yourself already. This isn't one session and you're there — but if you're ready to make the effort and put the energy in, you're in the right place."
-impact_cta_text = "Let's talk about your three months"
+impact_cta_text = "Let's build a plan that lasts"
 impact_image_alt = "Laurence working with a client"
 
 # ── Case Example Section ──────────────────────────────────────
