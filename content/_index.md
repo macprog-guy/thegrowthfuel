@@ -106,7 +106,7 @@ before = "You agree in the room, but realise afterwards that you cannot commit a
 after = "You say in the room what you can commit to — and what would have to change"
 
 [[extra.case_rows]]
-before = "\"Too kind\""
+before = "\"Too kind\" or \"too tough\""
 after = "\"Fair — and people know where you stand, and respect you for that\""
 
 [[extra.case_rows]]
