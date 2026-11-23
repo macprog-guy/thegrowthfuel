@@ -17,6 +17,11 @@
 {%- if not meta_desc and page is defined and page.description -%}
   {%- set meta_desc = page.description -%}
 {%- endif -%}
+{#- Sections carry their own description too (the homepage is a section, not a
+    page) — without this they all silently fell back to config.description. -#}
+{%- if not meta_desc and section is defined and section.description -%}
+  {%- set meta_desc = section.description -%}
+{%- endif -%}
 {%- if not meta_desc -%}
   {%- set meta_desc = config.description -%}
 {%- endif -%}
